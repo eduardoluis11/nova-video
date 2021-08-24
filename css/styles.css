@@ -1,7 +1,28 @@
+/* This modifies the styles of the landing page (the top of the home page, the part of the page the user
+will see when they first enter the website). 
+
+The movie reel image needs to be here*/
 #landing-page {
     background-color: black;
 }
 
-.navbar {
+/* Style sheet of the "Check our Portfolio" button */
+#portfolio-button {
+    color: white;
+
+    /* This makes the interior of the button to be transparent  */
+    background-color: transparent;
+
+    /* This makes a hand appear when the user hovers the mouse over the button */
+    cursor: pointer;
+    
+}
+
+/* This styles the title of the home page */
+#home-title {
     color: white;
 }
+
+/* .navbar {
+    color: white;
+} */
