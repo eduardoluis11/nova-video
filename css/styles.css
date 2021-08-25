@@ -23,6 +23,22 @@ The movie reel image needs to be here*/
     color: white;
 }
 
-/* .navbar {
+/* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
+put 2 CSS selectors for the unvisited and the visited links. */
+.navbar li a {
+    text-decoration: none;
     color: white;
+}
+
+/* This will remove the underline and the blue color of the text of the navbar links if the user hasn't clicked on them.
+Only the current page should have an underline (thanks to the <u> tags that I added on the html files.) */
+/* .navbar a:link {
+    color: white;
+    text-decoration: none;
+} */
+
+/* This will remove the underline and the blue color of the text of the navbar links after the user clicks on them. */
+/* .navbar a:visited {
+    color: white;
+    text-decoration: none;
 } */
