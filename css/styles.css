@@ -21,6 +21,9 @@ The movie reel image needs to be here*/
 /* This styles the title of the home page */
 #home-title {
     color: white;
+
+    /* This sets the font to Arial */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
@@ -29,6 +32,23 @@ put 2 CSS selectors for the unvisited and the visited links. */
     text-decoration: none;
     color: white;
 }
+
+/* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
+.navbar li {
+    display: inline;
+}
+
+/* This also modifies the style sheets of the navbar elements. */
+.navbar ul {
+    /* This removes the bullet points from the navbar elements */
+    list-style-type: none;
+}
+
+
+
+
+
+
 
 /* This will remove the underline and the blue color of the text of the navbar links if the user hasn't clicked on them.
 Only the current page should have an underline (thanks to the <u> tags that I added on the html files.) */
