@@ -67,11 +67,21 @@ put 2 CSS selectors for the unvisited and the visited links. */
 
     /* This should change the font of the navbar elements to Kameron */
     font-family: 'Kameron', serif;
+
+    /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
+    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray */
+    display: block;
+    padding: 15px 17px;
 }
 
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
 .navbar li {
-    display: inline;
+    /* This turns a vertical list into a horizontal one */
+    /* display: inline; */
+
+    /* If I don't use "display inline", this will turn a vertical lsit into a horizontal one, but the navbar
+    elements will be in the reverse order */
+    float: right;
 }
 
 /* This also modifies the style sheets of the navbar elements. */
@@ -79,6 +89,18 @@ put 2 CSS selectors for the unvisited and the visited links. */
     /* This removes the bullet points from the navbar elements */
     list-style-type: none;
 }
+
+/* This will modify the CSS of the "Nova Video Productions" title in the navbar */
+.navbar .company-logo {
+    /* This makes the title to go to the far left of the navbar */
+    float: left;
+}
+
+/* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
+"Nova Video Productions" title */
+/* .navbar li {
+    float: left;
+} */
 
 
 
