@@ -18,6 +18,9 @@ The movie reel image needs to be here*/
     
 }
 
+/* This will change the color of the "check our portfolio" button if the user moves the mouse over it. */
+
+
 /* This styles the title of the home page */
 #home-title {
     color: white;
@@ -31,6 +34,9 @@ put 2 CSS selectors for the unvisited and the visited links. */
 .navbar li a {
     text-decoration: none;
     color: white;
+
+    /* This should change the font of the navbar elements to Kameron */
+    font-family: 'Kameron', serif;
 }
 
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
