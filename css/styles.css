@@ -10,16 +10,38 @@ The movie reel image needs to be here*/
 #portfolio-button {
     color: white;
 
+    /* This adds a white border to the button */
+    border: 1px solid white;
+
     /* This makes the interior of the button to be transparent  */
     background-color: transparent;
 
     /* This makes a hand appear when the user hovers the mouse over the button */
     cursor: pointer;
-    
+
+    /* This will add rounded corners to the button */
+    border-radius: 5px;
+
+    padding: 10px;
+    font-size: 24px;
+
+    /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
+    on a black screen (the default background color of the page is white) */
+    margin-bottom: 10px;
+
+    /* text-align: center; */
 }
 
-/* This will change the color of the "check our portfolio" button if the user moves the mouse over it. */
+/* This should move the "check our portfolio button" to the center of the page */
+div#portfolio-button {
+    text-align: center;
+}
 
+/* This will change the color of the "check our portfolio" button to white if the user moves the mouse over it. */
+#portfolio-button:hover {
+    background-color: white;
+    color: black;
+}
 
 /* This styles the title of the home page */
 #home-title {
