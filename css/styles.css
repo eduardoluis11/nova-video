@@ -32,10 +32,18 @@ The movie reel image needs to be here*/
     /* text-align: center; */
 }
 
-/* This should move the "check our portfolio button" to the center of the page */
-div#portfolio-button {
-    text-align: center;
+/* This will center the "Check our portfolio" button. Source: 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* This should move the "check our portfolio button" to the center of the page */
+/* div#portfolio-button {
+    text-align: center;
+} */
 
 /* This will change the color of the "check our portfolio" button to white if the user moves the mouse over it. */
 #portfolio-button:hover {
