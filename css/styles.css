@@ -1,9 +1,20 @@
+/* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
+be any white borders surrounding the body nor the image if the landing page.
+Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 /* This modifies the styles of the landing page (the top of the home page, the part of the page the user
 will see when they first enter the website). 
 
 The movie reel image needs to be here*/
 #landing-page {
     background-color: black;
+
+    /* This will make the landing page div to be the same height and width of the <body> tag */
+    height: 100%;
 }
 
 /* Style sheet of the "Check our Portfolio" button */
