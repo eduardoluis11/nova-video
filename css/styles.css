@@ -33,7 +33,7 @@ The movie reel image needs to be here*/
     /* This will add rounded corners to the button */
     border-radius: 5px;
 
-    padding: 10px;
+    padding: 15px;
     font-size: 24px;
 
     /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
@@ -114,11 +114,18 @@ put 2 CSS selectors for the unvisited and the visited links. */
     float: left;
 }
 
+/* This will modify the style sheets of the small navbar links to other pages. */
+.navbar-small-link li {
+    font-size: 20px;
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
     float: left;
 } */
+
+
 
 
 
