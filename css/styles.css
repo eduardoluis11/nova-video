@@ -102,6 +102,10 @@ put 2 CSS selectors for the unvisited and the visited links. */
 
     /* This removes the padding that was to the left of the "Nova Video Productions" title on the navbar */
     padding-left: 0;
+
+    /* This fixes a bug in which there was a vertical overflow in which a white rectangle appeared at the top of the 
+    screen on the web browser, just above the navbar */
+    margin: 0;
 }
 
 /* This will modify the CSS of the "Nova Video Productions" title in the navbar */
