@@ -112,11 +112,20 @@ put 2 CSS selectors for the unvisited and the visited links. */
 .navbar .company-logo {
     /* This makes the title to go to the far left of the navbar */
     float: left;
+
+    font-size: 35px;
+
+    /* This will make it so that "Productions" appears below "Nova Video". I can't use "display: inline-block" because
+    it will have a conflict with the "float: left" from above.
+    Source: https://jsfiddle.net/hr6hq7uj/1/ */
+    max-width: 255px;
+    /* display: inline-block; */
+
 }
 
 /* This will modify the style sheets of the small navbar links to other pages. */
 .navbar-small-link li {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
