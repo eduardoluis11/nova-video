@@ -88,6 +88,9 @@ put 2 CSS selectors for the unvisited and the visited links. */
 .navbar ul {
     /* This removes the bullet points from the navbar elements */
     list-style-type: none;
+
+    /* This removes the padding that was to the left of the "Nova Video Productions" title on the navbar */
+    padding-left: 0;
 }
 
 /* This will modify the CSS of the "Nova Video Productions" title in the navbar */
