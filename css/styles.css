@@ -45,7 +45,7 @@ The movie reel image needs to be here*/
 
 /* This will center the "Check our portfolio" button. Source: 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
-.center-button {
+.center-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,25 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
 
     /* This sets the font to Arial */
     font-family: Arial, Helvetica, sans-serif;
+
+    /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
+    Source: https://jsfiddle.net/hr6hq7uj/1/ */
+    /* max-width: 650px;
+    display: inline-block; */
 }
+
+/* This only affects the div that contains the h1 title of the homepage. */
+div#home-title {
+    /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
+    by reducing the size of the div container that contains the h1 title.
+    Source: https://jsfiddle.net/hr6hq7uj/1/ */
+    max-width: 650px;
+
+    /* This moves aligns the text to the center of the div container. */
+    text-align: center;
+}
+
+
 
 /* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
 put 2 CSS selectors for the unvisited and the visited links. */
