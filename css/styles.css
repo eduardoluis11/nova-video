@@ -80,9 +80,11 @@ put 2 CSS selectors for the unvisited and the visited links. */
     font-family: 'Kameron', serif;
 
     /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
+    The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
+    right margins should be of 20px (the 2nd parameter in "padding").
     Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray */
     display: block;
-    padding: 15px 17px;
+    padding: 15px 20px;
 }
 
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
