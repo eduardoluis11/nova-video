@@ -2,8 +2,8 @@
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
 html, body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 /* This modifies the styles of the landing page (the top of the home page, the part of the page the user
@@ -11,141 +11,138 @@ will see when they first enter the website).
 
 The movie reel image needs to be here*/
 #landing-page {
-    background-color: black;
 
-    /* This will make the landing page div to be the same height and width of the <body> tag */
-    height: 100%;
+  /* This will add the landing page image. I needed to use the "linear gradient" property and put
+  the "rgba" attribut twice to put the black mask. Otherwise, I would get either a white screen, or the
+  black mask would never appear. 
+  Source: https://css-tricks.com/tinted-images-multiple-backgrounds/ */
+  background: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+    ),
+    url(../img/landing-page-bg.jpg);
+
+  /* This makes the images to be resized so that it fits the browser window. 
+  
+  In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
+  the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
+  repeated and look bad in all other screen sizes anyways.  */
+  background-size: 1366px 768px;
+
+  /* background-color: black; */
+  /* This will make the landing page div to be the same height and width of the <body> tag. */
+  height: 100%;
 }
 
 /* Style sheet of the "Check our Portfolio" button */
 #portfolio-button {
-    color: white;
-
-    /* This adds a white border to the button */
-    border: 1px solid white;
-
-    /* This makes the interior of the button to be transparent  */
-    background-color: transparent;
-
-    /* This makes a hand appear when the user hovers the mouse over the button */
-    cursor: pointer;
-
-    /* This will add rounded corners to the button */
-    border-radius: 5px;
-
-    padding: 15px;
-    font-size: 24px;
-
-    /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
-    on a black screen (the default background color of the page is white) */
-    margin-bottom: 10px;
-
-    /* text-align: center; */
+  color: white;
+  /* This adds a white border to the button */
+  border: 1px solid white;
+  /* This makes the interior of the button to be transparent  */
+  background-color: transparent;
+  /* This makes a hand appear when the user hovers the mouse over the button */
+  cursor: pointer;
+  /* This will add rounded corners to the button */
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 24px;
+  /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
+  on a black screen (the default background color of the page is white) */
+  margin-bottom: 10px;
+  /* text-align: center; */
 }
 
 /* This will center the "Check our portfolio" button. Source: 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
 .center-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* This should move the "check our portfolio button" to the center of the page */
 /* div#portfolio-button {
     text-align: center;
 } */
-
 /* This will change the color of the "check our portfolio" button to white if the user moves the mouse over it. */
 #portfolio-button:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 /* This styles the title of the home page */
 #home-title {
-    color: white;
-
-    /* This sets the font to Arial */
-    font-family: Arial, Helvetica, sans-serif;
-
-    /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
-    Source: https://jsfiddle.net/hr6hq7uj/1/ */
-    /* max-width: 650px;
-    display: inline-block; */
+  color: white;
+  /* This sets the font to Arial */
+  font-family: Arial, Helvetica, sans-serif;
+  /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
+  Source: https://jsfiddle.net/hr6hq7uj/1/ */
+  /* max-width: 650px;
+  display: inline-block; */
 }
 
 /* This only affects the div that contains the h1 title of the homepage. */
 div#home-title {
-    /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
-    by reducing the size of the div container that contains the h1 title.
-    Source: https://jsfiddle.net/hr6hq7uj/1/ */
-    max-width: 650px;
-
-    /* This moves aligns the text to the center of the div container. */
-    text-align: center;
+  /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
+  by reducing the size of the div container that contains the h1 title.
+  Source: https://jsfiddle.net/hr6hq7uj/1/ */
+  max-width: 650px;
+  /* This moves aligns the text to the center of the div container. */
+  text-align: center;
 }
-
-
 
 /* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
 put 2 CSS selectors for the unvisited and the visited links. */
 .navbar li a {
-    text-decoration: none;
-    color: white;
-
-    /* This should change the font of the navbar elements to Kameron */
-    font-family: 'Kameron', serif;
-
-    /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
-    The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
-    right margins should be of 20px (the 2nd parameter in "padding").
-    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray */
-    display: block;
-    padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  /* This should change the font of the navbar elements to Kameron */
+  font-family: "Kameron", serif;
+  /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
+  The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
+  right margins should be of 20px (the 2nd parameter in "padding").
+  Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray */
+  display: block;
+  padding: 15px 20px;
 }
 
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
 .navbar li {
-    /* This turns a vertical list into a horizontal one */
-    /* display: inline; */
-
-    /* If I don't use "display inline", this will turn a vertical lsit into a horizontal one, but the navbar
-    elements will be in the reverse order */
-    float: right;
+  /* This turns a vertical list into a horizontal one */
+  /* display: inline; */
+  /* If I don't use "display inline", this will turn a vertical lsit into a horizontal one, but the navbar
+  elements will be in the reverse order */
+  float: right;
 }
 
 /* This also modifies the style sheets of the navbar elements. */
 .navbar ul {
-    /* This removes the bullet points from the navbar elements */
-    list-style-type: none;
-
-    /* This removes the padding that was to the left of the "Nova Video Productions" title on the navbar */
-    padding-left: 0;
-
-    /* This fixes a bug in which there was a vertical overflow in which a white rectangle appeared at the top of the 
-    screen on the web browser, just above the navbar */
-    margin: 0;
+  /* This removes the bullet points from the navbar elements */
+  list-style-type: none;
+  /* This removes the padding that was to the left of the "Nova Video Productions" title on the navbar */
+  padding-left: 0;
+  /* This fixes a bug in which there was a vertical overflow in which a white rectangle appeared at the top of the 
+  screen on the web browser, just above the navbar */
+  margin: 0;
 }
 
 /* This will modify the CSS of the "Nova Video Productions" title in the navbar */
 .navbar .company-logo {
-    /* This makes the title to go to the far left of the navbar */
-    float: left;
-
-    font-size: 35px;
-
-    /* This will make it so that "Productions" appears below "Nova Video". I can't use "display: inline-block" because
-    it will have a conflict with the "float: left" from above.
-    Source: https://jsfiddle.net/hr6hq7uj/1/ */
-    max-width: 255px;
-    /* display: inline-block; */
-
+  /* This makes the title to go to the far left of the navbar */
+  float: left;
+  font-size: 35px;
+  /* This will make it so that "Productions" appears below "Nova Video". I can't use "display: inline-block" because
+  it will have a conflict with the "float: left" from above.
+  Source: https://jsfiddle.net/hr6hq7uj/1/ */
+  max-width: 255px;
+  /* display: inline-block; */
 }
 
 /* This will modify the style sheets of the small navbar links to other pages. */
 .navbar-small-link li {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
@@ -153,24 +150,16 @@ put 2 CSS selectors for the unvisited and the visited links. */
 /* .navbar li {
     float: left;
 } */
-
-
-
-
-
-
-
-
-
 /* This will remove the underline and the blue color of the text of the navbar links if the user hasn't clicked on them.
 Only the current page should have an underline (thanks to the <u> tags that I added on the html files.) */
 /* .navbar a:link {
     color: white;
     text-decoration: none;
 } */
-
 /* This will remove the underline and the blue color of the text of the navbar links after the user clicks on them. */
 /* .navbar a:visited {
     color: white;
     text-decoration: none;
 } */
+
+/*# sourceMappingURL=styles.css.map */
