@@ -3,6 +3,8 @@ be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
 html, body {
   height: 100%;
+  /* This fixed the bug that made the html and body tag to be 17 px thinner than the actual viewport width, but
+  it creates a horizontal overflow, for some reason */
   margin: 0;
 }
 
@@ -20,11 +22,22 @@ The movie reel image needs to be here*/
 
   In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
   the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
-  repeated and look bad in all other screen sizes anyways.  */
-  background-size: 1366px 768px;
+  repeated and look bad in all other screen sizes anyways.
+
+  I will use media queries to make the movie reel image to look well on different screen sizes.*/
   /* background-color: black; */
   /* This will make the landing page div to be the same height and width of the <body> tag. */
   height: 100%;
+}
+@media only screen and (max-width: 1366px) {
+  #landing-page {
+    background-size: 1366px 768px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  #landing-page {
+    background-size: 1536px 768px;
+  }
 }
 
 /* Style sheet of the "Check our Portfolio" button */
@@ -97,6 +110,13 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
 
 /* This only affects the div that contains the h1 title of the homepage. */
 div#home-title {
+  /* This will add a padding to the top of the div so that there is enough space between the navbar and the h1
+  title. It needs to be responsive, since different screen sizes will need different padding values. Also, 
+  with this, I'll be able to remove the temporary "br" tags that I used on index.html. 
+
+  Since what will ultimately tell me how much padding I'll need is the height of the viewport, I'll use "vh"
+  as the measuring unit.*/
+  padding-top: 20vh;
   /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
   by reducing the size of the div container that contains the h1 title.
   Source: https://jsfiddle.net/hr6hq7uj/1/ 
@@ -168,6 +188,11 @@ put 2 CSS selectors for the unvisited and the visited links. */
 /* This will modify the style sheets of the small navbar links to other pages. */
 .navbar-small-link li {
   font-size: 25px;
+}
+
+.navbar {
+  width: 100%;
+  height: 118px;
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
