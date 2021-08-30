@@ -11,25 +11,17 @@ will see when they first enter the website).
 
 The movie reel image needs to be here*/
 #landing-page {
-
   /* This will add the landing page image. I needed to use the "linear gradient" property and put
   the "rgba" attribut twice to put the black mask. Otherwise, I would get either a white screen, or the
   black mask would never appear. 
   Source: https://css-tricks.com/tinted-images-multiple-backgrounds/ */
-  background: 
-    linear-gradient(
-    rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0.7)
-    ),
-    url(../img/landing-page-bg.jpg);
-
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/landing-page-bg.jpg);
   /* This makes the images to be resized so that it fits the browser window. 
-  
+
   In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
   the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
   repeated and look bad in all other screen sizes anyways.  */
   background-size: 1366px 768px;
-
   /* background-color: black; */
   /* This will make the landing page div to be the same height and width of the <body> tag. */
   height: 100%;
