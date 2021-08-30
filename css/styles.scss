@@ -72,11 +72,34 @@ html, body {
     color: black;
   }
   
-  /* This styles the title of the home page */
+  /* This styles the h1 title of the homepage */
   #home-title {
     color: white;
+
     /* This sets the font to Arial */
     font-family: Arial, Helvetica, sans-serif;
+
+    /* The unit "vw" or "vh" will make the text size to be responsive. This way, the text will automatically become smaller 
+    in smaller screens.
+    
+    I will most likely make the text change based on the browser height instead of its width, since I want the movie reel
+    image to occupy the entire height of the viewport when the users 1st enter the page, so I want the text to have its
+    size to look big when they 1st enter the homepage. 
+    
+    With a font size of 1.5vh, the title text looks good on most screen sizes, with the onluy exception of laptop screens.
+    So, I will use a media query, and use a "2vw" on screens larger than tablets so that the text looks big enough
+    in laptop screens.*/
+    // For small screens
+    @media only screen and (max-width: 1299px) {
+        font-size: 1.5vh;
+    }
+
+    // For laptop screens
+    @media only screen and (min-width: 1300px) {
+        font-size: 1.5vw;
+    }
+    
+
     /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
     Source: https://jsfiddle.net/hr6hq7uj/1/ */
     /* max-width: 650px;
@@ -87,8 +110,21 @@ html, body {
   div#home-title {
     /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
     by reducing the size of the div container that contains the h1 title.
-    Source: https://jsfiddle.net/hr6hq7uj/1/ */
-    max-width: 650px;
+    Source: https://jsfiddle.net/hr6hq7uj/1/ 
+    
+    I need to use media queries in this in order to have control in the number of words that will appear
+    per line for the h1 title on different screen sizes. 800px is ok for screens with 1366px of width, whereas
+    900px is ok for screens of 1536px of width.*/
+
+    // For screens wider than 1536 px
+    @media only screen and (min-width: 1536px) {
+        max-width: 900px;
+    }
+
+    // For screens of up to 1366 px of width
+    @media only screen and (max-width: 1366px) {
+        max-width: 800px;
+    }
     /* This moves aligns the text to the center of the div container. */
     text-align: center;
   }
