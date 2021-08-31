@@ -72,25 +72,23 @@ html, body {
     /* text-align: center; */
   }
   
-  /* This will center the "Check our portfolio" button. Source: 
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
-  .center-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* This will center the "Check our portfolio" button. Source: 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* This will remove any padding that the button would add that would otherwise prevent the h1 title from being at
-    the center of the landing page. With this I'll be able to move around the button on the "landing page" div. */
-    position: absolute;
+  /* This will remove any padding that the button would add that would otherwise prevent the h1 title from being at
+  the center of the landing page. With this I'll be able to move around the button on the "landing page" div. */
+  position: absolute;
 
-    /* By modifying the bottom, top, left and right properties, I should be able to move the button towars the bottom
-    of the screen (source: https://stackoverflow.com/questions/36191516/center-and-bottom-align-flex-items .)
-    
-    I will make it responsive, so I need to remove the "px" value and use a responsive value (like vh or vw .)
-    
-    EDIT LATER. */
-    bottom: 40px;
-  }
+  /* By modifying the bottom, top, left and right properties, I should be able to move the button towars the bottom
+  of the screen (source: https://stackoverflow.com/questions/36191516/center-and-bottom-align-flex-items .)
+  
+  I will make it responsive, so I need to remove the "px" value and use a responsive value (like vh or vw .) */
+  bottom: 8vh;
+}
   
   /* This should move the "check our portfolio button" to the center of the page */
   /* div#portfolio-button {
@@ -183,9 +181,13 @@ div#home-title {
     /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
     The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
     right margins should be of 20px (the 2nd parameter in "padding").
-    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray */
+    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray . 
+    
+    After further consideration, and by looking at my wireframes, it would be better to reduce the vertical padding from
+    15px so that the navbar is closer to the top edge of the browser. And ideally, this should be responsive, and I shouldn't
+    be using "px". However, for the time being, I may leave the vertical padding with "px" units. */
     display: block;
-    padding: 15px 20px;
+    padding: 5px 20px;
   }
   
   /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
@@ -234,8 +236,10 @@ div#home-title {
   width: 100%; 
   height: 118px;
 
-  /* By using "bottom", "top", "left" and "right", I'll be able to move the navbar around the landing page screen */
-  top: 20px;
+  /* By using "bottom", "top", "left" and "right", I'll be able to move the navbar around the landing page screen.
+  
+  EDIT LATER*/
+  top: 0;
 }
   
   /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
