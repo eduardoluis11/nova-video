@@ -45,12 +45,10 @@ html, body {
   
   The image is no longer zoomed-in in a lptop screen of 1366px of width if I use "100% 100%" as the width and height
   of the image in the "background-size" property. */
-  // For screens with a min width of 1366px
-  @media only screen and (min-width: 1366px) {
+  // For laptop, and desktop screens with a min width of 801px
+  @media only screen and (min-width: 801px) {
       background-size: 100% 100%;
   }
-
-
 
   // // For screens with a width larger than 1366px
   // @media only screen and (min-width: 1536px) {
@@ -61,7 +59,7 @@ html, body {
   /* This will make the landing page div to be the same height and width of the <body> tag. */
   height: 100%;
 
-    /* For screens with a max width of 1365px. If I set the height of the image to 100%, and I set "px" units to its
+  /* For smartphone screens. If I set the height of the image to 100%, and I set "px" units to its
   width, I will get more or less the effect that I want for smaller screens.
   
   I need to find out if there's a way to the image horizontally so that I get the specific portion of the image
@@ -69,9 +67,21 @@ html, body {
   
   This only works as intended if I put this below the "height" property (source: 
   https://www.w3schools.com/cssref/pr_background-position.asp .) */
-  @media only screen and (max-width: 1365px) {
+  @media only screen and (max-width: 767px) {
     background-position:right 5%;
     background-size: 1000px 100%; 
+  }
+
+  /* For tablet screens with a min width of 768px and a max width of 800px.
+  
+  I choose 1024px since, if you multiply 728 times 2, you get 1536. Now, a third of 1536 is 512. If you subtract
+  512 to 1536 you get 1024px. That is, if you stretch the image to be double of an iPad screen, and then you subtract
+  a third of it, that's what will be shown on tablet screens. 
+  
+  If I showed only half of the image, it wouldn't look good. I decided to show two-thirds of the image to make it look good. */
+  @media only screen and (min-width: 768px) and (max-width: 800px) {
+    background-position:right 0;
+    background-size: 1024px 100%; 
   }
 }
   
