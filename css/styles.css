@@ -1,3 +1,5 @@
+/* This variable will store the height of the div that contains the navbar. I may change this to "vh" or "vw" units
+to make it responsive. */
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -219,7 +221,7 @@ put 2 CSS selectors for the unvisited and the visited links. */
 
   I need to put the line-height property as the same height of the navbar div so that all of the small navbar links are
   vertically centered. */
-  line-height: 98px;
+  line-height: 88px;
   text-align: center;
 }
 
@@ -230,7 +232,7 @@ put 2 CSS selectors for the unvisited and the visited links. */
   position: absolute;
   width: 100%;
   /* I may need to use "vh" or "vw" units for the height of the div in order to make the navbar height responsive */
-  height: 98px;
+  height: 88px;
   /* By using "bottom", "top", "left" and "right", I'll be able to move the navbar around the landing page screen.
 
   EDIT LATER*/
