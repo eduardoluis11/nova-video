@@ -13,6 +13,10 @@ will see when they first enter the website).
 
 The movie reel image needs to be here*/
 #landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   /* This will add the landing page image. I needed to use the "linear gradient" property and put
   the "rgba" attribut twice to put the black mask. Otherwise, I would get either a white screen, or the
   black mask would never appear. 
@@ -65,6 +69,16 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* This will remove any padding that the button would add that would otherwise prevent the h1 title from being at
+  the center of the landing page. With this I'll be able to move around the button on the "landing page" div. */
+  position: absolute;
+  /* By modifying the bottom, top, left and right properties, I should be able to move the button towars the bottom
+  of the screen (source: https://stackoverflow.com/questions/36191516/center-and-bottom-align-flex-items .)
+
+  I will make it responsive, so I need to remove the "px" value and use a responsive value (like vh or vw .)
+
+  EDIT LATER. */
+  bottom: 40px;
 }
 
 /* This should move the "check our portfolio button" to the center of the page */
@@ -116,7 +130,6 @@ div#home-title {
 
   Since what will ultimately tell me how much padding I'll need is the height of the viewport, I'll use "vh"
   as the measuring unit.*/
-  padding-top: 20vh;
   /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page, 
   by reducing the size of the div container that contains the h1 title.
   Source: https://jsfiddle.net/hr6hq7uj/1/ 
@@ -126,6 +139,9 @@ div#home-title {
   900px is ok for screens of 1536px of width.*/
   /* This moves aligns the text to the center of the div container. */
   text-align: center;
+  /* This will make it so that the h1 title remains at the center of the "landing page" div. Tha is, the 
+  h1 title will be centered both vertically and horizontally. */
+  display: flex;
 }
 @media only screen and (min-width: 1536px) {
   div#home-title {
@@ -191,8 +207,14 @@ put 2 CSS selectors for the unvisited and the visited links. */
 }
 
 .navbar {
+  /* This will allow me to move around the navbar elements, and to prevent them from adding additional padding
+  that would prevent the h1 title from being vertically aligned (source: 
+  https://stackoverflow.com/questions/36191516/center-and-bottom-align-flex-items .) */
+  position: absolute;
   width: 100%;
   height: 118px;
+  /* By using "bottom", "top", "left" and "right", I'll be able to move the navbar around the landing page screen */
+  top: 20px;
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
