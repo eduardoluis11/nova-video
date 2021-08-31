@@ -30,19 +30,17 @@ The movie reel image needs to be here*/
   the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
   repeated and look bad in all other screen sizes anyways.
 
-  I will use media queries to make the movie reel image to look well on different screen sizes.*/
+  I will use media queries to make the movie reel image to look well on different screen sizes.
+
+  The image is no longer zoomed-in in a lptop screen of 1366px of width if I use "100% 100%" as the width and height
+  of the image in the "background-size" property. */
   /* background-color: black; */
   /* This will make the landing page div to be the same height and width of the <body> tag. */
   height: 100%;
 }
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 1366px) {
   #landing-page {
-    background-size: 1366px 768px;
-  }
-}
-@media only screen and (min-width: 1536px) {
-  #landing-page {
-    background-size: 1536px 768px;
+    background-size: 100% 100%;
   }
 }
 
