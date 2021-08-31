@@ -166,9 +166,12 @@ put 2 CSS selectors for the unvisited and the visited links. */
 
   After further consideration, and by looking at my wireframes, it would be better to reduce the vertical padding from
   15px so that the navbar is closer to the top edge of the browser. And ideally, this should be responsive, and I shouldn't
-  be using "px". However, for the time being, I may leave the vertical padding with "px" units. */
+  be using "px". However, for the time being, I may leave the vertical padding with "px" units. 
+
+  To perfectly align the small navbar elements with the Nova logo, I need to remove any vertical padding from the navbar, 
+  so I'll make the 1st parameter of the padding 0. */
   display: block;
-  padding: 5px 20px;
+  padding: 0 20px;
 }
 
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
@@ -206,6 +209,18 @@ put 2 CSS selectors for the unvisited and the visited links. */
 /* This will modify the style sheets of the small navbar links to other pages. */
 .navbar-small-link li {
   font-size: 25px;
+  /* This vertically centers the small navbar links (source: 
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical .) 
+
+  BUG: The problem is that all of the small elements are piled on top of each other, and are located
+  right on top of the Nova logo. I need to separate them, and align them towards the right side of the screen.  */
+  /* This vertically centers the small navbar elements inside of the navbar without any bugs
+  (source: Michiel van Oosterhout from https://stackoverflow.com/questions/8865458/how-do-i-vertically-center-text-with-css .)
+
+  I need to put the line-height property as the same height of the navbar div so that all of the small navbar links are
+  vertically centered. */
+  line-height: 98px;
+  text-align: center;
 }
 
 .navbar {
@@ -214,7 +229,8 @@ put 2 CSS selectors for the unvisited and the visited links. */
   https://stackoverflow.com/questions/36191516/center-and-bottom-align-flex-items .) */
   position: absolute;
   width: 100%;
-  height: 118px;
+  /* I may need to use "vh" or "vw" units for the height of the div in order to make the navbar height responsive */
+  height: 98px;
   /* By using "bottom", "top", "left" and "right", I'll be able to move the navbar around the landing page screen.
 
   EDIT LATER*/
