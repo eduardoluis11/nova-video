@@ -37,10 +37,24 @@ The movie reel image needs to be here*/
   /* background-color: black; */
   /* This will make the landing page div to be the same height and width of the <body> tag. */
   height: 100%;
+  /* For screens with a max width of 1365px. If I set the height of the image to 100%, and I set "px" units to its
+  width, I will get more or less the effect that I want for smaller screens.
+
+  I need to find out if there's a way to the image horizontally so that I get the specific portion of the image
+  that I want to show.
+
+  This only works as intended if I put this below the "height" property (source: 
+  https://www.w3schools.com/cssref/pr_background-position.asp .) */
 }
 @media only screen and (min-width: 1366px) {
   #landing-page {
     background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 1365px) {
+  #landing-page {
+    background-position: right 5%;
+    background-size: 1000px 100%;
   }
 }
 

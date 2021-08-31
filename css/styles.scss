@@ -35,30 +35,45 @@ html, body {
       ),
       url(../img/landing-page-bg.jpg);
   
-    /* This makes the images to be resized so that it fits the browser window. 
-    
-    In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
-    the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
-    repeated and look bad in all other screen sizes anyways.
-    
-    I will use media queries to make the movie reel image to look well on different screen sizes.
-    
-    The image is no longer zoomed-in in a lptop screen of 1366px of width if I use "100% 100%" as the width and height
-    of the image in the "background-size" property. */
-    // For screens with a min width of 1366px
-    @media only screen and (min-width: 1366px) {
-        background-size: 100% 100%;
-    }
-
-    // // For screens with a width larger than 1366px
-    // @media only screen and (min-width: 1536px) {
-    //     background-size: 100% 100%;
-    // }
+  /* This makes the images to be resized so that it fits the browser window. 
   
-    /* background-color: black; */
-    /* This will make the landing page div to be the same height and width of the <body> tag. */
-    height: 100%;
+  In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
+  the size screen. I can't use "100%". And anyways, even if I used "100%", the image would get cropped or would get
+  repeated and look bad in all other screen sizes anyways.
+  
+  I will use media queries to make the movie reel image to look well on different screen sizes.
+  
+  The image is no longer zoomed-in in a lptop screen of 1366px of width if I use "100% 100%" as the width and height
+  of the image in the "background-size" property. */
+  // For screens with a min width of 1366px
+  @media only screen and (min-width: 1366px) {
+      background-size: 100% 100%;
   }
+
+
+
+  // // For screens with a width larger than 1366px
+  // @media only screen and (min-width: 1536px) {
+  //     background-size: 100% 100%;
+  // }
+
+  /* background-color: black; */
+  /* This will make the landing page div to be the same height and width of the <body> tag. */
+  height: 100%;
+
+    /* For screens with a max width of 1365px. If I set the height of the image to 100%, and I set "px" units to its
+  width, I will get more or less the effect that I want for smaller screens.
+  
+  I need to find out if there's a way to the image horizontally so that I get the specific portion of the image
+  that I want to show.
+  
+  This only works as intended if I put this below the "height" property (source: 
+  https://www.w3schools.com/cssref/pr_background-position.asp .) */
+  @media only screen and (max-width: 1365px) {
+    background-position:right 5%;
+    background-size: 1000px 100%; 
+  }
+}
   
   /* Style sheet of the "Check our Portfolio" button */
   #portfolio-button {
