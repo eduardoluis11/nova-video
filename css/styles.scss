@@ -2,6 +2,12 @@
 to make it responsive. */
 $navbar-height: 88px;
 
+/* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
+So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
+$edge-navbar-padding: 9px;
+$internal-navbar-padding: 0 11px;
+
+
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -222,7 +228,10 @@ div#home-title {
     To perfectly align the small navbar elements with the Nova logo, I need to remove any vertical padding from the navbar, 
     so I'll make the 1st parameter of the padding 0. */
     display: block;
-    padding: 0 20px;
+
+    /* 12 px of horizontal padding looks good on laptop screens (it looks like my wireframe.) I may need to edit this later
+    to make this padding responsive, though. */
+    padding: $internal-navbar-padding;
   }
   
   /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
@@ -255,6 +264,10 @@ div#home-title {
     Source: https://jsfiddle.net/hr6hq7uj/1/ */
     max-width: 255px;
     /* display: inline-block; */
+
+    /* This will give additional horizontal padding so that the logo has 20 px of padding between itself and the left border 
+    of the browser (as 20px is the minimum margin that there should be between the browser's window and any element.) */
+    padding-left: $edge-navbar-padding;
   }
   
 /* This will modify the style sheets of the small navbar links to other pages. */
