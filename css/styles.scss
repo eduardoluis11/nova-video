@@ -20,27 +20,31 @@ html, body {
   margin: 0;
 }
   
-  /* This modifies the styles of the landing page (the top of the home page, the part of the page the user
-  will see when they first enter the website). 
+/* This modifies the styles of the landing page (the top of the home page, the part of the page the user
+will see when they first enter the website). 
+
+The movie reel image needs to be here*/
+#landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  /* This will add the landing page image. I needed to use the "linear gradient" property and put
+  the "rgba" attribut twice to put the black mask. Otherwise, I would get either a white screen, or the
+  black mask would never appear. 
+  Source: https://css-tricks.com/tinted-images-multiple-backgrounds/ 
   
-  The movie reel image needs to be here*/
-  #landing-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  
-    /* This will add the landing page image. I needed to use the "linear gradient" property and put
-    the "rgba" attribut twice to put the black mask. Otherwise, I would get either a white screen, or the
-    black mask would never appear. 
-    Source: https://css-tricks.com/tinted-images-multiple-backgrounds/ */
-    background: 
-      linear-gradient(
-      rgba(0, 0, 0, 0.65), 
-      rgba(0, 0, 0, 0.65)
-      ),
-      url(../img/landing-page-bg.jpg);
-  
+  I used a lower quality version of the image to make the background image load way faster.
+
+  Source of the background image: https://unsplash.com/photos/xq1eWTas_a0 */
+  background: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.65), 
+    rgba(0, 0, 0, 0.65)
+    ),
+    url(../img/landing-page-bg-medium.jpg);
+
   /* This makes the images to be resized so that it fits the browser window. 
   
   In order for the image to appear in the proper size and not get cropped on a laptop screen, I need to manually specify
