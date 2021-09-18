@@ -344,6 +344,17 @@ I will use "415px" of width for the media query, */
   }
 }
 /* End of the styles for the side navbar */
+/* This should make the hamburger menu icon to disappear on any device that's not a phone. This way, users won't be able 
+to activate the side navbar in tablets nor in laptops/desktop computers. */
+@media screen and (min-width: 415px) {
+  .hamburger-icon {
+    display: none;
+  }
+
+  .closebutton {
+    display: none;
+  }
+}
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
