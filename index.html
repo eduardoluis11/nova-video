@@ -21,29 +21,33 @@
     <!-- This will contain the fullscreen-sized picture of the movie reel for the landing page -->
     <div id="landing-page">
         <!-- This contains the navbar -->
-        <div class="navbar sidenavbar mySidenavbar">
+        <div class="navbar">
             <!-- Navbar -->
             <ul>
-                <!-- I had to reverse the order of the navbar elements so that they appeared in the 
-                right order after using "float: right" in CSS.
-            
-                I will hide them inside a side navbar in smaller screens by using the "mySidenavbar" and 
-                "sidenavbar" classes. 
+                <!-- Side navbar, I will only insert the small navbar links into the side navbar. I don't want to store the logo, 
+                that is, the name of the company inside of the navbar. -->
+                <div class="sidenavbar mySidenavbar">
+                    <!-- I had to reverse the order of the navbar elements so that they appeared in the 
+                    right order after using "float: right" in CSS.
                 
-                I will also use JS code to make the "X" button which will close the side navbar after  I open it. 
-                
-                The "&times;" text will render the "X" button for closing the navbar (source: 
-                https://www.w3schools.com/howto/howto_js_sidenav.asp) -->
-                <div class="navbar-small-link">
-                    <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#"><u>Home</u></a></li>
-                </div>
+                    I will hide them inside a side navbar in smaller screens by using the "mySidenavbar" and 
+                    "sidenavbar" classes. 
+                    
+                    I will also use JS code to make the "X" button which will close the side navbar after  I open it. 
+                    
+                    The "&times;" text will render the "X" button for closing the navbar (source: 
+                    https://www.w3schools.com/howto/howto_js_sidenav.asp) -->
+                    <div class="navbar-small-link">
+                        <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#"><u>Home</u></a></li>
+                    </div>
+                </div>  <!-- End of the Side Navbar-->
+
                 <li class="company-logo">
                     <a href="#">Nova Video Productions</a>
-                    <!-- <a>Word</a> -->
                 </li>
             </ul>
 
@@ -59,7 +63,7 @@
     
         I will paint it white so that it's easier to see on the dark background. I will modify the color of this
         on the CSS file later. -->
-        <span class="hamburger-icon" style="color: white;" onclick="openNavbar()">&#9776; open</span>
+        <span class="hamburger-icon" style="color: white; font-size: 35px;" onclick="openNavbar()">&#9776;</span>
 
         <!-- By adding these line breaks, the h1 main title appears below the navbar.
         
