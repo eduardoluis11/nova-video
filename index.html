@@ -49,21 +49,27 @@
                 <li class="company-logo">
                     <a href="#">Nova Video Productions</a>
                 </li>
+
+                <!-- I will insert the hamburger menu icon inside of a "li" tag to make it appear towards the right edge of
+                the screen. -->
+                <li>
+                    <!-- This is the hamburguer menu icon. If the user clicks it, the side navbar should appear (source:
+                    https://www.w3schools.com/howto/howto_js_sidenav.asp ). 
+                        
+                    This button should only appear in small screens.
+                
+                    The "&#9776;" text refers to the temporal hamburguer menu icon (I will later use an icon from Font Awesome.)
+                
+                    I will paint it white so that it's easier to see on the dark background. I will modify the color of this
+                    on the CSS file later. -->
+                    <span class="hamburger-icon" style="color: white; font-size: 35px;" onclick="openNavbar()">&#9776;</span>
+                </li>
             </ul>
 
 
         </div>
 
-        <!-- This is the hamburguer menu icon. If the user clicks it, the side navbar should appear (source:
-        https://www.w3schools.com/howto/howto_js_sidenav.asp ). 
-            
-        This button should only appear in small screens.
-    
-        The "&#9776;" text refers to the temporal hamburguer menu icon (I will later use an icon from Font Awesome.)
-    
-        I will paint it white so that it's easier to see on the dark background. I will modify the color of this
-        on the CSS file later. -->
-        <span class="hamburger-icon" style="color: white; font-size: 35px;" onclick="openNavbar()">&#9776;</span>
+
 
         <!-- By adding these line breaks, the h1 main title appears below the navbar.
         
