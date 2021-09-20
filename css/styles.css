@@ -316,12 +316,19 @@ I will use "415px" of width for the media query, */
 
   /* The navigation menu links.
 
-  I don't want to put the Nova logo inside of the side navbar. So, I will exclude the logo from it.*/
-  .sidenavbar a {
+  I don't want to put the Nova logo inside of the side navbar. So, I will exclude the logo from it.
+
+  This is what's going to make all of my side navbar elements to be aligned vertically.
+
+  This only seems to work if I delete the "li" tags from the "small-navbar-links" class (which contains the small
+  elements of the navbar). For this reason, I decided to add once again the 4 navbar links, but without a "li" tag, and 
+  in a different order so that they appear on the right order if they're shown vertically. */
+  .sidenavbar .sidenavbar-small-links a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
+    /* CHANGE TO WHITE after I'm done with debugging. */
     display: block;
     transition: 0.3s;
   }
@@ -356,6 +363,18 @@ to activate the side navbar in tablets nor in laptops/desktop computers. */
   }
 
   .closebutton {
+    display: none;
+  }
+
+  /* This will make the small links for the side navbar to disappear on larger screens. */
+  .sidenavbar-small-links {
+    display: none;
+  }
+}
+/* This will make the horizontal navbar links (which have a "li" tag) to disappear on phone screens. This is done to 
+so that I don't have 8 navbar links inside of the side navbar.  */
+@media screen and (max-width: 415px) {
+  .navbar-small-link {
     display: none;
   }
 }
