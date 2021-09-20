@@ -10,12 +10,13 @@ and the button should work (by using a class instead of an ID) (source:
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_queryselectorall_class)  */
 
 
-/* Set the width of the side navigation to 250px */
+/* Set the width of the side navigation to 93% of the viewport width. I shouldn't use "px" since I want the width of the
+side navbar to be responsive. */
 function openNavbar() {
     var x, i;
     x = document.querySelectorAll(".mySidenavbar");
     for (i = 0; i < x.length; i++) {
-      x[i].style.width = "250px";
+      x[i].style.width = "93%";
     }
 }
   
