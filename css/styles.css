@@ -329,7 +329,7 @@ I will use "415px" of width for the media query, */
   Then I added 24px to the left so that the navbar links have the same padding betheen the mand the edge of the sidebar as 
   my wireframe's. */
   .sidenavbar .sidenavbar-small-links a {
-    padding: 8px 0px 8px 24px;
+    padding: 8px 0px 12px 24px;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -339,8 +339,11 @@ I will use "415px" of width for the media query, */
     font-family: "Kameron", serif;
   }
 
-  /* Position and style the close button (top right corner) */
-  .sidenavbar .closebutton {
+  /* Position and style the close button (top right corner).
+
+  I had a bug which didn't let me resize the "X" button. To fix it, I had to add the ".sidenavbar-small-links"
+  class as a selector. */
+  .sidenavbar .sidenavbar-small-links .closebutton {
     position: absolute;
     top: 0;
     right: 12px;
@@ -355,7 +358,7 @@ I will use "415px" of width for the media query, */
     padding-top: 15px;
   }
 
-  .sidenavbar a {
+  .sidenavbar .sidenavbar-small-links a {
     font-size: 18px;
   }
 }
