@@ -322,25 +322,30 @@ I will use "415px" of width for the media query, */
 
   This only seems to work if I delete the "li" tags from the "small-navbar-links" class (which contains the small
   elements of the navbar). For this reason, I decided to add once again the 4 navbar links, but without a "li" tag, and 
-  in a different order so that they appear on the right order if they're shown vertically. */
+  in a different order so that they appear on the right order if they're shown vertically. 
+
+  I added 0px to the right since I will be adding the "X" button's padding on another CSS selector. 
+
+  Then I added 24px to the left so that the navbar links have the same padding betheen the mand the edge of the sidebar as 
+  my wireframe's. */
   .sidenavbar .sidenavbar-small-links a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 0px 8px 24px;
     text-decoration: none;
     font-size: 25px;
     color: white;
     /* CHANGE TO WHITE after I'm done with debugging. */
     display: block;
     transition: 0.3s;
+    font-family: "Kameron", serif;
   }
 
   /* Position and style the close button (top right corner) */
   .sidenavbar .closebutton {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 12px;
+    /* This is the padding between the "X" button and the right edge of the screen */
     font-size: 36px;
-    margin-right: 50px;
-    /* I want the side navbar to show up from the right side of the screen */
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
