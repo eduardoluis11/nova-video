@@ -352,6 +352,7 @@ I will use "415px" of width for the media query, */
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  /* These are the styles of the hamburger menu icon */
 }
 @media only screen and (max-width: 415px) and (max-height: 450px) {
   .sidenavbar {
@@ -360,6 +361,29 @@ I will use "415px" of width for the media query, */
 
   .sidenavbar .sidenavbar-small-links a {
     font-size: 18px;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .hamburger-icon {
+    color: white;
+    font-size: 30px;
+    /* This changes the size of the icon */
+    /* I need to add at least 20px of margin between the edge of the screen and this icon. I WON'T use "padding" in
+    here, since I need to use the "padding" property to fix the size of the border that will surround this icon. */
+    margin-right: 20px;
+    /* This adds a border with rounded edges to the icon (source: 
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_border_round ) */
+    border: 1px solid white;
+    /* Width of the border's line */
+    border-radius: 5px;
+    /* This determines how rounded the corners should be */
+    padding: 1px 4px 0px 4px;
+    /* This gives the padding between the icon and the borders */
+    /* This is the class of the Font Awesome icon itself. Using this selector is the only way of adding a margin
+    between the top of the screen and the icon. */
+  }
+  .hamburger-icon .fa-bars {
+    margin-top: 30px;
   }
 }
 /* End of the styles for the side navbar */
