@@ -209,6 +209,12 @@ put 2 CSS selectors for the unvisited and the visited links. */
   padding: 0 11px;
 }
 
+/* This will vertically center the hamburger menu icon so that it gets aligned to the vertical center of the navbar. */
+.hamburger-icon {
+  /* This vertically centers hamburger icon within the navbar (source: https://www.w3schools.com/css/css_align.asp) */
+  line-height: 88px;
+}
+
 /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
 .navbar li {
   /* This turns a vertical list into a horizontal one */
@@ -380,10 +386,9 @@ I will use "415px" of width for the media query, */
     padding: 1px 4px 0px 4px;
     /* This gives the padding between the icon and the borders */
     /* This is the class of the Font Awesome icon itself. Using this selector is the only way of adding a margin
-    between the top of the screen and the icon. */
-  }
-  .hamburger-icon .fa-bars {
-    margin-top: 30px;
+    between the top of the screen and the icon. 
+
+    I DON'T NEED THIS ANY LONGER. */
   }
 }
 /* End of the styles for the side navbar */

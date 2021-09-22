@@ -213,39 +213,46 @@ div#home-title {
   display: flex;
 }
   
-  /* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
-  put 2 CSS selectors for the unvisited and the visited links. */
-  .navbar li a {
-    text-decoration: none;
-    color: white;
-    /* This should change the font of the navbar elements to Kameron */
-    font-family: "Kameron", serif;
-    /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
-    The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
-    right margins should be of 20px (the 2nd parameter in "padding").
-    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray . 
-    
-    After further consideration, and by looking at my wireframes, it would be better to reduce the vertical padding from
-    15px so that the navbar is closer to the top edge of the browser. And ideally, this should be responsive, and I shouldn't
-    be using "px". However, for the time being, I may leave the vertical padding with "px" units. 
-    
-    To perfectly align the small navbar elements with the Nova logo, I need to remove any vertical padding from the navbar, 
-    so I'll make the 1st parameter of the padding 0. */
-    display: block;
-
-    /* 12 px of horizontal padding looks good on laptop screens (it looks like my wireframe.) I may need to edit this later
-    to make this padding responsive, though. */
-    padding: $internal-navbar-padding;
-  }
+/* This should remove all text decoration (underlines and blue text) for the navbar elements without needing to 
+put 2 CSS selectors for the unvisited and the visited links. */
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  /* This should change the font of the navbar elements to Kameron */
+  font-family: "Kameron", serif;
+  /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
+  The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
+  right margins should be of 20px (the 2nd parameter in "padding").
+  Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray . 
   
-  /* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
-  .navbar li {
-    /* This turns a vertical list into a horizontal one */
-    /* display: inline; */
-    /* If I don't use "display inline", this will turn a vertical lsit into a horizontal one, but the navbar
-    elements will be in the reverse order */
-    float: right;
-  }
+  After further consideration, and by looking at my wireframes, it would be better to reduce the vertical padding from
+  15px so that the navbar is closer to the top edge of the browser. And ideally, this should be responsive, and I shouldn't
+  be using "px". However, for the time being, I may leave the vertical padding with "px" units. 
+  
+  To perfectly align the small navbar elements with the Nova logo, I need to remove any vertical padding from the navbar, 
+  so I'll make the 1st parameter of the padding 0. */
+  display: block;
+
+  /* 12 px of horizontal padding looks good on laptop screens (it looks like my wireframe.) I may need to edit this later
+  to make this padding responsive, though. */
+  padding: $internal-navbar-padding;
+}
+
+/* This will vertically center the hamburger menu icon so that it gets aligned to the vertical center of the navbar. */
+.hamburger-icon {
+  /* This vertically centers hamburger icon within the navbar (source: https://www.w3schools.com/css/css_align.asp) */
+  line-height: $navbar-height; 
+}
+
+  
+/* This should arrange all elements of the navbar horizontally, that is, so that they are each to the side of the other  */
+.navbar li {
+  /* This turns a vertical list into a horizontal one */
+  /* display: inline; */
+  /* If I don't use "display inline", this will turn a vertical lsit into a horizontal one, but the navbar
+  elements will be in the reverse order */
+  float: right;
+}
   
   /* This also modifies the style sheets of the navbar elements. */
   .navbar ul {
@@ -409,10 +416,12 @@ I will use "415px" of width for the media query, */
     // padding-right: 4px;
 
     /* This is the class of the Font Awesome icon itself. Using this selector is the only way of adding a margin
-    between the top of the screen and the icon. */
-    .fa-bars {
-      margin-top: 30px;
-    }
+    between the top of the screen and the icon. 
+    
+    I DON'T NEED THIS ANY LONGER. */
+    // .fa-bars {
+    //   margin-top: 30px;
+    // }
   }
 
 }
