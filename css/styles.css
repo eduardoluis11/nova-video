@@ -372,8 +372,11 @@ I will use "415px" of width for the media query, */
 @media only screen and (max-width: 415px) {
   .hamburger-icon {
     color: white;
+    /* This changes the size of the icon. If it's above 29 px, a bug will occur making the icon to get below the navbar
+    in iPhone 5 and iPhone 5S screens. I should make it at east 29 px on screens of 320px of width. 
+
+    FIX THIS BUG*/
     font-size: 30px;
-    /* This changes the size of the icon */
     /* I need to add at least 20px of margin between the edge of the screen and this icon. I WON'T use "padding" in
     here, since I need to use the "padding" property to fix the size of the border that will surround this icon. */
     margin-right: 20px;
