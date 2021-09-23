@@ -27,66 +27,66 @@
         <div class="navbar">
             <!-- Navbar -->
             <!-- <ul> -->
-                <!-- Side navbar, I will only insert the small navbar links into the side navbar. I don't want to store the logo, 
-                that is, the name of the company inside of the navbar. -->
-                <div class="sidenavbar mySidenavbar">
-                    <!-- I had to reverse the order of the navbar elements so that they appeared in the 
-                    right order after using "float: right" in CSS.
+            <!-- Side navbar, I will only insert the small navbar links into the side navbar. I don't want to store the logo, 
+            that is, the name of the company inside of the navbar. -->
+            <div class="sidenavbar mySidenavbar">
+                <!-- I had to reverse the order of the navbar elements so that they appeared in the 
+                right order after using "float: right" in CSS.
+            
+                I will hide them inside a side navbar in smaller screens by using the "mySidenavbar" and 
+                "sidenavbar" classes. 
                 
-                    I will hide them inside a side navbar in smaller screens by using the "mySidenavbar" and 
-                    "sidenavbar" classes. 
-                    
-                    I will also use JS code to make the "X" button which will close the side navbar after  I open it. 
-                    
-                    The "&times;" text will render the "X" button for closing the navbar (source: 
-                    https://www.w3schools.com/howto/howto_js_sidenav.asp) -->
-                    <div class="navbar-small-link">
-                        <ul>
-                            <!-- <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a> -->
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="#"><u>Home</u></a></li>
-                        </ul>
-                    </div>
+                I will also use JS code to make the "X" button which will close the side navbar after  I open it. 
+                
+                The "&times;" text will render the "X" button for closing the navbar (source: 
+                https://www.w3schools.com/howto/howto_js_sidenav.asp) -->
+                <div class="navbar-small-link">
+                    <ul>
+                        <!-- <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a> -->
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#"><u>Home</u></a></li>
+                    </ul>
+                </div>
 
-                    <!-- These are the links for the side navbar. These will be only visible on phone screens. -->
-                    <div class="sidenavbar-small-links">
-                        <!-- <ul> -->
-                            <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>            
-                            <a href="#"><u>Home</u></a>
-                            <a href="portfolio.html">Portfolio</a>
-                            <a href="about.html">About</a>
-                            <a href="contact.html">Contact</a>
-                        <!-- </ul> -->
-                    </div>
-                </div>  <!-- End of the Side Navbar-->
+                <!-- These are the links for the side navbar. These will be only visible on phone screens. -->
+                <div class="sidenavbar-small-links">
+                    <!-- <ul> -->
+                        <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>            
+                        <a href="#"><u>Home</u></a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    <!-- </ul> -->
+                </div>
+            </div>  <!-- End of the Side Navbar-->
 
-                <ul>
-                    <li class="company-logo">
-                        <a href="#">Nova Video Productions</a>
-                    </li>
+            <ul>
+                <li class="company-logo">
+                    <a href="#">Nova Video Productions</a>
+                </li>
 
-                    <!-- I will insert the hamburger menu icon inside of a "li" tag to make it appear towards the right edge of
-                    the screen. -->
-                    <li>
-                        <!-- This is the hamburguer menu icon. If the user clicks it, the side navbar should appear (source:
-                        https://www.w3schools.com/howto/howto_js_sidenav.asp ). 
-                            
-                        This button should only appear in small screens.
-                    
-                        The "&#9776;" text refers to the temporal hamburguer menu icon (I will later use an icon from Font Awesome.)
-                    
-                        I will paint it white so that it's easier to see on the dark background. I will modify the color of this
-                        on the CSS file later.
-                    
-                        This is the source of the hamburger menu icon that I'll use from Font Awesome: 
-                        https://fontawesome.com/v5.15/icons/bars?style=solid-->
-                        <span class="hamburger-icon" onclick="openNavbar()">
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </li>
-                </ul>
+                <!-- I will insert the hamburger menu icon inside of a "li" tag to make it appear towards the right edge of
+                the screen. -->
+                <li>
+                    <!-- This is the hamburguer menu icon. If the user clicks it, the side navbar should appear (source:
+                    https://www.w3schools.com/howto/howto_js_sidenav.asp ). 
+                        
+                    This button should only appear in small screens.
+                
+                    The "&#9776;" text refers to the temporal hamburguer menu icon (I will later use an icon from Font Awesome.)
+                
+                    I will paint it white so that it's easier to see on the dark background. I will modify the color of this
+                    on the CSS file later.
+                
+                    This is the source of the hamburger menu icon that I'll use from Font Awesome: 
+                    https://fontawesome.com/v5.15/icons/bars?style=solid-->
+                    <span class="hamburger-icon" onclick="openNavbar()">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </li>
+            </ul>
         </div>
 
 
