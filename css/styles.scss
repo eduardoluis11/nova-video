@@ -427,6 +427,43 @@ I will use "415px" of width for the media query, */
     // }
   }
 
+  /* I wanted to make the company logo's size to be responsive on phone screens, but I got a bug that altered the alignment
+  of the logo, so that it wasn't vertically centered within the navbar.
+  
+  To fix the bug and make the logo smaller on phone screens, I decided to leave a fixed font size of 30px. Smaller font
+  sizes make the aforementioned bug to reappear.*/
+  .navbar .company-logo {
+    font-size: 30px;
+  }
+
+
+  li.company-logo {
+    /* This vertically centers the logo if I use a responsive size for its font: 
+    (source: https://www.w3schools.com/css/tryit.asp?filename=trycss_align_padding).
+    
+    IT DOESN'T WORK. It just gives me 11px of top and bottom margin, giving me the illusion that it's centered.*/
+    // padding: 11px 0;
+
+    /* This should verticalle center multi-line elements (source: 
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_align_line-height) */
+
+    line-height: $navbar-height;
+    height: $navbar-height;
+
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  // li.company-logo a {
+
+  // }
+
+  // .company-logo {
+  //   position: absolute;
+  //   padding: 1px 0px
+  // }
+
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size).
