@@ -391,11 +391,7 @@ I will use "415px" of width for the media query, */
     // margin-right: 50px; /* This margin is unnecessary */
   }
 
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenavbar {padding-top: 15px;}
-    .sidenavbar .sidenavbar-small-links a {font-size: 18px;}
-  }
+
 
   /* These are the styles of the hamburger menu icon */
   .hamburger-icon {
@@ -433,6 +429,21 @@ I will use "415px" of width for the media query, */
 
 }
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size).
+
+This will make the navbar elements smaller if the user has their phone horizontally. 
+
+I needed to remove this from the media query that checked if the width of the viewport was around 415 px because, otherwise, 
+this code would never be executed. Remember that phones in horizontal mode have like 800px of width, so it would be way over
+415 px wide, so this code wouldn't run.
+
+Since none of this will be inside of the side navbar while in horizontal mode, I need to use the regular navbar class, 
+NOT the side navbar class.*/
+@media screen and (max-height: 450px) {
+  // .sidenavbar {padding-top: 15px;} /* My padding top is like 8px, so I don't currently need this */
+  .navbar-small-link li {font-size: 18px;}
+}
+
 
 /* End of the styles for the side navbar */
 
@@ -461,7 +472,26 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* Styles for the part of the home page with a white background */
 
+/* Styles for the black title on the white background on the home page */
+#home-black-title {
+
+  font-family: "Kameron", serif;
+
+  /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
+  // For laptop screens
+  @media only screen and (min-width: 1366px) {
+      max-width: 380px;
+  }
+
+  // // For screens wider than 1536 px
+  // @media only screen and (min-width: 1536px) {
+  //   max-width: 400px;
+  // }
+}
+
+/* End of the styles for the part of the home page with a white background */
 
 
 
