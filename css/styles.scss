@@ -478,7 +478,21 @@ Since none of this will be inside of the side navbar while in horizontal mode, I
 NOT the side navbar class.*/
 @media screen and (max-height: 450px) {
   // .sidenavbar {padding-top: 15px;} /* My padding top is like 8px, so I don't currently need this */
-  .navbar-small-link li {font-size: 18px;}
+  
+  .navbar-small-link li {font-size: 18px;} /* This will decrease the font size of the navbar's small links  */
+
+  .navbar .company-logo {font-size: 30px;} /* This will decrease the logo's font size  */
+
+  /* This will vertically center the logo within the navbar  */
+  li.company-logo {
+    line-height: $navbar-height;
+    height: $navbar-height;
+
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
 }
 
 
