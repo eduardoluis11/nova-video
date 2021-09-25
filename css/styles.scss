@@ -481,16 +481,23 @@ NOT the side navbar class.*/
   
   .navbar-small-link li {font-size: 18px;} /* This will decrease the font size of the navbar's small links  */
 
-  .navbar .company-logo {font-size: 30px;} /* This will decrease the logo's font size  */
+  .navbar .company-logo {
+    font-size: 30px; /* This will decrease the logo's font size  */
+
+    /* This will reduce the max width of the logo so that it can be kept as 2 lines of text, but it doesn't 
+    appear below the navbar on iPhone 5 screens.  */
+    max-width: 200px;
+  } 
 
   /* This will vertically center the logo within the navbar  */
   li.company-logo {
+    /* Inherited (USE SASS and replace this code)*/
     line-height: $navbar-height;
     height: $navbar-height;
 
     line-height: 1.5;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle; /* End of inheritance */
   }
 
 }
