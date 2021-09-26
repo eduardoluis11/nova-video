@@ -2,6 +2,7 @@
 to make it responsive. */
 /* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
+/* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -433,13 +434,14 @@ NOT the side navbar class.*/
 
   /* This will vertically center the logo within the navbar  */
   li.company-logo {
-    /* Inherited (USE SASS and replace this code)*/
+    /* I wanted to use Sass' inheritance for this since this is code snippet is copied and pasted from above, but 
+    Sass doesn't allow me to use inheritance within media queries*/
     line-height: 88px;
     height: 88px;
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    /* End of inheritance */
+    /* End of re-used code */
   }
 }
 /* End of the styles for the side navbar */
@@ -467,15 +469,22 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 /* Styles for the part of the home page with a white background */
-/* Styles for the black title on the white background on the home page */
-#home-black-title {
-  font-family: "Kameron", serif;
-  /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
+/* Styles for the left half of the grid */
+.body-left-half {
+  /* In laptop screens, this div will occupy 50% of the viewport width */
+  /* Styles for the black title on the white background on the home page */
 }
-@media only screen and (min-width: 1366px) {
-  #home-black-title {
-    max-width: 380px;
+@media only screen and (min-width: 1080px) {
+  .body-left-half {
+    max-width: 50vw;
+    padding-left: 20px;
+    /* This adds 20px of left and right margin to the  */
   }
+}
+.body-left-half #home-black-title {
+  font-family: "Kameron", serif;
+  font-size: 3vw;
+  /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
 }
 
 /* End of the styles for the part of the home page with a white background */

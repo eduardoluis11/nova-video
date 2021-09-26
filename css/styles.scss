@@ -7,6 +7,8 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 $edge-navbar-padding: 9px;
 $internal-navbar-padding: 0 11px;
 
+/* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
+$edge-body-padding: 20px;
 
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
@@ -491,13 +493,14 @@ NOT the side navbar class.*/
 
   /* This will vertically center the logo within the navbar  */
   li.company-logo {
-    /* Inherited (USE SASS and replace this code)*/
+    /* I wanted to use Sass' inheritance for this since this is code snippet is copied and pasted from above, but 
+    Sass doesn't allow me to use inheritance within media queries*/
     line-height: $navbar-height;
     height: $navbar-height;
 
     line-height: 1.5;
     display: inline-block;
-    vertical-align: middle; /* End of inheritance */
+    vertical-align: middle; /* End of re-used code */
   }
 
 }
@@ -532,22 +535,32 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* Styles for the part of the home page with a white background */
 
-/* Styles for the black title on the white background on the home page */
-#home-black-title {
+/* Styles for the left half of the grid */
+.body-left-half {
 
-  font-family: "Kameron", serif;
+  /* In laptop screens, this div will occupy 50% of the viewport width */
+  @media only screen and (min-width: 1080px) {
+    max-width: 50vw;
 
-  /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
-  // For laptop screens
-  @media only screen and (min-width: 1366px) {
-      max-width: 380px;
+    padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
   }
 
-  // // For screens wider than 1536 px
-  // @media only screen and (min-width: 1536px) {
-  //   max-width: 400px;
-  // }
+  /* Styles for the black title on the white background on the home page */
+  #home-black-title {
+    font-family: "Kameron", serif;
+    font-size: 3vw;
+
+    /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
+
+
+    // // For screens wider than 1536 px
+    // @media only screen and (min-width: 1536px) {
+    //   max-width: 400px;
+    // }
+  }
 }
+
+
 
 /* End of the styles for the part of the home page with a white background */
 
