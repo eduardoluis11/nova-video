@@ -535,27 +535,43 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* Styles for the part of the home page with a white background */
 
-/* Styles for the left half of the grid */
-.body-left-half {
-
-  /* In laptop screens, this div will occupy 50% of the viewport width */
-  @media only screen and (min-width: 1080px) {
-    max-width: 50vw;
-    padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
-  }
+/* Styles that will affect both halves of the grid  */
+.home-white-background {
 
   /* Styles for the black title on the white background on the home page */
   #home-black-title {
     font-family: "Kameron", serif;
-    font-size: 4vw;
     line-height: 1; /* This will reduce the default space between the 2 lines of text */
+
+    /* This will execute in phone and tablets screens */
+    @media only screen and (max-width: 1080px) {
+      font-size: 4vh; /* This will make the font look big on small screens */
+    }
+
+    // For laptop screens
+    @media only screen and (min-width: 1080px) {
+      font-size: 4vw; /* This will make the font look big on small screens */
+    }
+    
 
     // // For screens wider than 1536 px
     // @media only screen and (min-width: 1536px) {
     //   max-width: 400px;
     // }
   }
+
+  /* Styles for the left half of the grid */
+  .body-left-half {
+
+    /* In laptop screens, this div will occupy 50% of the viewport width */
+    @media only screen and (min-width: 1080px) {
+      max-width: 50vw;
+      padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
+    }
+  }
 }
+
+
 
 
 

@@ -469,23 +469,38 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 /* Styles for the part of the home page with a white background */
-/* Styles for the left half of the grid */
-.body-left-half {
-  /* In laptop screens, this div will occupy 50% of the viewport width */
+/* Styles that will affect both halves of the grid  */
+.home-white-background {
   /* Styles for the black title on the white background on the home page */
+  /* Styles for the left half of the grid */
+}
+.home-white-background #home-black-title {
+  font-family: "Kameron", serif;
+  line-height: 1;
+  /* This will reduce the default space between the 2 lines of text */
+  /* This will execute in phone and tablets screens */
+}
+@media only screen and (max-width: 1080px) {
+  .home-white-background #home-black-title {
+    font-size: 4vh;
+    /* This will make the font look big on small screens */
+  }
 }
 @media only screen and (min-width: 1080px) {
-  .body-left-half {
+  .home-white-background #home-black-title {
+    font-size: 4vw;
+    /* This will make the font look big on small screens */
+  }
+}
+.home-white-background .body-left-half {
+  /* In laptop screens, this div will occupy 50% of the viewport width */
+}
+@media only screen and (min-width: 1080px) {
+  .home-white-background .body-left-half {
     max-width: 50vw;
     padding-left: 20px;
     /* This adds 20px of left and right margin to the  */
   }
-}
-.body-left-half #home-black-title {
-  font-family: "Kameron", serif;
-  font-size: 4vw;
-  line-height: 1;
-  /* This will reduce the default space between the 2 lines of text */
 }
 
 /* End of the styles for the part of the home page with a white background */
