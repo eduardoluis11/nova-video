@@ -483,8 +483,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 .body-left-half #home-black-title {
   font-family: "Kameron", serif;
-  font-size: 3vw;
-  /* This will make it so that the title is split into 2 lines: "We record and edit" and "videos for events" */
+  font-size: 4vw;
+  line-height: 1;
+  /* This will reduce the default space between the 2 lines of text */
 }
 
 /* End of the styles for the part of the home page with a white background */
