@@ -111,7 +111,7 @@ The movie reel image needs to be here*/
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   #portfolio-button {
     padding: 1vh;
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
 }
 @media only screen and (max-height: 450px) {
