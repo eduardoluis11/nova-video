@@ -163,7 +163,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
   So, I will use a media query, and use a "2vw" on screens larger than tablets so that the text looks big enough
   in laptop screens.*/
   /* The div should have at least 20px of side margins at all times */
-  padding: 0 20px;
+  margin: 0 20px;
   /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
   Source: https://jsfiddle.net/hr6hq7uj/1/ */
   /* max-width: 650px;

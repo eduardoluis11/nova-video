@@ -146,8 +146,6 @@ The movie reel image needs to be here*/
       font-size: 2.5vw;
     }
 
-
-
     /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
     on a black screen (the default background color of the page is white) */
     margin-bottom: 10px;
@@ -217,7 +215,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
     }
 
     /* The div should have at least 20px of side margins at all times */
-    padding: $side-margins;
+    margin: $side-margins;
     
     /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
     Source: https://jsfiddle.net/hr6hq7uj/1/ */
