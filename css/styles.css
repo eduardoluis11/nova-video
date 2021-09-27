@@ -88,20 +88,37 @@ The movie reel image needs to be here*/
 /* Style sheet of the "Check our Portfolio" button */
 #portfolio-button {
   color: white;
-  /* This adds a white border to the button */
   border: 1px solid white;
-  /* This makes the interior of the button to be transparent  */
+  /* This adds a white border to the button */
   background-color: transparent;
-  /* This makes a hand appear when the user hovers the mouse over the button */
+  /* This makes the interior of the button to be transparent  */
   cursor: pointer;
-  /* This will add rounded corners to the button */
+  /* This makes a hand appear when the user hovers the mouse over the button */
   border-radius: 5px;
-  padding: 15px;
-  font-size: 24px;
+  /* This will add rounded corners to the button */
+  /* This will add padding within the button, and establish the size of the text */
   /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
   on a black screen (the default background color of the page is white) */
   margin-bottom: 10px;
   /* text-align: center; */
+}
+@media only screen and (min-width: 767px) and (min-height: 450px) {
+  #portfolio-button {
+    padding: 15px;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  #portfolio-button {
+    padding: 1vh;
+    font-size: 2.5vh;
+  }
+}
+@media only screen and (max-height: 450px) {
+  #portfolio-button {
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
 }
 
 /* This will center the "Check our portfolio" button. Source: 
@@ -537,7 +554,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   font-family: Arial, Helvetica, sans-serif;
   /* This will give the font a size of 20px in tablet and computer screens */
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
   .gray-text {
     font-size: 20px;
   }

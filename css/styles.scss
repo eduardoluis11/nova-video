@@ -29,7 +29,7 @@ $computer-min-width: 1080px;
 $horizontal-phone-height: 450px;
 
 /* If a screen has this width or higher, I  will consider it a tablet screen */
-$tablet-min-width: 768px;
+$tablet-min-width: 767px;
 
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
@@ -100,7 +100,7 @@ The movie reel image needs to be here*/
   
   This only works as intended if I put this below the "height" property (source: 
   https://www.w3schools.com/cssref/pr_background-position.asp .) */
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: $tablet-min-width) {
     background-position:right 5%;
     background-size: 1000px 100%; 
   }
@@ -121,19 +121,37 @@ The movie reel image needs to be here*/
   /* Style sheet of the "Check our Portfolio" button */
   #portfolio-button {
     color: white;
-    /* This adds a white border to the button */
-    border: 1px solid white;
-    /* This makes the interior of the button to be transparent  */
-    background-color: transparent;
-    /* This makes a hand appear when the user hovers the mouse over the button */
-    cursor: pointer;
-    /* This will add rounded corners to the button */
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 24px;
+    
+    border: 1px solid white;  /* This adds a white border to the button */
+    background-color: transparent;  /* This makes the interior of the button to be transparent  */
+    cursor: pointer;  /* This makes a hand appear when the user hovers the mouse over the button */
+    border-radius: 5px; /* This will add rounded corners to the button */
+
+    /* This will add padding within the button, and establish the size of the text */
+    // In tablet and computer screens 
+    @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      padding: 15px;
+      font-size: 24px;
+    }
+
+    // In phone screens in vertical mode
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      padding: 1vh;
+      font-size: 2.5vh;
+    }
+
+    // In phone screens in horizontal mode
+    @media only screen and (max-height: $horizontal-phone-height) {
+      padding: 1vw;
+      font-size: 2.5vw;
+    }
+
+
+
     /* I will temporarily add a margin at the bottom of the button so that I can see how the white border looks
     on a black screen (the default background color of the page is white) */
     margin-bottom: 10px;
+
     /* text-align: center; */
   }
   
