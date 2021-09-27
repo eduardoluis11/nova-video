@@ -7,6 +7,8 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* Shade of gray for the paragraph text for body sections with a white background */
 /* This stores the Arial font */
 /* This stores the Kameron font, which will be used for titles */
+/* This will be the minimum width that I will use to consider a screen to be a computer screen */
+/* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
