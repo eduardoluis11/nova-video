@@ -552,7 +552,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* Styles that will affect both halves of the grid  */
 .home-white-background {
-  padding: $side-margins; /* This will add 20px of side margins to the whole div */
+  margin: $side-margins; /* This will add 20px of side margins to the whole div */
 
   // text-align: center; /* This horizontally centers all of the content within their respective div */
 
@@ -561,14 +561,22 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     font-family: $title-font;
     line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
-    /* This will execute in phone and tablets screens */
-    @media only screen and (max-width: 1080px) {
+    /* This will execute in phone and tablets screens in vertical mode */
+    @media only screen and (max-width: 1080px) and (min-height: 450px) {
       font-size: 4vh; /* This will make the font look big on small screens */
+      padding-bottom: 5vh;  /* This will add padding below the title */
+    }
+
+    /* This will execute in phone and tablets screens in horizontal mode */
+    @media only screen and (max-width: 1080px) and (max-height: 450px) {
+      font-size: 4vw; /* This will make the font look big on small screens */
+      padding-bottom: 5vw;  /* This will add padding below the title */
     }
 
     // For laptop screens
     @media only screen and (min-width: 1080px) {
       font-size: 4vw; /* This will make the font look big on small screens */
+      padding-bottom: 5vw;  /* This will add padding below the title */
     }
     
 
