@@ -504,8 +504,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .home-white-background {
   margin: 0 20px;
   /* This will add 20px of side margins to the whole div */
+  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
+  so that both halves appear one on top of the other in small screeens (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  display: flex;
+  flex-direction: row;
   /* Styles for the black title on the white background on the home page */
-  /* Styles for the left half of the grid */
 }
 .home-white-background #home-black-title {
   font-family: "Kameron", serif;
@@ -538,15 +542,27 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* This will add padding below the title */
   }
 }
-.home-white-background .body-left-half {
-  /* In laptop screens, this div will occupy 50% of the viewport width */
-}
-@media only screen and (min-width: 1080px) {
-  .home-white-background .body-left-half {
-    max-width: 50vw;
-  }
+
+/* Styles for the left half of the grid in the homepage's body */
+.body-left-half {
+  /* In laptop screens, this div will occupy 50% of the viewport width (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  flex: 50%;
 }
 
+/* Styles for the right half of the grid in the homepage's body */
+.body-right-half {
+  /* In laptop screens, this div will occupy 50% of the viewport width */
+  flex: 50%;
+}
+
+/* This will make both halves of the grid from the home page to be stacked one on top of the other in small screens 
+(source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+@media (max-width: 1080px) {
+  .home-white-background {
+    flex-direction: column;
+  }
+}
 /* End of the styles for the part of the home page with a white background */
 /* This styles the gray paragraph text on all pages */
 .gray-text {

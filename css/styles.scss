@@ -579,6 +579,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .home-white-background {
   margin: $side-margins; /* This will add 20px of side margins to the whole div */
 
+  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
+  so that both halves appear one on top of the other in small screeens (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  display: flex;
+  flex-direction: row;
+
   // text-align: center; /* This horizontally centers all of the content within their respective div */
 
   /* Styles for the black title on the white background on the home page */
@@ -609,15 +615,33 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     //   max-width: 400px;
     // }
   }
+} 
 
-  /* Styles for the left half of the grid */
-  .body-left-half {
+/* Styles for the left half of the grid in the homepage's body */
+.body-left-half {
 
-    /* In laptop screens, this div will occupy 50% of the viewport width */
-    @media only screen and (min-width: $computer-min-width) {
-      max-width: 50vw;
-      // padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
-    }
+  /* In laptop screens, this div will occupy 50% of the viewport width (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  flex: 50%;
+
+  // @media only screen and (min-width: $computer-min-width) {
+  //   max-width: 50vw;
+  //   // padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
+  // }
+}
+
+/* Styles for the right half of the grid in the homepage's body */
+.body-right-half {
+
+  /* In laptop screens, this div will occupy 50% of the viewport width */
+  flex: 50%;
+}
+
+/* This will make both halves of the grid from the home page to be stacked one on top of the other in small screens 
+(source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+@media (max-width: $computer-min-width) {
+  .home-white-background {
+    flex-direction: column;
   }
 } /* End of the styles for the part of the home page with a white background */
 
