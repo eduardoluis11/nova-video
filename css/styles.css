@@ -3,6 +3,10 @@ to make it responsive. */
 /* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
+/* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
+/* Shade of gray for the paragraph text for body sections with a white background */
+/* This stores the Arial font */
+/* This stores the Kameron font, which will be used for titles */
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -478,6 +482,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 /* Styles for the part of the home page with a white background */
 /* Styles that will affect both halves of the grid  */
 .home-white-background {
+  padding: 0 20px;
+  /* This will add 20px of side margins to the whole div */
   /* Styles for the black title on the white background on the home page */
   /* Styles for the left half of the grid */
 }
@@ -505,12 +511,16 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 @media only screen and (min-width: 1080px) {
   .home-white-background .body-left-half {
     max-width: 50vw;
-    padding-left: 20px;
-    /* This adds 20px of left and right margin to the  */
   }
 }
 
 /* End of the styles for the part of the home page with a white background */
+/* This styles the gray paragraph text on all pages */
+.gray-text {
+  color: #312B2B;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {

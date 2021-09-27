@@ -10,6 +10,18 @@ $internal-navbar-padding: 0 11px;
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 $edge-body-padding: 20px;
 
+/* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
+$side-margins: 0 20px;
+
+/* Shade of gray for the paragraph text for body sections with a white background */
+$gray-text: #312B2B;
+
+/* This stores the Arial font */
+$arial-font: Arial, Helvetica, sans-serif;
+
+/* This stores the Kameron font, which will be used for titles */
+$title-font: "Kameron", serif;
+
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -149,7 +161,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
     color: white;
 
     /* This sets the font to Arial */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $arial-font;
 
     /* The unit "vw" or "vh" will make the text size to be responsive. This way, the text will automatically become smaller 
     in smaller screens.
@@ -178,7 +190,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
     }
 
     /* The div should have at least 20px of side margins at all times */
-    padding: 0 20px;
+    padding: $side-margins;
     
     /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
     Source: https://jsfiddle.net/hr6hq7uj/1/ */
@@ -228,7 +240,7 @@ put 2 CSS selectors for the unvisited and the visited links. */
   text-decoration: none;
   color: white;
   /* This should change the font of the navbar elements to Kameron */
-  font-family: "Kameron", serif;
+  font-family: $title-font;
   /* This will add some padding to the navbar so that the main title of the landing page is way below the navbar.
   The minimum horizontal padding that must exist between the navbar elements on the edges of the navbar and the left and
   right margins should be of 20px (the 2nd parameter in "padding").
@@ -384,7 +396,7 @@ I will use "415px" of width for the media query, */
     display: block;
     transition: 0.3s;
 
-    font-family: "Kameron", serif;
+    font-family: $title-font;
   }
 
   /* Position and style the close button (top right corner).
@@ -540,10 +552,13 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* Styles that will affect both halves of the grid  */
 .home-white-background {
+  padding: $side-margins; /* This will add 20px of side margins to the whole div */
+
+  // text-align: center; /* This horizontally centers all of the content within their respective div */
 
   /* Styles for the black title on the white background on the home page */
   #home-black-title {
-    font-family: "Kameron", serif;
+    font-family: $title-font;
     line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
     /* This will execute in phone and tablets screens */
@@ -569,18 +584,16 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* In laptop screens, this div will occupy 50% of the viewport width */
     @media only screen and (min-width: 1080px) {
       max-width: 50vw;
-      padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
+      // padding-left: $edge-body-padding; /* This adds 20px of left and right margin to the  */
     }
   }
+} /* End of the styles for the part of the home page with a white background */
+
+/* This styles the gray paragraph text on all pages */
+.gray-text {
+  color: $gray-text;
+  font-family: $arial-font;
 }
-
-
-
-
-
-/* End of the styles for the part of the home page with a white background */
-
-
 
   
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
