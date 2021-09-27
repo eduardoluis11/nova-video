@@ -161,18 +161,25 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-flex_btn */
     With a font size of 1.5vh, the title text looks good on most screen sizes, with the onluy exception of laptop screens.
     So, I will use a media query, and use a "2vw" on screens larger than tablets so that the text looks big enough
     in laptop screens.*/
-    // For small screens
-    @media only screen and (max-width: 1299px) {
-        font-size: 1.5vh;
+
+    // For small screens in vertical mode
+    @media only screen and (max-width: 1080px) and (min-height: 450px) {
+        font-size: 1.7vh;
+    }
+
+    // For small screens in horizontal mode
+    @media only screen and (max-width: 1080px) and (max-height: 450px) {
+      font-size: 1.8vw;
     }
 
     // For laptop screens
-    @media only screen and (min-width: 1300px) {
+    @media only screen and (min-width: 1080px) {
         font-size: 1.8vw;
     }
+
+    /* The div should have at least 20px of side margins at all times */
+    padding: 0 20px;
     
-
-
     /* This will make it so that the title of the homepage is divided into 3 lines in the desktop version of the page.
     Source: https://jsfiddle.net/hr6hq7uj/1/ */
     /* max-width: 650px;
@@ -502,11 +509,7 @@ NOT the side navbar class.*/
     display: inline-block;
     vertical-align: middle; /* End of re-used code */
   }
-
-}
-
-
-/* End of the styles for the side navbar */
+} /* End of the styles for the side navbar */
 
 /* This should make the hamburger menu icon to disappear on any device that's not a phone. This way, users won't be able 
 to activate the side navbar in tablets nor in laptops/desktop computers. */
