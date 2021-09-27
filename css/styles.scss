@@ -28,6 +28,9 @@ $computer-min-width: 1080px;
 /* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 $horizontal-phone-height: 450px;
 
+/* If a screen has this width or higher, I  will consider it a tablet screen */
+$tablet-min-width: 768px;
+
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -570,7 +573,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* This will execute in phone and tablets screens in vertical mode */
     @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
       font-size: 4vh; /* This will make the font look big on small screens */
-      padding-bottom: 5vh;  /* This will add padding below the title */
+      padding-bottom: 7vh;  /* This will add padding below the title */
     }
 
     /* This will execute in phone and tablets screens in horizontal mode */
@@ -606,6 +609,11 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .gray-text {
   color: $gray-text;
   font-family: $arial-font;
+
+  /* This will give the font a size of 20px in tablet and computer screens */
+  @media only screen and (min-width: $tablet-min-width) {
+    font-size: 20px;
+  }
 }
 
   
