@@ -647,10 +647,21 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   margin: 0 20px;
   cursor: pointer;
   /* Styles for computer screens  */
+  /* The following two snippets of code will modify the padding of the link on smaller screens */
 }
 @media only screen and (min-width: 1080px) {
   .back-to-top {
     padding-top: 2vw;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-height: 450px) {
+  .back-to-top {
+    padding-top: 20vw;
+  }
+}
+@media only screen and (max-width: 1080px) and (max-height: 450px) {
+  .back-to-top {
+    padding-top: 20vh;
   }
 }
 

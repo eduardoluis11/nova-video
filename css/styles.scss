@@ -734,6 +734,17 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   @media only screen and (min-width: $computer-min-width) {
     padding-top: 2vw;
   }
+
+  /* The following two snippets of code will modify the padding of the link on smaller screens */
+  // On tablets and phones on vertical mode 
+  @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
+    padding-top: 20vw;
+  }
+
+  // In phone screens in horizontal mode
+  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+    padding-top: 20vh;
+  }
 }
 
   
