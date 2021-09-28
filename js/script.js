@@ -42,3 +42,10 @@ function closeNavbar() {
       x[i].style.width = null;
     }
 }
+
+/* "Back to top" button. By clicking it, the user will return to the top of the current page (source: 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top ). */
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
