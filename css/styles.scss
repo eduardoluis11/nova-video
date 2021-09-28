@@ -672,6 +672,31 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* This will add vertical padding between the paragraph text and the image in the home page on phone and tablet screens   */
+.text-image-padding-mobile {
+  /* On tablets and phones on vertical mode */
+  @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
+    padding-bottom: 9vw;
+  }
+
+  // In phone screens in horizontal mode
+  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+    padding-bottom: 9vh;
+  }
+}
+
+/* This styles the picture of Nova's office front door */
+.office-door {
+  width: 40vw;  /* This will make the size of the image to be responsive */
+
+  /* This will give add a padding to the top of the image in tablet and computer screens which is equivalent to the 
+  biggest font size for the gray paragraph text. This will be done to make the image to be at the same height as the
+  gray text that will be located to the left of the image.  */
+  @media only screen and (min-width: $tablet-min-width) {
+    padding-top: 20px; 
+  }
+}
+
   
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
