@@ -608,15 +608,26 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .office-door {
   width: 35vw;
   /* This will make the size of the image to be responsive */
+  justify-content: center;
   /* This will give add a padding to the top of the image in computer screens which is equivalent to the 
   biggest font size for the gray paragraph text. This will be done to make the image to be at the same height as the
   gray text that will be located to the left of the image. This should only happen when the white body is split into
   the 1x2 grid, which is on screens with at least 1080px of width.  */
+  /* This styles the image on phone screens and on tablets (if the tablet's screen size is less than 1080px wide) */
 }
 @media only screen and (min-width: 1080px) {
   .office-door {
     padding-top: 20px;
     padding-left: 10vw;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .office-door {
+    /* This will horizontally center the image to the center of the div (source: 
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center) */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
