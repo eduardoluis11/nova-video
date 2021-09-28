@@ -616,7 +616,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 @media only screen and (min-width: 1080px) {
   .office-door {
     padding-top: 20px;
-    padding-left: 4vw;
+    padding-left: 10vw;
   }
 }
 
