@@ -641,6 +641,19 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* This will style the "Back To Top" link */
+.back-to-top {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 20px;
+  cursor: pointer;
+  /* Styles for computer screens  */
+}
+@media only screen and (min-width: 1080px) {
+  .back-to-top {
+    padding-top: 2vw;
+  }
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
