@@ -10,6 +10,19 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be the minimum width that I will use to consider a screen to be a computer screen */
 /* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 /* If a screen has this width or higher, I  will consider it a tablet screen */
+/* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
+div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
+in order to create the  1x2 grid */
+.black-title-container, .home-white-background {
+  margin: 0 20px;
+  /* This will add 20px of side margins to the whole div */
+  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
+  so that both halves appear one on top of the other in small screeens (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  display: flex;
+  flex-direction: row;
+}
+
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -502,16 +515,11 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 /* Styles for the part of the home page with a white background */
 /* Styles that will affect both halves of the grid  */
 .home-white-background {
-  margin: 0 20px;
-  /* This will add 20px of side margins to the whole div */
-  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
-  so that both halves appear one on top of the other in small screeens (source: 
-  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
-  display: flex;
-  flex-direction: row;
-  /* Styles for the black title on the white background on the home page */
+  /* This will use Sass to call the snippet of code which contains the instructions on how to create a grid  */
 }
-.home-white-background #home-black-title {
+
+/* Styles for the black title on the white background on the home page */
+#home-black-title {
   font-family: "Kameron", serif;
   line-height: 1;
   /* This will reduce the default space between the 2 lines of text */
@@ -519,7 +527,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This will execute in phone and tablets screens in horizontal mode */
 }
 @media only screen and (max-width: 1080px) and (min-height: 450px) {
-  .home-white-background #home-black-title {
+  #home-black-title {
     font-size: 4vh;
     /* This will make the font look big on small screens */
     padding-bottom: 7vh;
@@ -527,7 +535,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 @media only screen and (max-width: 1080px) and (max-height: 450px) {
-  .home-white-background #home-black-title {
+  #home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
     padding-bottom: 5vw;
@@ -535,7 +543,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 @media only screen and (min-width: 1080px) {
-  .home-white-background #home-black-title {
+  #home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
     padding-bottom: 5vw;
@@ -543,6 +551,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* This will create a 1x2 grid (1 row and 2 columns) which will contain the black title of the home page */
 /* Styles for the left half of the grid in the homepage's body */
 .body-left-half {
   /* In laptop screens, this div will occupy 50% of the viewport width (source: 
@@ -560,6 +569,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 (source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
 @media (max-width: 1080px) {
   .home-white-background {
+    flex-direction: column;
+  }
+
+  .black-title-container {
     flex-direction: column;
   }
 }

@@ -31,6 +31,19 @@ $horizontal-phone-height: 450px;
 /* If a screen has this width or higher, I  will consider it a tablet screen */
 $tablet-min-width: 767px;
 
+/* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
+div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
+in order to create the  1x2 grid */
+%grid {
+  margin: 0 20px; /* This will add 20px of side margins to the whole div */
+
+  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
+  so that both halves appear one on top of the other in small screeens (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
+  display: flex;
+  flex-direction: row;
+}
+
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
 be any white borders surrounding the body nor the image if the landing page.
 Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_div_full_height */
@@ -577,45 +590,44 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* Styles that will affect both halves of the grid  */
 .home-white-background {
-  margin: $side-margins; /* This will add 20px of side margins to the whole div */
-
-  /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
-  so that both halves appear one on top of the other in small screeens (source: 
-  https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
-  display: flex;
-  flex-direction: row;
+  @extend %grid;  /* This will use Sass to call the snippet of code which contains the instructions on how to create a grid  */
 
   // text-align: center; /* This horizontally centers all of the content within their respective div */
+}
 
-  /* Styles for the black title on the white background on the home page */
-  #home-black-title {
-    font-family: $title-font;
-    line-height: 1; /* This will reduce the default space between the 2 lines of text */
+/* Styles for the black title on the white background on the home page */
+#home-black-title {
+  font-family: $title-font;
+  line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
-    /* This will execute in phone and tablets screens in vertical mode */
-    @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
-      font-size: 4vh; /* This will make the font look big on small screens */
-      padding-bottom: 7vh;  /* This will add padding below the title */
-    }
-
-    /* This will execute in phone and tablets screens in horizontal mode */
-    @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
-      font-size: 4vw; /* This will make the font look big on small screens */
-      padding-bottom: 5vw;  /* This will add padding below the title */
-    }
-
-    // For laptop screens
-    @media only screen and (min-width: $computer-min-width) {
-      font-size: 4vw; /* This will make the font look big on small screens */
-      padding-bottom: 5vw;  /* This will add padding below the title */
-    }
-
-    // // For screens wider than 1536 px
-    // @media only screen and (min-width: 1536px) {
-    //   max-width: 400px;
-    // }
+  /* This will execute in phone and tablets screens in vertical mode */
+  @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
+    font-size: 4vh; /* This will make the font look big on small screens */
+    padding-bottom: 7vh;  /* This will add padding below the title */
   }
-} 
+
+  /* This will execute in phone and tablets screens in horizontal mode */
+  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+    font-size: 4vw; /* This will make the font look big on small screens */
+    padding-bottom: 5vw;  /* This will add padding below the title */
+  }
+
+  // For laptop screens
+  @media only screen and (min-width: $computer-min-width) {
+    font-size: 4vw; /* This will make the font look big on small screens */
+    padding-bottom: 5vw;  /* This will add padding below the title */
+  }
+
+  // // For screens wider than 1536 px
+  // @media only screen and (min-width: 1536px) {
+  //   max-width: 400px;
+  // }
+}
+
+/* This will create a 1x2 grid (1 row and 2 columns) which will contain the black title of the home page */
+.black-title-container {
+  @extend %grid;
+}
 
 /* Styles for the left half of the grid in the homepage's body */
 .body-left-half {
@@ -641,6 +653,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 (source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
 @media (max-width: $computer-min-width) {
   .home-white-background {
+    flex-direction: column;
+  }
+
+  .black-title-container {
     flex-direction: column;
   }
 } /* End of the styles for the part of the home page with a white background */
