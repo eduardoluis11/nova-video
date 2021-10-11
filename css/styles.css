@@ -654,14 +654,19 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     padding-top: 2vw;
   }
 }
-@media only screen and (max-width: 1080px) and (min-height: 450px) {
+@media only screen and (max-width: 767px) and (min-height: 450px) {
   .back-to-top {
-    padding-top: 20vw;
+    padding-top: 15%;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 767px) {
+  .back-to-top {
+    padding-top: 5%;
   }
 }
 @media only screen and (max-width: 1080px) and (max-height: 450px) {
   .back-to-top {
-    padding-top: 20vh;
+    padding-top: 5%;
   }
 }
 
