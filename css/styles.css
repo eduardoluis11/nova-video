@@ -645,7 +645,6 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .back-to-top {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 20px;
-  cursor: pointer;
   /* Styles for computer screens  */
   /* The following two snippets of code will modify the padding of the link on smaller screens */
 }
@@ -668,6 +667,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   .back-to-top {
     padding-top: 5%;
   }
+}
+.back-to-top a {
+  cursor: pointer;
 }
 
 /* These are the styles for the footer text */

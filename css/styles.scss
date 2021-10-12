@@ -728,7 +728,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .back-to-top {
   font-family: $arial-font;
   margin: $side-margins;
-  cursor: pointer;
+  // cursor: pointer; // This should be in the "a" tag, NOT on the div containing it
 
   /* Styles for computer screens  */
   @media only screen and (min-width: $computer-min-width) {
@@ -749,6 +749,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   // In phone screens in horizontal mode
   @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
     padding-top: 5%;
+  }
+
+  a {
+    cursor: pointer; // This will only make hand icon appear if the user mosues over the link
   }
 }
 
