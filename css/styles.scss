@@ -31,6 +31,9 @@ $horizontal-phone-height: 450px;
 /* If a screen has this width or higher, I  will consider it a tablet screen */
 $tablet-min-width: 767px;
 
+/* Font size of the gray text */
+$gray-text-size: 20px;
+
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
@@ -668,7 +671,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* This will give the font a size of 20px in tablet and computer screens */
   @media only screen and (min-width: $tablet-min-width) {
-    font-size: 20px;
+    font-size: $gray-text-size;
   }
 }
 
@@ -760,7 +763,18 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .footer-text {
   background-color: black;
   color: white;
+  font-family: $arial-font;
+
+  /* This styles the biggest font size for the footer text */
+  .footer-big-text {
+    // For tablet and computer screens
+    @media only screen and (min-width: $tablet-min-width) {
+      font-size: $gray-text-size;
+    }
+  }
 }
+
+
 
 // footer {
 //   margin-bottom: auto;

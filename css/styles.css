@@ -10,6 +10,7 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be the minimum width that I will use to consider a screen to be a computer screen */
 /* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 /* If a screen has this width or higher, I  will consider it a tablet screen */
+/* Font size of the gray text */
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
@@ -676,6 +677,13 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .footer-text {
   background-color: black;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  /* This styles the biggest font size for the footer text */
+}
+@media only screen and (min-width: 767px) {
+  .footer-text .footer-big-text {
+    font-size: 20px;
+  }
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
