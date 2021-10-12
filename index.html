@@ -153,6 +153,8 @@
     <div class="back-to-top">
         <a onclick="backToTop()"><u>Back to top</u></a>
     </div>
+    <br>    <!-- This adds some padding between "back to top" and the footer -->
+
     <footer>    <!-- Footer -->
         <!-- Placeholder text and background color -->
         <!-- <p style="background-color: chartreuse;">This is the footer</p> -->
@@ -163,13 +165,22 @@
             <a>This is a link.</a>  -->
             <!-- End of placeholder text -->
             
+            <!-- This adds some black padding to the top of the footer, but it's way too high -->
+            <!-- <br> -->
+
+            <!-- This will add a smaller black padding to the top of the footer -->
+            <div style="padding-top: 1%;"></div>
+            
             <!-- Social media icons and site map -->
             <div class="footer-big-text">
-                <p>Follow us on social media</p>
+                <p class="centered-footer-text">Follow us on social media</p>
             </div>
-            <p>Some text</p>
-            <a>An "a" tag.</a>
-            <p>&copy; Copyright YEAR IN JS Nova Video Productions</p>
+
+            <!-- <p>Some text</p>
+            <a>An "a" tag.</a> -->
+            
+            <!-- The JS code will add the year and automatically update it at the beginning of each year -->
+            <p>&copy; Copyright <script>document.write(new Date().getFullYear())</script> Nova Video Productions</p>
 
             <!-- This adds a bit of extra black space below the footer's last line of text, but only of it's below a "p" tag. -->
             <br>    

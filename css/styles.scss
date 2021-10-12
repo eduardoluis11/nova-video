@@ -771,6 +771,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     @media only screen and (min-width: $tablet-min-width) {
       font-size: $gray-text-size;
     }
+    
+  }
+
+  /* This will be the footer text that will be centered */
+  .centered-footer-text {
+    text-align: center;
   }
 }
 
