@@ -670,6 +670,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* These are the styles for the footer text */
+.footer-text {
+  background-color: black;
+  color: white;
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
