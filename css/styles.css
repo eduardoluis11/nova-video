@@ -714,14 +714,27 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .footer-text .sitemap {
+    /* This is the 1x3 grid */
+    /* This is the 1x2 grid */
+  }
+  .footer-text .sitemap .grid-1x3 {
     display: grid;
     /* This will create a 1x3 grid (1 row, 3 columns). I made the center rectangle of the grid to have 30% of the width
     since it makes the site map to look more organized (with the "About" section taking one 3rd of the width of the grid.) */
     grid-template-columns: auto 30% auto;
     /* This will center the "About" link on phone screens */
+    /* This will align the "Contact" link to the right edge of the screen on phones */
   }
-  .footer-text .sitemap .about-centered {
+  .footer-text .sitemap .grid-1x3 .about-centered {
     text-align: center;
+  }
+  .footer-text .sitemap .grid-1x3 .contact-right-aligned {
+    float: right;
+  }
+  .footer-text .sitemap .grid-1x2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* This creates the 1x2 grid */
   }
 }
 
