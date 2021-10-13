@@ -680,6 +680,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   font-family: Arial, Helvetica, sans-serif;
   /* This styles the biggest font size for the footer text */
   /* This will be the footer text that will be centered */
+  /* Styles for the footer's copyright info */
 }
 @media only screen and (min-width: 767px) {
   .footer-text .footer-big-text {
@@ -688,6 +689,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 .footer-text .centered-footer-text {
   text-align: center;
+}
+.footer-text .copyright-info a {
+  color: white;
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the

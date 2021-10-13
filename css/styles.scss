@@ -778,6 +778,13 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   .centered-footer-text {
     text-align: center;
   }
+
+  /* Styles for the footer's copyright info */
+  .copyright-info {
+    a {
+      color: white;
+    }
+  }
 }
 
 
