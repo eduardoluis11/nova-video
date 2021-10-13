@@ -783,7 +783,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* This will be the footer text that will be centered */
   .centered-footer-text {
-    text-align: center;
+    // For phone screens in vertical mode
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      text-align: center;
+    }
   }
 
   /* Styles for the footer's copyright info */

@@ -694,8 +694,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     font-size: 20px;
   }
 }
-.footer-text .centered-footer-text {
-  text-align: center;
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .footer-text .centered-footer-text {
+    text-align: center;
+  }
 }
 .footer-text .copyright-info {
   line-height: 2;
