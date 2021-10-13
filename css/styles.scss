@@ -793,6 +793,14 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* Styles for the site map */
   .sitemap {
+
+    a {
+      text-decoration: none;  // This removes the underlines
+      color: white;
+      line-height:2;
+    }
+    
+
     /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
     https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
     // For phone screens in vertical mode
