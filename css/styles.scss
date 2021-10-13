@@ -838,10 +838,23 @@ so that I don't have 8 navbar links inside of the side navbar.  */
       //   text-align: center; // This will center each link to the center of their respective div
       // }
     }
-
   }
 }
 
+/* This styles the social media icons on the footer */
+.social-media-footer {
+  
+  /* This will directly affect the social media icon images */
+  img {
+    /* From what I've read from the brand guidelines from both Facebook and YouTube, it seems that both icons need to have 64x64 
+    px as their dimensions. Also, the distance between the Youtube icon and anything surrounding it should be of at least the 
+    size of the triangle of the "play" icon within the YouTube icon, which is of 11x12 px. 
+    
+    So, I will add 12 px (the largest dimension of the YouTube triangle) as the padding that should surround the Youtube icon,
+    as well as for the FB icon. */
+    padding: 12px;
+  }
+}
 
 
 // footer {
