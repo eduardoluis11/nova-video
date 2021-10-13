@@ -768,6 +768,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   color: white;
   font-family: $arial-font;
 
+  /* This adds the 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
+  sides of the footer instead of black space. */
+  padding: $side-margins;
+
   /* This styles the biggest font size for the footer text */
   .footer-big-text {
     // For tablet and computer screens
@@ -806,7 +810,18 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     // For phone screens in vertical mode
     @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
       display: grid;  // This allows me to use the grid
-      grid-template-columns: auto auto auto;  // This will create a 1x3 grid (1 row, 3 columns) 
+      /* This will create a 1x3 grid (1 row, 3 columns). I made the center rectangle of the grid to have 30% of the width
+      since it makes the site map to look more organized (with the "About" section taking one 3rd of the width of the grid.) */
+      grid-template-columns: auto 30% auto; 
+      
+      /* This will center the "About" link on phone screens */
+      .about-centered {
+        text-align: center;
+      }
+      
+      // div {
+      //   text-align: center; // This will center each link to the center of their respective div
+      // }
     }
 
   }
