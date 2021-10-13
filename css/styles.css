@@ -684,6 +684,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This styles the biggest font size for the footer text */
   /* This will be the footer text that will be centered */
   /* Styles for the footer's copyright info */
+  /* Styles for the site map */
 }
 @media only screen and (min-width: 767px) {
   .footer-text .footer-big-text {
@@ -698,6 +699,16 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 .footer-text .copyright-info a {
   color: white;
+}
+.footer-text .sitemap {
+  /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .footer-text .sitemap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
