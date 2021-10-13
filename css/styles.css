@@ -712,7 +712,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .footer-text .sitemap a {
   text-decoration: none;
   color: white;
-  line-height: 2;
+  line-height: 3;
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .footer-text .sitemap {
