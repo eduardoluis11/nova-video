@@ -781,8 +781,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* Styles for the footer's copyright info */
   .copyright-info {
+    line-height:2;  // This gives additional space between each line of text
+
     a {
-      color: white;
+      color: white; // This makes the underlined links to be white
     }
   }
 }
