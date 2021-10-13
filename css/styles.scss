@@ -399,8 +399,11 @@ put 2 CSS selectors for the unvisited and the visited links. */
 Source of most of this code: https://www.w3schools.com/howto/howto_js_sidenav.asp   
 
 If I put "max width: 414px", the sidebar will be invisible in screens of 414px of width (like the iPhone 6). So, 
-I will use "415px" of width for the media query, */
-@media only screen and (max-width: 415px) {
+I will use "415px" of width for the media query. 
+
+I ended up using a variable that stores a tablet's min width to specify that the hamburger menu icon should only appear
+on phones, not in tablets. */
+@media only screen and (max-width: $tablet-min-width) {
   /* The side navigation menu */
   .sidenavbar {
     height: 100%; /* 100% Full-height */
@@ -566,7 +569,7 @@ NOT the side navbar class.*/
 
 /* This should make the hamburger menu icon to disappear on any device that's not a phone. This way, users won't be able 
 to activate the side navbar in tablets nor in laptops/desktop computers. */
-@media screen and (min-width: 415px) {
+@media screen and (min-width: $tablet-min-width) {
   .hamburger-icon {
     display: none;
   }
@@ -583,7 +586,7 @@ to activate the side navbar in tablets nor in laptops/desktop computers. */
 
 /* This will make the horizontal navbar links (which have a "li" tag) to disappear on phone screens. This is done to 
 so that I don't have 8 navbar links inside of the side navbar.  */
-@media screen and (max-width: 415px) {
+@media screen and (max-width: $tablet-min-width) {
   .navbar-small-link {
     display: none;
   }
