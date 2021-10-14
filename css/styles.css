@@ -751,6 +751,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   color: white;
 }
 .footer-text .sitemap {
+  /* Fot all of the links (all of the site map's text) */
   /* This will add padding between the site map links and the copyright info text  */
   padding-bottom: 4%;
   /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
@@ -760,6 +761,14 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   text-decoration: none;
   color: white;
   line-height: 3;
+  /* Font size for tablet and computer screens. I will make it the same size as the "Follow us on social media" title.
+  This way, both "Follow us" and the site map links will be perfectly algined in computer screens (the will appear 
+  side-by-side in a 1x5 grid.) */
+}
+@media only screen and (min-width: 767px) {
+  .footer-text .sitemap a {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .footer-text .sitemap {
@@ -807,8 +816,26 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   size of the triangle of the "play" icon within the YouTube icon, which is of 11x12 px. 
 
   So, I will add 12 px (the largest dimension of the YouTube triangle) as the padding that should surround the Youtube icon,
-  as well as for the FB icon. */
-  padding: 12px;
+  as well as for the FB icon. 
+
+  This will be for phone screens, since phone screens could have font sizes that are smaller than 12 px. So, the "Follow
+  us" text would have less than 12px of padding below it, so it would be too close to the social media icons, violating
+  YouTube's brand guidelines.
+
+  However, this will never happen in computer screens, since I'm not planning on using font sizes of less than 12px
+  in computer screens, so I don't need the extra padding between "Follow us" and the icons. Besides, if I have
+  "padding top" for the social media icons in computer screens, the "Follow us" text would bein a higher position 
+  than the site map links, so the text would look disorganized.*/
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .social-media-footer img {
+    padding: 12px;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .social-media-footer img {
+    padding: 0 12px 12px;
+  }
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
