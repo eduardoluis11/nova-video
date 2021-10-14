@@ -789,7 +789,13 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* This will be the footer text that will be centered */
   .centered-footer-text {
-    // For phone screens in vertical mode
+
+    // .copyright-info {
+    //   /* The copyright info text needs to be centered on all screen sizes, not only on phones  */
+    //   text-align: center;
+    // }
+
+    // For phone screens in vertical mode (this will be for the "Follow us on social media" text)
     @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
       text-align: center;
     }
@@ -804,6 +810,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     }
 
     font-size: small;
+    text-align: center;
   }
 
   /* Styles for the site map */
@@ -877,9 +884,6 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This will add padding between the social media icons and the site map links */
   padding-bottom: 12%;
 }
-
-
-
 
 // footer {
 //   margin-bottom: auto;

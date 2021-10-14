@@ -707,6 +707,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .footer-text .copyright-info {
   line-height: 2;
   font-size: small;
+  text-align: center;
 }
 .footer-text .copyright-info a {
   color: white;
