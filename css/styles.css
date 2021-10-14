@@ -684,12 +684,50 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This adds the 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
   sides of the footer instead of black space. */
   padding: 0 20px;
+  /* This will create a 1x5 grid, which will contain most of the footer text on computer and tablet screens. This will contain
+  the social media icons and its respective title, and the links of the sitemap */
   /* This adds black padding within the footer to add padding between "Follow us on social media" and the upper white edge 
   (the beginning of the footer) */
   /* This styles the biggest font size for the footer text */
   /* This will be the footer text that will be centered */
   /* Styles for the footer's copyright info */
   /* Styles for the site map */
+}
+@media only screen and (min-width: 767px) {
+  .footer-text {
+    /* This grid will create 1 row and 2 columns. The 1st column will have the "Follow us" text and the social media icons.
+    Meanwhile, the 2nd column will have the entirety of the sitemap. */
+    /* This will display the site map links into a 1x2 grid. The reason I'm doing this is since 3 of the site map links
+    are already within a div, and the last 2 are in a different div. Since each div creates a column, the easiest solution
+    is to reuse those divs as my columns. 
+
+    And anyways, the last div has the "privacy policy" and "Terms and conditions"
+    within one div, which is what I wanted to get the desired effect anyways.
+
+    The 1st column will have the "Portfolio", "About" and "Contact" links. Meanwhile, the last column will have 
+    the last 2 links. Since this is a container that will contain 4 columns, I want this container to follow the following 
+    widths for the columns: three-fourths for the column containing the "Portfolio", "About" and "Contact" links, 
+    and one-fourth for the last 2 links.
+
+    So, I'll need to use widths of "75%" and "25%", respectively ("3/4" and "1/4".) */
+    /* Finally, this will divide the container with the "Portfolio", "About", and "Contact" links into 3 separate 
+    columns. So, this will be a 1x3 grid. I could use "auto" or "33%" width, since I want each link to occupy one
+    third of its parent container. */
+  }
+  .footer-text .grid-1x2-social-media {
+    display: grid;
+    /* The first column will have a 20% width since I want to ultimately create a 1x5 grid, so the 1st column should
+    occupy one fifth of the width of the entire grid container (it will contain the "Follow us" text) */
+    grid-template-columns: 20% auto;
+  }
+  .footer-text .grid-1x2-sitemap {
+    display: grid;
+    grid-template-columns: 75% 25%;
+  }
+  .footer-text .grid-1x3-sitemap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }
 .footer-text .black-padding-div {
   padding-top: 1%;

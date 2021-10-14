@@ -169,45 +169,53 @@
             <div class="black-padding-div"></div>
             
             <!-- "Follow us on social media" text-->
-            <div class="footer-big-text">
-                <p class="centered-footer-text">Follow us on social media</p>
-            </div>
-
-            <!-- I'll use line breaks to follow YouTube's brand guidelines, which state that everything surrounding the
-            YouTube icon should be at a distance equal to at least the size of the triangle of the "play" icon within the 
-            YouTube icon.  -->
-            <!-- <br>     -->
-            <div class="social-media-footer">   <!-- Social media icons -->
-                <!-- <div></div> -->
-                <!-- From what I've read from the brand guidelines from both Facebook and YouTube, it seems that 
-                both icons need to have 64x64 px as their dimensions. Also, the distance between the Youtube icon and
-                anything surrounding it should be of at least the size of the triangle of the "play" icon within the 
-                YouTube icon. -->
-                <!-- This extra div will allow me to move both images to the center of the screen. -->
-                <div>
-                    <img src="./img/facebook.png" alt="Facebook icon" height="64px" width="64px">
-                    <img src="./img/youtube.png" alt="YouTube icon">
+            <div class="grid-1x2-social-media">
+                <div>   <!-- "Follow us on social media" text and icons -->
+                    <div class="footer-big-text">
+                        <p class="centered-footer-text">Follow us on social media</p>
+                    </div>
+        
+                    <!-- I'll use line breaks to follow YouTube's brand guidelines, which state that everything surrounding the
+                    YouTube icon should be at a distance equal to at least the size of the triangle of the "play" icon within the 
+                    YouTube icon.  -->
+                    <!-- <br>     -->
+                    <div class="social-media-footer">   <!-- Social media icons -->
+                        <!-- <div></div> -->
+                        <!-- From what I've read from the brand guidelines from both Facebook and YouTube, it seems that 
+                        both icons need to have 64x64 px as their dimensions. Also, the distance between the Youtube icon and
+                        anything surrounding it should be of at least the size of the triangle of the "play" icon within the 
+                        YouTube icon. -->
+                        <!-- This extra div will allow me to move both images to the center of the screen. -->
+                        <div>
+                            <img src="./img/facebook.png" alt="Facebook icon" height="64px" width="64px">
+                            <img src="./img/youtube.png" alt="YouTube icon">
+                        </div>
+                        <!-- <div></div> -->
+                    </div>
                 </div>
-                <!-- <div></div> -->
+                <div>   <!-- Entirety of site map -->
+                    <div class="sitemap grid-1x2-sitemap">   <!-- Site map -->
+                        <!-- For phone screens, I will create a 1x3 grid (1 row, 3 columns) for the "Portfolio", "About", and "Contact" 
+                        pages. Then, I'll create a 1x2 grid (1 row, 2 colums) for the "Privacy Policy" and "Terms and Conditions" 
+                        pages. -->
+                        <div class="grid-1x3 grid-1x3-sitemap">
+                            <div><a href="#"><b>Portfolio</b></a></div>
+                            <div class="about-centered"><a href="#"><b>About</b></a></div>
+                            <div><a class="contact-right-aligned" href="#"><b>Contact</b></a></div>
+                        </div>
+                        <div class="grid-1x2">
+                            <div><a href="#"><b>Privacy Policy</b></a></div>
+                            <!-- <div></div> Empty space on the second 1x3 grid -->
+                            <div><a href="#"><b>Terms and Conditions</b></a></div>
+                        </div>
+        
+                    </div>  <!-- End of site map -->
+                </div>
             </div>
+            
             <!-- <br> -->
 
-            <div class="sitemap">   <!-- Site map -->
-                <!-- For phone screens, I will create a 1x3 grid (1 row, 3 columns) for the "Portfolio", "About", and "Contact" 
-                pages. Then, I'll create a 1x2 grid (1 row, 2 colums) for the "Privacy Policy" and "Terms and Conditions" 
-                pages. -->
-                <div class="grid-1x3">
-                    <div><a href="#"><b>Portfolio</b></a></div>
-                    <div class="about-centered"><a href="#"><b>About</b></a></div>
-                    <div><a class="contact-right-aligned" href="#"><b>Contact</b></a></div>
-                </div>
-                <div class="grid-1x2">
-                    <div><a href="#"><b>Privacy Policy</b></a></div>
-                    <!-- <div></div> Empty space on the second 1x3 grid -->
-                    <div><a href="#"><b>Terms and Conditions</b></a></div>
-                </div>
 
-            </div>  <!-- End of site map -->
             <br>
             <br>
             <br>
