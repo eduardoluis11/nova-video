@@ -800,6 +800,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 /* This styles the social media icons in the footer */
 .social-media-footer {
   /* These 3 lines of code will center both icons to the center of the screen */
+  /* This will remove the underlines that would appear below the social media icons once I insert the link to Nova's
+  FB and YouTube pages into the icon images */
   /* This will directly affect the social media icon images */
   /* This will add padding between the social media icons and the site map links */
   padding-bottom: 12%;
@@ -810,6 +812,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     justify-content: center;
     align-items: center;
   }
+}
+.social-media-footer a {
+  text-decoration: none;
 }
 .social-media-footer img {
   /* From what I've read from the brand guidelines from both Facebook and YouTube, it seems that both icons need to have 64x64 

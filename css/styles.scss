@@ -920,6 +920,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     align-items: center;
   }
 
+  /* This will remove the underlines that would appear below the social media icons once I insert the link to Nova's
+  FB and YouTube pages into the icon images */
+  a {
+    text-decoration: none;
+  }
+
   /* This will directly affect the social media icon images */
   img {
     /* From what I've read from the brand guidelines from both Facebook and YouTube, it seems that both icons need to have 64x64 
