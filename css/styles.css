@@ -684,10 +684,15 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This adds the 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
   sides of the footer instead of black space. */
   padding: 0 20px;
+  /* This adds black padding within the footer to add padding between "Follow us on social media" and the upper white edge 
+  (the beginning of the footer) */
   /* This styles the biggest font size for the footer text */
   /* This will be the footer text that will be centered */
   /* Styles for the footer's copyright info */
   /* Styles for the site map */
+}
+.footer-text .black-padding-div {
+  padding-top: 1%;
 }
 @media only screen and (min-width: 767px) {
   .footer-text .footer-big-text {
@@ -701,6 +706,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 .footer-text .copyright-info {
   line-height: 2;
+  font-size: small;
 }
 .footer-text .copyright-info a {
   color: white;

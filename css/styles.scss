@@ -772,6 +772,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   sides of the footer instead of black space. */
   padding: $side-margins;
 
+  /* This adds black padding within the footer to add padding between "Follow us on social media" and the upper white edge 
+  (the beginning of the footer) */
+  .black-padding-div {
+    padding-top: 1%;
+  }
+
   /* This styles the biggest font size for the footer text */
   .footer-big-text {
     // For tablet and computer screens
@@ -796,6 +802,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     a {
       color: white; // This makes the underlined links to be white
     }
+
+    font-size: small;
   }
 
   /* Styles for the site map */
@@ -865,6 +873,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     padding: 12px;
   }
 }
+
+
 
 
 // footer {
