@@ -719,6 +719,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* The first column will have a 20% width since I want to ultimately create a 1x5 grid, so the 1st column should
     occupy one fifth of the width of the entire grid container (it will contain the "Follow us" text) */
     grid-template-columns: 20% auto;
+    text-align: center;
   }
   .footer-text .grid-1x2-sitemap {
     display: grid;

@@ -779,9 +779,11 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     Meanwhile, the 2nd column will have the entirety of the sitemap. */
     .grid-1x2-social-media {
       display: grid;  // This allows me to use the grid
+
       /* The first column will have a 20% width since I want to ultimately create a 1x5 grid, so the 1st column should
       occupy one fifth of the width of the entire grid container (it will contain the "Follow us" text) */
       grid-template-columns: 20% auto; 
+      text-align: center; // This centers the text and the icons within their respective container within the grid
     }
 
     /* This will display the site map links into a 1x2 grid. The reason I'm doing this is since 3 of the site map links
