@@ -814,6 +814,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
       line-height: 3;
     }
     
+    /* This will add padding between the site map links and the copyright info text  */
+    padding-bottom: 4%;
 
     /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
     https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
@@ -861,7 +863,6 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     align-items: center;
   }
 
-
   /* This will directly affect the social media icon images */
   img {
     /* From what I've read from the brand guidelines from both Facebook and YouTube, it seems that both icons need to have 64x64 
@@ -872,6 +873,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     as well as for the FB icon. */
     padding: 12px;
   }
+
+  /* This will add padding between the social media icons and the site map links */
+  padding-bottom: 12%;
 }
 
 
