@@ -811,7 +811,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 padding bottom or top */
 @media only screen and (max-width: 767px) {
   .sitemap-copyright-padding {
-    padding-bottom: 5%;
+    padding-bottom: 20%;
   }
 }
 
