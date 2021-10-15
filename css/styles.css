@@ -10,7 +10,9 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be the minimum width that I will use to consider a screen to be a computer screen */
 /* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 /* If a screen has this width or higher, I  will consider it a tablet screen */
-/* This is the minimum screen size of an iPhone 5 or 5S (320px) */
+/* This is the minimum width to be wider than an iPhone 5 or 5S in vertical mode (320px) */
+/* This is the maximum height size for an iPhone 5 on horizontal mode (320px) */
+/* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
 /* Font size of the gray text */
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
@@ -739,7 +741,14 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) {
+.footer-text .centered-footer-text {
+  /* For phone screens in vertical mode (this will be for the "Follow us on social media" text). I want this 
+  to apply as well for iPhone 5 screens in horizontal mode.
+
+  For the time being, I want this to apply to all screens that are thinner than a tablet screen. I don't need 
+  to specify a minimum nor a maximum screen height.*/
+}
+@media only screen and (max-width: 767px) {
   .footer-text .centered-footer-text {
     text-align: center;
   }
@@ -758,6 +767,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   padding-bottom: 4%;
   /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
   https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
+  /* For phone screens in vertical mode and iPhone 5 in horizontal mode. This should execute on screens of any height size. */
 }
 .footer-text .sitemap a {
   text-decoration: none;
@@ -772,7 +782,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) {
+@media only screen and (max-width: 767px) {
   .footer-text .sitemap {
     /* This is the 1x3 grid */
     /* This is the 1x2 grid that will contain the "Privacy" and "Terms" links in phone screens wider than iPhone 5 
@@ -793,7 +803,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     float: right;
   }
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) and (min-width: 321px) {
+@media only screen and (max-width: 767px) and (min-width: 321px) {
   .footer-text .sitemap .grid-1x2 {
     display: grid;
     grid-template-columns: auto auto;
@@ -801,7 +811,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     text-align: center;
   }
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) and (max-width: 321px) {
+@media only screen and (max-width: 767px) and (max-width: 321px) {
   .footer-text .sitemap .grid-1x2 {
     text-align: center;
   }
@@ -818,13 +828,21 @@ padding bottom or top */
 /* This styles the social media icons in the footer */
 .social-media-footer {
   /* These 3 lines of code will center both icons to the center of the screen */
+  /* In phone screens in vertical mode, and iPhones in horizontal mode. 
+
+  If I want to put code for iPhone 5 screens in horizontal mode, then I need to specify the MAXIMUM height that will make 
+  this code execute. There's no point in specifying a minimum height if I want to execute code on screens with a really 
+  low height, since that would make this code execute in most screens (both large and small).
+
+  Since I want to center the social media icons to the center of the whole footer in all screens that thinner than 
+  a tablet, there's no point in specifying a minimum nor a maximum height. */
   /* This will remove the underlines that would appear below the social media icons once I insert the link to Nova's
   FB and YouTube pages into the icon images */
   /* This will directly affect the social media icon images */
   /* This will add padding between the social media icons and the site map links */
   padding-bottom: 12%;
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) {
+@media only screen and (max-width: 767px) {
   .social-media-footer {
     display: flex;
     justify-content: center;
@@ -851,7 +869,7 @@ padding bottom or top */
   "padding top" for the social media icons in computer screens, the "Follow us" text would bein a higher position 
   than the site map links, so the text would look disorganized.*/
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) {
+@media only screen and (max-width: 767px) {
   .social-media-footer img {
     padding: 12px;
   }

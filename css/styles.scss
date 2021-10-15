@@ -31,8 +31,14 @@ $horizontal-phone-height: 450px;
 /* If a screen has this width or higher, I  will consider it a tablet screen */
 $tablet-min-width: 767px;
 
-/* This is the minimum screen size of an iPhone 5 or 5S (320px) */
-$iphone5-min-width: 321px;
+/* This is the minimum width to be wider than an iPhone 5 or 5S in vertical mode (320px) */
+$wider-than-iphone5-min-width: 321px;
+
+/* This is the maximum height size for an iPhone 5 on horizontal mode (320px) */
+$iphone5-max-height-horizontal: 320px;
+
+/* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
+$iphone5-max-height-vertical: 568px;
 
 /* Font size of the gray text */
 $gray-text-size: 20px;
@@ -839,8 +845,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     //   text-align: center;
     // }
 
-    // For phone screens in vertical mode (this will be for the "Follow us on social media" text)
-    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    /* For phone screens in vertical mode (this will be for the "Follow us on social media" text). I want this 
+    to apply as well for iPhone 5 screens in horizontal mode.
+    
+    For the time being, I want this to apply to all screens that are thinner than a tablet screen. I don't need 
+    to specify a minimum nor a maximum screen height.*/
+    @media only screen and (max-width: $tablet-min-width) {
       text-align: center;
     }
   }
@@ -879,8 +889,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
     /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
     https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
-    // For phone screens in vertical mode
-    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+
+    /* For phone screens in vertical mode and iPhone 5 in horizontal mode. This should execute on screens of any height size. */
+    @media only screen and (max-width: $tablet-min-width) {
       /* This is the 1x3 grid */
       .grid-1x3 {
         display: grid;  // This allows me to use the grid
@@ -901,7 +912,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
       /* This is the 1x2 grid that will contain the "Privacy" and "Terms" links in phone screens wider than iPhone 5 
       screens (320px of width) */
-      @media only screen and (min-width: $iphone5-min-width) {
+      @media only screen and (min-width: $wider-than-iphone5-min-width) {
         .grid-1x2 {
           display: grid;  // This allows me to use the grid
           grid-template-columns: auto auto; /* This creates the 1x2 grid */
@@ -909,7 +920,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
         }
       }
       // This will display the "Privacy" and "Terms" links one on top of the other on iPhone 5 screens
-      @media only screen and (max-width: $iphone5-min-width) {
+      @media only screen and (max-width: $wider-than-iphone5-min-width) {
         .grid-1x2 {
           text-align: center;
         }
@@ -935,8 +946,15 @@ padding bottom or top */
 /* This styles the social media icons in the footer */
 .social-media-footer {
   /* These 3 lines of code will center both icons to the center of the screen */
-  // In phone screens in vertical mode
-  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+  /* In phone screens in vertical mode, and iPhones in horizontal mode. 
+  
+  If I want to put code for iPhone 5 screens in horizontal mode, then I need to specify the MAXIMUM height that will make 
+  this code execute. There's no point in specifying a minimum height if I want to execute code on screens with a really 
+  low height, since that would make this code execute in most screens (both large and small).
+  
+  Since I want to center the social media icons to the center of the whole footer in all screens that thinner than 
+  a tablet, there's no point in specifying a minimum nor a maximum height. */
+  @media only screen and (max-width: $tablet-min-width) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -965,8 +983,8 @@ padding bottom or top */
     in computer screens, so I don't need the extra padding between "Follow us" and the icons. Besides, if I have
     "padding top" for the social media icons in computer screens, the "Follow us" text would bein a higher position 
     than the site map links, so the text would look disorganized.*/
-    // In phone screens in vertical mode
-    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    // In phone screens in vertical mode and on iPhone 5 in horizontal mode
+    @media only screen and (max-width: $tablet-min-width) {
       padding: 12px;
     }
 
