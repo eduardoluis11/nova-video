@@ -10,6 +10,7 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be the minimum width that I will use to consider a screen to be a computer screen */
 /* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
 /* If a screen has this width or higher, I  will consider it a tablet screen */
+/* This is the minimum screen size of an iPhone 5 or 5S (320px) */
 /* Font size of the gray text */
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
@@ -755,7 +756,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* Fot all of the links (all of the site map's text) */
   /* This will add padding between the site map links and the copyright info text  */
   padding-bottom: 4%;
-  /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
+  /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
   https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
 }
 .footer-text .sitemap a {
@@ -774,7 +775,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .footer-text .sitemap {
     /* This is the 1x3 grid */
-    /* This is the 1x2 grid */
+    /* This is the 1x2 grid that will contain the "Privacy" and "Terms" links in phone screens wider than iPhone 5 
+    screens (320px of width) */
   }
   .footer-text .sitemap .grid-1x3 {
     display: grid;
@@ -790,10 +792,13 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   .footer-text .sitemap .grid-1x3 .contact-right-aligned {
     float: right;
   }
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) and (min-width: 321px) {
   .footer-text .sitemap .grid-1x2 {
     display: grid;
     grid-template-columns: auto auto;
     /* This creates the 1x2 grid */
+    text-align: center;
   }
 }
 

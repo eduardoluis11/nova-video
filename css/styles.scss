@@ -31,6 +31,9 @@ $horizontal-phone-height: 450px;
 /* If a screen has this width or higher, I  will consider it a tablet screen */
 $tablet-min-width: 767px;
 
+/* This is the minimum screen size of an iPhone 5 or 5S (320px) */
+$iphone5-min-width: 321px;
+
 /* Font size of the gray text */
 $gray-text-size: 20px;
 
@@ -874,7 +877,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* This will add padding between the site map links and the copyright info text  */
     padding-bottom: 4%;
 
-    /* I need this to create the 1x3 grid that will contain the site map elements on phone screens (source: 
+    /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
     https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
     // For phone screens in vertical mode
     @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
@@ -896,10 +899,14 @@ so that I don't have 8 navbar links inside of the side navbar.  */
         }
       }
 
-      /* This is the 1x2 grid */
-      .grid-1x2 {
-        display: grid;  // This allows me to use the grid
-        grid-template-columns: auto auto; /* This creates the 1x2 grid */
+      /* This is the 1x2 grid that will contain the "Privacy" and "Terms" links in phone screens wider than iPhone 5 
+      screens (320px of width) */
+      @media only screen and (min-width: $iphone5-min-width) {
+        .grid-1x2 {
+          display: grid;  // This allows me to use the grid
+          grid-template-columns: auto auto; /* This creates the 1x2 grid */
+          text-align: center;
+        }
       }
 
       
