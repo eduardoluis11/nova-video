@@ -923,6 +923,15 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* This will add responsive padding between the site map and the copyright information in the footer. I could use either 
+padding bottom or top */
+.sitemap-copyright-padding {
+  // For phone screens
+  @media only screen and (max-width: $tablet-min-width) {
+    padding-bottom: 5%; 
+  }
+}
+
 /* This styles the social media icons in the footer */
 .social-media-footer {
   /* These 3 lines of code will center both icons to the center of the screen */
