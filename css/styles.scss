@@ -908,6 +908,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
           text-align: center;
         }
       }
+      // This will display the "Privacy" and "Terms" links one on top of the other on iPhone 5 screens
+      @media only screen and (max-width: $iphone5-min-width) {
+        .grid-1x2 {
+          text-align: center;
+        }
+      }
 
       
       // div {

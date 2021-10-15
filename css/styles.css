@@ -801,6 +801,11 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     text-align: center;
   }
 }
+@media only screen and (max-width: 767px) and (min-height: 450px) and (max-width: 321px) {
+  .footer-text .sitemap .grid-1x2 {
+    text-align: center;
+  }
+}
 
 /* This styles the social media icons in the footer */
 .social-media-footer {
