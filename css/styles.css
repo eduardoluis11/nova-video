@@ -417,8 +417,12 @@ on phones, not in tablets. */
 
     FIX THIS BUG
 
-    I used "vw" to make it responsive (dependent on the viewport's width.) */
-    font-size: 9vw;
+    I used "vw" to make it responsive (dependent on the viewport's width.) 
+
+    For thin screens, I could make it "9vw", whereas in wide screens, I could make it "9vh".
+
+    Alternatively, I could simply use "%" as the unit. However, this causes a bug in iPhone 5 screens in vertical
+    mode, so I'd rather use "vh" and "vw". */
     /* I need to add at least 20px of margin between the edge of the screen and this icon. I WON'T use "padding" in
     here, since I need to use the "padding" property to fix the size of the border that will surround this icon. */
     margin-right: 20px;
@@ -441,10 +445,23 @@ on phones, not in tablets. */
 
   To fix the bug and make the logo smaller on phone screens, I decided to leave a fixed font size of 30px. Smaller font
   sizes make the aforementioned bug to reappear.*/
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .hamburger-icon {
+    font-size: 9vw;
+  }
+}
+@media only screen and (max-width: 767px) and (max-height: 450px) {
+  .hamburger-icon {
+    font-size: 9vh;
+  }
+}
+@media only screen and (max-width: 767px) {
   .navbar .company-logo {
     font-size: 30px;
   }
-
+}
+@media only screen and (max-width: 767px) {
   li.company-logo {
     /* This vertically centers the logo if I use a responsive size for its font: 
     (source: https://www.w3schools.com/css/tryit.asp?filename=trycss_align_padding).
