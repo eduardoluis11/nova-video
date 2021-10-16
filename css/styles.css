@@ -785,8 +785,8 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 .footer-text .sitemap {
   /* Fot all of the links (all of the site map's text) */
-  /* This will add padding between the site map links and the copyright info text  */
-  padding-bottom: 4%;
+  /* This will add padding between the site map links and the copyright info text in phone screens in vertical mode  */
+  /* This will add padding between the site map links and the copyright info text in tablet screens  */
   /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
   https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
   /* For phone screens in vertical mode and iPhone 5 in horizontal mode. This should execute on screens of any height size. */
@@ -802,6 +802,16 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 @media only screen and (min-width: 767px) {
   .footer-text .sitemap a {
     font-size: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer-text .sitemap {
+    padding-bottom: 4%;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .footer-text .sitemap {
+    padding-bottom: 8%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -893,8 +903,9 @@ padding bottom or top */
   /* This will remove the underlines that would appear below the social media icons once I insert the link to Nova's
   FB and YouTube pages into the icon images */
   /* This will directly affect the social media icon images */
-  /* This will add padding between the social media icons and the site map links */
-  padding-bottom: 12%;
+  /* This will add padding between the social media icons and the site map links in phone screens in vertical mode */
+  /* This will add padding between the social media icons and the site map links in tablets */
+  /* This will add padding between the social media icons and the site map links in computer screens */
 }
 @media only screen and (max-width: 1279px) {
   .social-media-footer {
@@ -952,6 +963,21 @@ padding bottom or top */
   .social-media-footer img {
     height: 64px;
     width: 64px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .social-media-footer {
+    padding-bottom: 12%;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) {
+  .social-media-footer {
+    padding-bottom: 8%;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .social-media-footer {
+    padding-bottom: 12%;
   }
 }
 

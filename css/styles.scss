@@ -906,8 +906,20 @@ so that I don't have 8 navbar links inside of the side navbar.  */
       }
     }
     
-    /* This will add padding between the site map links and the copyright info text  */
-    padding-bottom: 4%;
+    /* This will add padding between the site map links and the copyright info text in phone screens in vertical mode  */
+    @media only screen and (max-width: $tablet-min-width) {
+      padding-bottom: 4%;
+    }
+
+    /* This will add padding between the site map links and the copyright info text in tablet screens  */
+    @media only screen and (max-width: $computer-min-width) {
+      padding-bottom: 8%;
+    }
+
+    // /* This will add padding between the site map links and the copyright info text in computer screens  */
+    // @media only screen and (min-width: $computer-min-width) {
+    //   padding-bottom: 4%;
+    // }
 
     /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
     https://www.w3schools.com/css/tryit.asp?filename=trycss_grid) */
@@ -1075,8 +1087,20 @@ padding bottom or top */
     }
   }
 
-  /* This will add padding between the social media icons and the site map links */
-  padding-bottom: 12%;
+  /* This will add padding between the social media icons and the site map links in phone screens in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) { 
+    padding-bottom: 12%;
+  }
+
+  /* This will add padding between the social media icons and the site map links in tablets */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) { 
+    padding-bottom: 8%;
+  }
+
+  /* This will add padding between the social media icons and the site map links in computer screens */
+  @media only screen and (min-width: $computer-min-width) { 
+    padding-bottom: 12%;
+  }
 }
 
 // footer {
