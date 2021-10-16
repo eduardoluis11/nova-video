@@ -40,6 +40,9 @@ $iphone5-max-height-horizontal: 320px;
 /* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
 $iphone5-max-height-vertical: 568px;
 
+/* This is the minimum height that is higher than an iPhone SE in horizontal mode */
+$iphone-se-max-height-horizontal: 376px;
+
 /* Font size of the gray text */
 $gray-text-size: 20px;
 
@@ -998,8 +1001,8 @@ grid will contain the "Privacy" and "Terms" links, and will add it to the 2nd co
 /* This will add responsive padding between the site map and the copyright information in the footer. I could use either 
 padding bottom or top */
 .sitemap-copyright-padding {
-  // For phone screens
-  @media only screen and (max-width: $tablet-min-width) {
+  // For phone screens. I don't want this to be executed on iPhone 5 nor older in horizontal mode
+  @media only screen and (min-height: $iphone-se-max-height-horizontal) and (max-width: $tablet-min-width) {
     padding-bottom: 20%; 
   }
 }

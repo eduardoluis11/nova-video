@@ -13,6 +13,7 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This is the minimum width to be wider than an iPhone 5 or 5S in vertical mode (320px) */
 /* This is the maximum height size for an iPhone 5 on horizontal mode (320px) */
 /* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
+/* This is the minimum height that is higher than an iPhone SE in horizontal mode */
 /* Font size of the gray text */
 /* These 2 lines will store the size of the social media icons */
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
@@ -881,7 +882,7 @@ grid will contain the "Privacy" and "Terms" links, and will add it to the 2nd co
 }
 /* This will add responsive padding between the site map and the copyright information in the footer. I could use either 
 padding bottom or top */
-@media only screen and (max-width: 767px) {
+@media only screen and (min-height: 376px) and (max-width: 767px) {
   .sitemap-copyright-padding {
     padding-bottom: 20%;
   }
