@@ -706,7 +706,9 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   sides of the footer instead of black space. */
   padding: 0 20px;
   /* This will create a 1x5 grid, which will contain most of the footer text on computer and tablet screens. This will contain
-  the social media icons and its respective title, and the links of the sitemap */
+  the social media icons and its respective title, and the links of the sitemap.
+
+  I will only execute this on screens of at least 1280px of width (that is, on computer screens.) */
   /* This adds black padding within the footer to add padding between "Follow us on social media" and the upper white edge 
   (the beginning of the footer) */
   /* This styles the biggest font size for the footer text */
@@ -714,7 +716,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* Styles for the footer's copyright info */
   /* Styles for the site map */
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 1279px) {
   .footer-text {
     /* This grid will create 1 row and 2 columns. The 1st column will have the "Follow us" text and the social media icons.
     Meanwhile, the 2nd column will have the entirety of the sitemap. */
@@ -764,9 +766,11 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   to apply as well for iPhone 5 screens in horizontal mode.
 
   For the time being, I want this to apply to all screens that are thinner than a tablet screen. I don't need 
-  to specify a minimum nor a maximum screen height.*/
+  to specify a minimum nor a maximum screen height.
+
+  I want this to also apply on tablet screens (of less than 1280px of width.) */
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
   .footer-text .centered-footer-text {
     text-align: center;
   }
@@ -835,6 +839,36 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 
+/* This will create the 1x5 grid which will contain all of the sitemap links for tablet screens only
+(for screens between 767 px and 1279 px).
+
+Due to the amount of divs that I used in my html code, I will have to create 3 grids in here: a giant 1x2 grid,
+a small 1x3 grid, and a small 1x2 grid. 
+
+The 1x2 grid will contain everything. The 1x3 grid will contain "Portfolio", "About", and "Contact". Finally, the last 1x2 
+grid will contain the "Privacy" and "Terms" links, and will add it to the 2nd column of the giant 1x2 grid. */
+@media only screen and (min-width: 767px) and (max-width: 1279px) {
+  .sitemap-grid-1x5-tablets-part-1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* This creates the giant 1x2 grid */
+    text-align: center;
+  }
+
+  .sitemap-grid-1x5-tablets-part-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* This creates the small 1x3 grid */
+    text-align: center;
+  }
+
+  .sitemap-grid-1x5-tablets-part-3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* This creates the small 1x2 grid */
+    text-align: center;
+  }
+}
 /* This will add responsive padding between the site map and the copyright information in the footer. I could use either 
 padding bottom or top */
 @media only screen and (max-width: 767px) {
@@ -853,14 +887,16 @@ padding bottom or top */
   low height, since that would make this code execute in most screens (both large and small).
 
   Since I want to center the social media icons to the center of the whole footer in all screens that thinner than 
-  a tablet, there's no point in specifying a minimum nor a maximum height. */
+  a tablet, there's no point in specifying a minimum nor a maximum height. 
+
+  I want this to also be executed on tablet screens that are smaller than 1280 px of width. */
   /* This will remove the underlines that would appear below the social media icons once I insert the link to Nova's
   FB and YouTube pages into the icon images */
   /* This will directly affect the social media icon images */
   /* This will add padding between the social media icons and the site map links */
   padding-bottom: 12%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
   .social-media-footer {
     display: flex;
     justify-content: center;
