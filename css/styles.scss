@@ -1106,16 +1106,21 @@ padding bottom or top */
   }
 }
 
+/* DELETE LATER: This is a copy/paste version of the original cookie Consent Banner*/
 /* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
-/* I modified the CSS so that it only affects the Cookie consent banner. */
- .cookie-container {
-  font-family: $arial-font;
+/* I modified the CSS so that it only affects the Cookie consent banner, but the cookie consent banner's CSS is
+ not being modified by this. It's being modified by Bootstrap. */
+ .cookie-container body {
+  font-family: "Arial", sans-serif;
 }
 
 .cookie-container p {
   margin: 24px 0;
   line-height: 2;
-  font-family: $arial-font;
+}
+
+.wrapper {
+  padding: 32px;
 }
 
 .cookie-container {
@@ -1123,7 +1128,7 @@ padding bottom or top */
   bottom: -100%;
   left: 0;
   right: 0;
-  background-color: #2f3640;
+  background: #2f3640;
   color: #f5f6fa;
   padding: 0 32px;
   box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
@@ -1139,17 +1144,63 @@ padding bottom or top */
   color: #f5f6fa;
 }
 
+
 .cookie-btn {
-  background: blue;
+  background: #e84118;
   border: 0;
   color: #f5f6fa;
   padding: 12px 48px;
   font-size: 18px;
   margin-bottom: 16px;
-  border-radius: 2px;
+  border-radius: 8px;
   cursor: pointer;
-  // font-family: $arial-font
 }
+/* End of CSS of the cookie consent banner. */
+
+/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
+/* I modified the CSS so that it only affects the Cookie consent banner. */
+//  .cookie-container {
+//   font-family: $arial-font;
+// }
+
+// .cookie-container p {
+//   margin: 24px 0;
+//   line-height: 2;
+//   font-family: $arial-font;
+// }
+
+// .cookie-container {
+//   position: fixed;
+//   bottom: -100%;
+//   left: 0;
+//   right: 0;
+//   background-color: #2f3640;
+//   color: #f5f6fa;
+//   padding: 0 32px;
+//   box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+
+//   transition: 400ms;
+// }
+
+// .cookie-container.active {
+//   bottom: 0;
+// }
+
+// .cookie-container a {
+//   color: #f5f6fa;
+// }
+
+// .cookie-btn {
+//   background: blue;
+//   border: 0;
+//   color: #f5f6fa;
+//   padding: 12px 48px;
+//   font-size: 18px;
+//   margin-bottom: 16px;
+//   border-radius: 2px;
+//   cursor: pointer;
+//   // font-family: $arial-font
+// }
 /* End of CSS of the cookie consent banner. */
 
 // footer {
