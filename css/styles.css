@@ -1001,7 +1001,7 @@ padding bottom or top */
 
 .cookie-container {
   position: fixed;
-  bottom: -100%;
+  bottom: -200%;
   left: 0;
   right: 0;
   background: #2f3640;
