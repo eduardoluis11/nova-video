@@ -1013,6 +1013,8 @@ padding bottom or top */
 
 .cookie-container.active {
   bottom: 0;
+  /* This will make the text super small so that the cookie container is small in phones in horizontal mode */
+  font-size: 10px;
 }
 
 .cookie-container a {
