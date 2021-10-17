@@ -1108,18 +1108,14 @@ padding bottom or top */
 
 /* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
 /* I modified the CSS so that it only affects the Cookie consent banner. */
-//  .cookie-container {
-//   // font-family: $arial-font;
-// }
+ .cookie-container {
+  font-family: $arial-font;
+}
 
 .cookie-container p {
   margin: 24px 0;
   line-height: 2;
   font-family: $arial-font;
-}
-
-.wrapper {
-  padding: 32px;
 }
 
 .cookie-container {
@@ -1152,7 +1148,7 @@ padding bottom or top */
   margin-bottom: 16px;
   border-radius: 2px;
   cursor: pointer;
-  font-family: $arial-font
+  // font-family: $arial-font
 }
 /* End of CSS of the cookie consent banner. */
 
