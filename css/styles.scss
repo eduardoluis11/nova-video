@@ -410,6 +410,18 @@ put 2 CSS selectors for the unvisited and the visited links. */
   padding-top: 3.5px;
 }
 
+/* This will add a black background to the navbar that will be used in every page 
+except for the home page. */
+.non-home-navbar {
+  background-color: black;
+
+  /* I will add 3.5 px of padding bottom since the original navbar has 3.5 px of padding
+  top. So, by default, the navbar won't look centered if I add a black background. 
+  Therefore, to made the navbar look centered with a black background, I need to add
+  padding to the bottom of the navbar. */
+  padding-bottom: 3.5px;
+}
+
 /* This will handle the styles of the side navbar. This will only be available on small screens (such as phone screens.) 
 
 Source of most of this code: https://www.w3schools.com/howto/howto_js_sidenav.asp   
