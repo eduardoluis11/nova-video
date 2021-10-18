@@ -1,5 +1,9 @@
 /* This variable will store the height of the div that contains the navbar. I may change this to "vh" or "vw" units
 to make it responsive. */
+/* This will store the height of the navbar plus the 3.5 px of padding top and 3.5 px
+of padding bottom that I added to the navbar on every page except the home (
+to center the logo in the navbar in the black background of the navbar).
+) */
 /* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
@@ -121,7 +125,7 @@ image.  */
 
   This adds height to the div that contains the navbar, so it will push everything 
   downwards to prevent anything from hiding behind the navbar.  */
-  height: 88px;
+  height: 95px;
 }
 
 /* Style sheet of the "Check our Portfolio" button */
@@ -644,6 +648,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   .gray-text {
     font-size: 20px;
   }
+}
+
+/* This will add the styles for the titles of the iframes on the Portfolio page */
+.gray-iframe-titles {
+  color: #312B2B;
+  font-family: "Kameron", serif;
 }
 
 /* This will add vertical padding between the paragraph text and the image in the home page on phone and tablet screens   */

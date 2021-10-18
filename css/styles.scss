@@ -2,6 +2,12 @@
 to make it responsive. */
 $navbar-height: 88px;
 
+/* This will store the height of the navbar plus the 3.5 px of padding top and 3.5 px
+of padding bottom that I added to the navbar on every page except the home (
+to center the logo in the navbar in the black background of the navbar).
+) */
+$navbar-height-extended: 95px;
+
 /* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
 $edge-navbar-padding: 9px;
@@ -173,7 +179,7 @@ image.  */
   
   This adds height to the div that contains the navbar, so it will push everything 
   downwards to prevent anything from hiding behind the navbar.  */
-  height: $navbar-height;
+  height: $navbar-height-extended;
 
 } // End of the non-home landing page styles
   
@@ -744,6 +750,12 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   @media only screen and (min-width: $tablet-min-width) {
     font-size: $gray-text-size;
   }
+}
+
+/* This will add the styles for the titles of the iframes on the Portfolio page */
+.gray-iframe-titles {
+  color: $gray-text;
+  font-family: $title-font;
 }
 
 /* This will add vertical padding between the paragraph text and the image in the home page on phone and tablet screens   */
