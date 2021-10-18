@@ -995,10 +995,6 @@ padding bottom or top */
   line-height: 2;
 }
 
-.wrapper {
-  padding: 32px;
-}
-
 .cookie-container {
   position: fixed;
   bottom: -200%;
@@ -1006,15 +1002,30 @@ padding bottom or top */
   right: 0;
   background: #2f3640;
   color: #f5f6fa;
-  padding: 0 32px;
+  /* This will add a minimum padding of 20 px to the sides of the cookie banner. 
+  However, in larger screens, the padding will be of a maximum of 32 px. */
   box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
   transition: 400ms;
+}
+@media screen and (max-width: 767px) {
+  .cookie-container {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .cookie-container {
+    padding: 0 32px;
+  }
 }
 
 .cookie-container.active {
   bottom: 0;
   /* This will make the text super small so that the cookie container is small in phones in horizontal mode */
-  font-size: 10px;
+}
+@media only screen and (max-height: 320px) {
+  .cookie-container.active {
+    font-size: 10px;
+  }
 }
 
 .cookie-container a {
