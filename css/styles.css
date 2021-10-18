@@ -576,7 +576,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 
 /* Styles for the black title on the white background on the home page */
-#home-black-title {
+.home-black-title {
   font-family: "Kameron", serif;
   line-height: 1;
   /* This will reduce the default space between the 2 lines of text */
@@ -584,7 +584,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This will execute in phone and tablets screens in horizontal mode */
 }
 @media only screen and (max-width: 1279px) and (min-height: 450px) {
-  #home-black-title {
+  .home-black-title {
     font-size: 4vh;
     /* This will make the font look big on small screens */
     padding-bottom: 7vh;
@@ -592,7 +592,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
-  #home-black-title {
+  .home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
     padding-bottom: 5vw;
@@ -600,7 +600,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   }
 }
 @media only screen and (min-width: 1279px) {
-  #home-black-title {
+  .home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
     padding-bottom: 5vw;
@@ -1086,9 +1086,11 @@ padding bottom or top */
 }
 
 /* End of CSS of the cookie consent banner. */
-/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
-/* I modified the CSS so that it only affects the Cookie consent banner. */
-/* End of CSS of the cookie consent banner. */
+/* This will add 20 px of side margins to most of the content of the Portfolio page */
+.body-side-margins {
+  margin: 0 20px;
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {

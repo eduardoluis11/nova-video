@@ -670,7 +670,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 
 /* Styles for the black title on the white background on the home page */
-#home-black-title {
+.home-black-title {
   font-family: $title-font;
   line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
@@ -1218,51 +1218,12 @@ padding bottom or top */
 }
 /* End of CSS of the cookie consent banner. */
 
-/* Cookie consent banner CSS. Taken from: https://github.com/Godsont/Cookie-Consent-Banner/edit/master/style.css */
-/* I modified the CSS so that it only affects the Cookie consent banner. */
-//  .cookie-container {
-//   font-family: $arial-font;
-// }
+/* This will add 20 px of side margins to most of the content of the Portfolio page */
+.body-side-margins {
+  margin: $side-margins;
+}
 
-// .cookie-container p {
-//   margin: 24px 0;
-//   line-height: 2;
-//   font-family: $arial-font;
-// }
 
-// .cookie-container {
-//   position: fixed;
-//   bottom: -100%;
-//   left: 0;
-//   right: 0;
-//   background-color: #2f3640;
-//   color: #f5f6fa;
-//   padding: 0 32px;
-//   box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
-
-//   transition: 400ms;
-// }
-
-// .cookie-container.active {
-//   bottom: 0;
-// }
-
-// .cookie-container a {
-//   color: #f5f6fa;
-// }
-
-// .cookie-btn {
-//   background: blue;
-//   border: 0;
-//   color: #f5f6fa;
-//   padding: 12px 48px;
-//   font-size: 18px;
-//   margin-bottom: 16px;
-//   border-radius: 2px;
-//   cursor: pointer;
-//   // font-family: $arial-font
-// }
-/* End of CSS of the cookie consent banner. */
 
 // footer {
 //   margin-bottom: auto;
