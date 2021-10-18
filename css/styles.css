@@ -1022,8 +1022,17 @@ padding bottom or top */
   bottom: 0;
   /* This will make the text super small so that the cookie container is small in phones
   in horizontal mode */
+  /* I will also put that same font size in iPhone 5 screens in vertical mode to try to prevent 
+  a bug in which, if the user goes from vertical mode to horizontal mode, and the naback to vertical 
+  mode, the text becomes too large, so the cookie banner occupies the whole screen, and the "terms"
+  link is not visible.*/
 }
 @media only screen and (max-height: 320px) {
+  .cookie-container.active {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 320px) {
   .cookie-container.active {
     font-size: 10px;
   }

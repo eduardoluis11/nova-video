@@ -1151,6 +1151,14 @@ padding bottom or top */
   @media only screen and (max-height: $iphone5-max-height-horizontal) {
     font-size: 10px;
   }
+
+  /* I will also put that same font size in iPhone 5 screens in vertical mode to try to prevent 
+  a bug in which, if the user goes from vertical mode to horizontal mode, and the naback to vertical 
+  mode, the text becomes too large, so the cookie banner occupies the whole screen, and the "terms"
+  link is not visible.*/
+  @media only screen and (max-width: $iphone5-max-height-horizontal) {
+    font-size: 10px;
+  }
 }
 
 .cookie-container a {
