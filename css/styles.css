@@ -106,15 +106,25 @@ The movie reel image needs to be here*/
 
 /* This will be the landing page styles for any page other than the home page. This code WON'T contain the movie reel 
 image.  */
-#non-home-landing-page {
+.non-home-landing-page {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   /* background-color: black; */
   /* This will make the landing page div to be the same height and width of the <body> tag.
-  I'M NOT SURE IF I'LL BE NEEDING THIS. */
-  height: 100%;
+  I'M NOT SURE IF I'LL BE NEEDING THIS. 
+
+  If I delete this, a bug occurs in which the h1 title of the page disappears. 
+  FIX THIS BUG.
+
+  Turns out that this will add the space between the navbar and the h1 title of the 
+  page. That is, without this, the h1 title will be hidden behind the navbar. So, to
+  fix this bug, I will make this height equivalent to the height of the navbar (88 px).
+
+  This adds height to the div that contains the navbar, so it will push everything 
+  downwards to prevent anything from hiding behind the navbar.  */
+  height: 88px;
 }
 
 /* Style sheet of the "Check our Portfolio" button */
