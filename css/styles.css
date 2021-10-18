@@ -104,6 +104,19 @@ The movie reel image needs to be here*/
   }
 }
 
+/* This will be the landing page styles for any page other than the home page. This code WON'T contain the movie reel 
+image.  */
+#non-home-landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: black; */
+  /* This will make the landing page div to be the same height and width of the <body> tag.
+  I'M NOT SURE IF I'LL BE NEEDING THIS. */
+  height: 100%;
+}
+
 /* Style sheet of the "Check our Portfolio" button */
 #portfolio-button {
   color: white;
