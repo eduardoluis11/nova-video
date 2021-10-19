@@ -656,33 +656,39 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   color: #242121;
   font-family: "Kameron", serif;
   /* H1 titles are of 4vh of size in phone screens, and of 4vw of size in computer 
-  screens. So, I will make h2 titles smaller than those values. */
+  screens. So, I will make h2 titles smaller than those values.
+
+  I will also add responsive padding between the paragraph text and the h2 title. 
+  Don't use "%", since it makes the padding to be too large on computer screens, 
+  even if the padding looks good on phone screens. I will use "vh" and "vw" instead. */
   /* This will execute in phones in vertical mode */
   /* This will execute in phones in horizontal mode */
   /* For tablet screens (they are thin screens, so it's better to use "vh" as
     unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
     would be too small */
-  /* Responsive padding between the paragraph text and the h2 title */
-  padding-top: 20%;
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .gray-iframe-titles {
     font-size: 3vh;
+    padding-top: 5vh;
   }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
   .gray-iframe-titles {
     font-size: 3vw;
+    padding-top: 5vw;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .gray-iframe-titles {
     font-size: 2.5vh;
+    padding-top: 4vh;
   }
 }
 @media only screen and (min-width: 1279px) {
   .gray-iframe-titles {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    padding-top: 2vw;
   }
 }
 
