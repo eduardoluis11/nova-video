@@ -643,6 +643,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 .gray-text {
   color: #312B2B;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
   /* This will give the font a size of 20px in tablet and computer screens */
 }
 @media only screen and (min-width: 767px) {
@@ -676,6 +677,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     /* Code for the iframes */
   }
   .gray-iframe-titles iframe {
+    /* This will add padding between the iframe title and the video */
+    padding-top: 2vh;
+    /* This will add padding between the video and the h2 title of the next video */
+    padding-bottom: 2vh;
     width: 90%;
   }
 }

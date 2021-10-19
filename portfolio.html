@@ -123,14 +123,25 @@
             use the code provided by Youtube for the time being.
         
             Upon further consideration, the 560x315 px size provided by Youtube is too big for phone screens. So, I 
-            specify the width and height in the CSS file, and make it responsive. -->
+            specify the width and height in the CSS file, and make it responsive.
+        
+            I won't add lazy loading to the very first iframe. I will add it to the 2nd iframe and onwards.
+            I will do this to make the 1st video to be loaded as soon as the user enters the page. -->
             <iframe src="https://www.youtube.com/embed/1hwbiccpinA" title="YouTube video player" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
 
-            <h2>
+            <h2>    <!-- Second video -->
                 2) Second video:
             </h2>
+
+            <!-- I will add lazy loading from this iframe and onwards. Lazy loading will load the video 
+            only after the user scrolls down until the video shows up. This will prevent the page from 
+            becoming slow. -->
+            <iframe src="https://www.youtube.com/embed/qoOtO9jXemc" loading="lazy" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
         </div>  <!-- End of the Youtube videos -->
     </div>
     
