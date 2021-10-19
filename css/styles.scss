@@ -769,9 +769,10 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   even if the padding looks good on phone screens. I will use "vh" and "vw" instead.
   
   Also, I will include the dimensions of the iframe windows in here. */
+
   /* This will execute in phones in vertical mode */
   @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
-    font-size: 1.5vh; 
+    font-size: 2.5vh; // This needs to be under 4vh so that h2 titles are smaller than the h1 title
     padding-top: 5vh;
 
     /* Code for the iframes */
