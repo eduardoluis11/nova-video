@@ -22,6 +22,9 @@ $side-margins: 0 20px;
 /* Shade of gray for the paragraph text for body sections with a white background */
 $gray-text: #312B2B;
 
+/* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
+$gray-text-h2-titles: #242121;
+
 /* This stores the Arial font */
 $arial-font: Arial, Helvetica, sans-serif;
 
@@ -754,7 +757,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* This will add the styles for the titles of the iframes on the Portfolio page */
 .gray-iframe-titles {
-  color: $gray-text;
+  color: $gray-text-h2-titles;
   font-family: $title-font;
 
   /* H1 titles are of 4vh of size in phone screens, and of 4vw of size in computer 
@@ -769,18 +772,21 @@ so that I don't have 8 navbar links inside of the side navbar.  */
     font-size: 3vw; 
   }
 
-    /* For tablet screens (they are thin screens, so it's better to use "vh" as
-     unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
-     would be too small */
-    @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) 
-    and (min-height: $horizontal-phone-height) {
-      font-size: 2.5vh; 
-    }
+  /* For tablet screens (they are thin screens, so it's better to use "vh" as
+    unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
+    would be too small */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) 
+  and (min-height: $horizontal-phone-height) {
+    font-size: 2.5vh; 
+  }
 
   // For computer and tablet screens
   @media only screen and (min-width: $computer-min-width) {
     font-size: 2vw; 
   }
+
+  /* Responsive padding between the paragraph text and the h2 title */
+  padding-top: 20%;
 }
 
 /* This will add vertical padding between the paragraph text and the image in the home page on phone and tablet screens   */

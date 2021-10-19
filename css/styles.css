@@ -9,6 +9,7 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
 /* Shade of gray for the paragraph text for body sections with a white background */
+/* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
 /* This stores the Arial font */
 /* This stores the Kameron font, which will be used for titles */
 /* This will be the minimum width that I will use to consider a screen to be a computer screen */
@@ -652,15 +653,17 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
 /* This will add the styles for the titles of the iframes on the Portfolio page */
 .gray-iframe-titles {
-  color: #312B2B;
+  color: #242121;
   font-family: "Kameron", serif;
   /* H1 titles are of 4vh of size in phone screens, and of 4vw of size in computer 
   screens. So, I will make h2 titles smaller than those values. */
   /* This will execute in phones in vertical mode */
   /* This will execute in phones in horizontal mode */
   /* For tablet screens (they are thin screens, so it's better to use "vh" as
-   unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
-   would be too small */
+    unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
+    would be too small */
+  /* Responsive padding between the paragraph text and the h2 title */
+  padding-top: 20%;
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .gray-iframe-titles {
