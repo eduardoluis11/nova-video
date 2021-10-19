@@ -580,20 +580,22 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   /* This will use Sass to call the snippet of code which contains the instructions on how to create a grid  */
 }
 
-/* Styles for the black title on the white background on the home page */
+/* Styles for the black title on the white background on the home page. 
+
+These will be the styles for all h1 black titles.  */
 .home-black-title {
   font-family: "Kameron", serif;
-  line-height: 1;
-  /* This will reduce the default space between the 2 lines of text */
   /* This will execute in phone and tablets screens in vertical mode */
   /* This will execute in phone and tablets screens in horizontal mode */
 }
 @media only screen and (max-width: 1279px) and (min-height: 450px) {
   .home-black-title {
-    font-size: 4vh;
+    font-size: 2rem;
     /* This will make the font look big on small screens */
     padding-bottom: 7vh;
     /* This will add padding below the title */
+    /* I want more line height in phone screens for the multi-line title on the home page */
+    line-height: 1.5;
   }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
@@ -672,7 +674,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .gray-iframe-titles {
-    font-size: 2.5vh;
+    font-size: 1rem;
     padding-top: 5vh;
     /* Code for the iframes */
   }

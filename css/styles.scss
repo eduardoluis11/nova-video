@@ -678,15 +678,20 @@ so that I don't have 8 navbar links inside of the side navbar.  */
   // text-align: center; /* This horizontally centers all of the content within their respective div */
 }
 
-/* Styles for the black title on the white background on the home page */
+/* Styles for the black title on the white background on the home page. 
+
+These will be the styles for all h1 black titles.  */
 .home-black-title {
   font-family: $title-font;
-  line-height: 1; /* This will reduce the default space between the 2 lines of text */
+  // line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
   /* This will execute in phone and tablets screens in vertical mode */
   @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
-    font-size: 4vh; /* This will make the font look big on small screens */
+    font-size: 2rem; /* This will make the font look big on small screens */
     padding-bottom: 7vh;  /* This will add padding below the title */
+
+    /* I want more line height in phone screens for the multi-line title on the home page */
+    line-height: 1.5;
   }
 
   /* This will execute in phone and tablets screens in horizontal mode */
@@ -772,7 +777,7 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 
   /* This will execute in phones in vertical mode */
   @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
-    font-size: 2.5vh; // This needs to be under 4vh so that h2 titles are smaller than the h1 title
+    font-size: 1rem; // This needs to be under 4 vh or under 2 rem so that h2 titles are smaller than the h1 title
     padding-top: 5vh;
 
     /* Code for the iframes */
