@@ -8,6 +8,8 @@ to center the logo in the navbar in the black background of the navbar).
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
+/* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
+(with rem or something similar)   */
 /* Shade of gray for the paragraph text for body sections with a white background.
 
 I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
@@ -35,13 +37,38 @@ These should be SMALLER than the h1 sizes that I specified above. */
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
 .black-title-container, .home-white-background {
-  margin: 0 20px;
-  /* This will add 20px of side margins to the whole div */
+  /* This will add a minimum of 20px of side margins to the whole div. I want to make this responsive.
+
+  If I can't insert a media query in here for being Sass' inheritance tool, I will delete this, and I
+  will manually add the media queries for each screen size. */
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablets. */
   /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
   so that both halves appear one on top of the other in small screeens (source: 
   https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
   display: flex;
   flex-direction: row;
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .black-title-container, .home-white-background {
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .black-title-container, .home-white-background {
+    margin: 0 3em;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .black-title-container, .home-white-background {
+    margin: 0 3em;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .black-title-container, .home-white-background {
+    margin: 0 3em;
+  }
 }
 
 /* This will make the <body> tag to occupy the entire screen, and will remove all margins from it. This way, there won't
@@ -1241,9 +1268,31 @@ padding bottom or top */
 }
 
 /* End of CSS of the cookie consent banner. */
-/* This will add 20 px of side margins to most of the content of the Portfolio page */
+/* This will add a minimum of 20 px of side margins to most of the content of the Portfolio page */
 .body-side-margins {
-  margin: 0 20px;
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablets. */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .body-side-margins {
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .body-side-margins {
+    margin: 0 3em;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .body-side-margins {
+    margin: 0 3em;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .body-side-margins {
+    margin: 0 3em;
+  }
 }
 
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the

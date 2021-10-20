@@ -19,6 +19,10 @@ $edge-body-padding: 20px;
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
 $side-margins: 0 20px;
 
+/* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
+(with rem or something similar)   */
+$side-margins-large: 0 3em; 
+
 /* Shade of gray for the paragraph text for body sections with a white background.
 
 I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
@@ -84,7 +88,32 @@ $h2-size-computer: 1.5vw;  // For computers
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
 %grid {
-  margin: 0 20px; /* This will add 20px of side margins to the whole div */
+
+  /* This will add a minimum of 20px of side margins to the whole div. I want to make this responsive.
+  
+  If I can't insert a media query in here for being Sass' inheritance tool, I will delete this, and I
+  will manually add the media queries for each screen size. */
+    /* For phones in vertical mode */
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      margin: $side-margins;
+    }
+  
+    /* For phones in horizontal mode */
+    @media only screen and (max-height: $horizontal-phone-height) {
+      margin: $side-margins-large;
+    }
+  
+    /* For tablets. */
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+    and (min-height: $horizontal-phone-height) {
+      margin: $side-margins-large;
+    }
+  
+    // For computer screens
+    @media only screen and (min-width: $computer-min-width) {
+      margin: $side-margins-large;
+    }
+  // margin: 0 20px; 
 
   /* This will allow me to split this div into two halves (right and left) in large screens, but it will also make it responsive
   so that both halves appear one on top of the other in small screeens (source: 
@@ -1407,9 +1436,29 @@ padding bottom or top */
 }
 /* End of CSS of the cookie consent banner. */
 
-/* This will add 20 px of side margins to most of the content of the Portfolio page */
+/* This will add a minimum of 20 px of side margins to most of the content of the Portfolio page */
 .body-side-margins {
-  margin: $side-margins;
+  
+  /* For phones in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    margin: $side-margins;
+  }
+
+  /* For phones in horizontal mode */
+  @media only screen and (max-height: $horizontal-phone-height) {
+    margin: $side-margins-large;
+  }
+
+  /* For tablets. */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+  and (min-height: $horizontal-phone-height) {
+    margin: $side-margins-large;
+  }
+
+  // For computer screens
+  @media only screen and (min-width: $computer-min-width) {
+    margin: $side-margins-large;
+  }
 }
 
 
