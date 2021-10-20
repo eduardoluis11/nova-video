@@ -23,8 +23,11 @@ $side-margins: 0 20px;
 
 I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
 the same color of the h1 and h2 titles, whereas, in reality, it needs to be clearly lighter than the titles
-since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter. */
-$gray-text: #7a6f6f;
+since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter.
+
+Upon further consideration I decided to use the shade "Jet" (#131516), since it has better contrast with 
+a white background, so it's easier to read (source: https://www.viget.com/articles/color-contrast/ .)*/
+$gray-text: #131516;
 
 /* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
 $gray-text-h2-titles: #242121;
