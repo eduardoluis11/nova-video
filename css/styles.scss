@@ -59,6 +59,20 @@ $gray-text-size: 20px;
 $social-media-icon-large: 64px;
 $social-media-icon-small: 50px;
 
+/* These variables will store the font size of the black h1 titles in different screen sizes */
+$h1-size-phones-vertical: 2rem; // For phones in vertical mode
+$h1-size-phones-horizontal: 2rem;  // For phones in horizontal mode
+$h1-size-tablets: 4vw;  // For tablets
+$h1-size-computer: 4vw;  // For computers
+
+/* These variables will store the font size of the h2 titles in different screen sizes. 
+These should be SMALLER than the h1 sizes that I specified above. */
+$h2-size-phones-vertical: 1rem; // For phones in vertical mode
+$h2-size-phones-horizontal: 1rem;  // For phones in horizontal mode
+$h2-size-tablets: 4vw;  // For tablets
+$h2-size-computer: 4vw;  // For computers
+
+
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
@@ -693,24 +707,35 @@ These will be the styles for all h1 black titles.  */
   font-family: $title-font;
   // line-height: 1; /* This will reduce the default space between the 2 lines of text */
 
-  /* This will execute in phone and tablets screens in vertical mode */
-  @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
-    font-size: 2rem; /* This will make the font look big on small screens */
+  /* This will execute in phones in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    font-size: $h1-size-phones-vertical; /* This will make the font look big on small screens */
     padding-bottom: 7vh;  /* This will add padding below the title */
 
     /* I want more line height in phone screens for the multi-line title on the home page */
     line-height: 1.5;
   }
 
-  /* This will execute in phone and tablets screens in horizontal mode */
-  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
-    font-size: 4vw; /* This will make the font look big on small screens */
+  /* This will execute in phones in horizontal mode */
+  @media only screen and (max-height: $horizontal-phone-height) {
+    font-size: $h1-size-phones-horizontal; /* This will make the font look big on small screens */
+    padding-bottom: 5vw;  /* This will add padding below the title */
+  }
+
+  /* For tablets. 
+  
+  I need to specify that the minimum height should be bigger than phones in horizontal mode, 
+  or otherwise this code will overwrite the code of the styles for the phones in 
+  horizontal mode. */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+  and (min-height: $horizontal-phone-height) {
+    font-size: $h1-size-tablets; /* This will make the font look big on small screens */
     padding-bottom: 5vw;  /* This will add padding below the title */
   }
 
   // For laptop screens
   @media only screen and (min-width: $computer-min-width) {
-    font-size: 4vw; /* This will make the font look big on small screens */
+    font-size: $h1-size-computer; /* This will make the font look big on small screens */
     padding-bottom: 5vw;  /* This will add padding below the title */
   }
 
@@ -769,7 +794,7 @@ These will be the styles for all h1 black titles.  */
   }
 }
 
-/* This will add the styles for the titles of the iframes on the Portfolio page */
+/* This will add the styles for the titles of the iframes on the Portfolio page (h2 titles) */
 .gray-iframe-titles {
   color: $gray-text-h2-titles;
   font-family: $title-font;
@@ -785,7 +810,9 @@ These will be the styles for all h1 black titles.  */
 
   /* This will execute in phones in vertical mode */
   @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
-    font-size: 1rem; // This needs to be under 4 vh or under 2 rem so that h2 titles are smaller than the h1 title
+    
+    // This needs to be under 4 vh or under 2 rem so that h2 titles are smaller than the h1 title
+    font-size: $h2-size-phones-vertical; 
     padding-top: 5vh;
 
     /* Code for the iframes */
@@ -824,7 +851,7 @@ These will be the styles for all h1 black titles.  */
 
   /* This will execute in phones in horizontal mode */
   @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
-    font-size: 3vw;
+    font-size: $h2-size-phones-horizontal;
     padding-top: 5vw; 
 
     iframe {

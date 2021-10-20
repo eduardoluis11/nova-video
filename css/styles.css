@@ -21,6 +21,9 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This is the minimum height that is higher than an iPhone SE in horizontal mode */
 /* Font size of the gray text */
 /* These 2 lines will store the size of the social media icons */
+/* These variables will store the font size of the black h1 titles in different screen sizes */
+/* These variables will store the font size of the h2 titles in different screen sizes. 
+These should be SMALLER than the h1 sizes that I specified above. */
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
 in order to create the  1x2 grid */
@@ -591,10 +594,15 @@ so that I don't have 8 navbar links inside of the side navbar.  */
 These will be the styles for all h1 black titles.  */
 .home-black-title {
   font-family: "Kameron", serif;
-  /* This will execute in phone and tablets screens in vertical mode */
-  /* This will execute in phone and tablets screens in horizontal mode */
+  /* This will execute in phones in vertical mode */
+  /* This will execute in phones in horizontal mode */
+  /* For tablets. 
+
+  I need to specify that the minimum height should be bigger than phones in horizontal mode, 
+  or otherwise this code will overwrite the code of the styles for the phones in 
+  horizontal mode. */
 }
-@media only screen and (max-width: 1279px) and (min-height: 450px) {
+@media only screen and (max-width: 767px) and (min-height: 450px) {
   .home-black-title {
     font-size: 2rem;
     /* This will make the font look big on small screens */
@@ -604,7 +612,15 @@ These will be the styles for all h1 black titles.  */
     line-height: 1.5;
   }
 }
-@media only screen and (max-width: 1279px) and (max-height: 450px) {
+@media only screen and (max-height: 450px) {
+  .home-black-title {
+    font-size: 2rem;
+    /* This will make the font look big on small screens */
+    padding-bottom: 5vw;
+    /* This will add padding below the title */
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
@@ -660,7 +676,7 @@ These will be the styles for all h1 black titles.  */
   }
 }
 
-/* This will add the styles for the titles of the iframes on the Portfolio page */
+/* This will add the styles for the titles of the iframes on the Portfolio page (h2 titles) */
 .gray-iframe-titles {
   color: #242121;
   font-family: "Kameron", serif;
@@ -712,7 +728,7 @@ These will be the styles for all h1 black titles.  */
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
   .gray-iframe-titles {
-    font-size: 3vw;
+    font-size: 1rem;
     padding-top: 5vw;
   }
   .gray-iframe-titles iframe {
