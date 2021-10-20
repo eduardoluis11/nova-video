@@ -986,6 +986,11 @@ These will be the styles for all h1 black titles.  */
 .back-to-top {
   font-family: $arial-font;
   margin: $side-margins;
+
+  /* This will give the font a size of 20px in tablet and computer screens */
+  @media only screen and (min-width: $tablet-min-width) {
+    font-size: $gray-text-size;
+  }
   // cursor: pointer; // This should be in the "a" tag, NOT on the div containing it
 
   /* Styles for computer screens  */
