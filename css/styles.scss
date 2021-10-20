@@ -19,8 +19,12 @@ $edge-body-padding: 20px;
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
 $side-margins: 0 20px;
 
-/* Shade of gray for the paragraph text for body sections with a white background */
-$gray-text: #312B2B;
+/* Shade of gray for the paragraph text for body sections with a white background.
+
+I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
+the same color of the h1 and h2 titles, whereas, in reality, it needs to be clearly lighter than the titles
+since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter. */
+$gray-text: #7a6f6f;
 
 /* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
 $gray-text-h2-titles: #242121;
@@ -821,7 +825,7 @@ These will be the styles for all h1 black titles.  */
       padding-top: 2vh;
 
       /* This will add padding between the video and the h2 title of the next video */
-      padding-bottom: 2vh;
+      padding-bottom: 2em;
 
       /* This will center the videos.
       
@@ -856,7 +860,7 @@ These will be the styles for all h1 black titles.  */
 
     iframe {
       padding-top: 2vw;
-      padding-bottom: 2vw;
+      padding-bottom: 2rem;
 
       /* This will center the videos */
       display: block;
@@ -883,7 +887,7 @@ These will be the styles for all h1 black titles.  */
 
     iframe {
       padding-top: 2vh;
-      padding-bottom: 2vh;
+      padding-bottom: 3rem;
 
       /* This will center the videos */
       display: block;
@@ -906,7 +910,7 @@ These will be the styles for all h1 black titles.  */
 
     iframe {
       padding-top: 2vw;
-      padding-bottom: 2vw;
+      padding-bottom: 3rem;
 
       /* This will center the videos */
       display: block;

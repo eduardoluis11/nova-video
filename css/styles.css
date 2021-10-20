@@ -8,7 +8,11 @@ to center the logo in the navbar in the black background of the navbar).
 So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
-/* Shade of gray for the paragraph text for body sections with a white background */
+/* Shade of gray for the paragraph text for body sections with a white background.
+
+I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
+the same color of the h1 and h2 titles, whereas, in reality, it needs to be clearly lighter than the titles
+since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter. */
 /* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
 /* This stores the Arial font */
 /* This stores the Kameron font, which will be used for titles */
@@ -665,7 +669,7 @@ These will be the styles for all h1 black titles.  */
 /* End of the styles for the part of the home page with a white background */
 /* This styles the gray paragraph text on all pages */
 .gray-text {
-  color: #312B2B;
+  color: #7a6f6f;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   /* This will give the font a size of 20px in tablet and computer screens */
@@ -704,7 +708,7 @@ These will be the styles for all h1 black titles.  */
     /* This will add padding between the iframe title and the video */
     padding-top: 2vh;
     /* This will add padding between the video and the h2 title of the next video */
-    padding-bottom: 2vh;
+    padding-bottom: 2em;
     /* This will center the videos.
 
     If I will be occupying all of the width of the phone's screens, it's pointless to center
@@ -733,7 +737,7 @@ These will be the styles for all h1 black titles.  */
   }
   .gray-iframe-titles iframe {
     padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding-bottom: 2rem;
     /* This will center the videos */
     display: block;
     margin-left: auto;
@@ -754,7 +758,7 @@ These will be the styles for all h1 black titles.  */
   }
   .gray-iframe-titles iframe {
     padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-bottom: 3rem;
     /* This will center the videos */
     display: block;
     margin-left: auto;
@@ -774,7 +778,7 @@ These will be the styles for all h1 black titles.  */
   }
   .gray-iframe-titles iframe {
     padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding-bottom: 3rem;
     /* This will center the videos */
     display: block;
     margin-left: auto;
