@@ -62,15 +62,15 @@ $social-media-icon-small: 50px;
 /* These variables will store the font size of the black h1 titles in different screen sizes */
 $h1-size-phones-vertical: 2rem; // For phones in vertical mode
 $h1-size-phones-horizontal: 2rem;  // For phones in horizontal mode
-$h1-size-tablets: 4vw;  // For tablets
+$h1-size-tablets: 3rem;  // For tablets
 $h1-size-computer: 4vw;  // For computers
 
 /* These variables will store the font size of the h2 titles in different screen sizes. 
 These should be SMALLER than the h1 sizes that I specified above. */
 $h2-size-phones-vertical: 1rem; // For phones in vertical mode
 $h2-size-phones-horizontal: 1rem;  // For phones in horizontal mode
-$h2-size-tablets: 4vw;  // For tablets
-$h2-size-computer: 4vw;  // For computers
+$h2-size-tablets: 1.5rem;  // For tablets
+$h2-size-computer: 1.5vw;  // For computers
 
 
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
@@ -733,7 +733,7 @@ These will be the styles for all h1 black titles.  */
     padding-bottom: 5vw;  /* This will add padding below the title */
   }
 
-  // For laptop screens
+  // For computer screens
   @media only screen and (min-width: $computer-min-width) {
     font-size: $h1-size-computer; /* This will make the font look big on small screens */
     padding-bottom: 5vw;  /* This will add padding below the title */
@@ -878,7 +878,7 @@ These will be the styles for all h1 black titles.  */
     would be too small */
   @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) 
   and (min-height: $horizontal-phone-height) {
-    font-size: 2.5vh; 
+    font-size: $h2-size-tablets; 
     padding-top: 4vh; 
 
     iframe {
@@ -901,7 +901,7 @@ These will be the styles for all h1 black titles.  */
 
   // For computer screens
   @media only screen and (min-width: $computer-min-width) {
-    font-size: 1.5vw; 
+    font-size: $h2-size-computer; 
     padding-top: 2vw; 
 
     iframe {
