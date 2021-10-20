@@ -110,11 +110,14 @@
             </h1>
         </div>
         <!-- </div> -->
-        <!-- "Check our portfolio" button -->
+        <!-- "Check our portfolio" button. I will use "on click" and "type button" instead of an "a" tag
+        so that the whole button works as a link, not just the text of the button (source: 
+        https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link .) -->
         <!-- This class will center the button -->
         <div class="center-content">
-            <button id="portfolio-button">
-                <a href="portfolio.html">Check Our Portfolio</a>
+            <button id="portfolio-button" onclick="location.href='portfolio.html'" type="button">
+                Check Our Portfolio
+                <!-- <a href="portfolio.html">Check Our Portfolio</a> -->
             </button>
         </div>
     </div> <!-- End of the landing page (the page with the movie reel picture as a background) -->
