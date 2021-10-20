@@ -188,6 +188,14 @@ image.  */
   
   /* Style sheet of the "Check our Portfolio" button */
   #portfolio-button {
+
+    /* This will remove the blue text and the underline from the button (source: 
+    https://www.codegrepper.com/code-examples/css/how+to+remove+the+blue+link+color+in+html) */
+    a {
+      text-decoration: none; 
+      color: inherit;
+    }
+
     color: white;
     
     border: 1px solid white;  /* This adds a white border to the button */
