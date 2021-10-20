@@ -20,8 +20,9 @@ $edge-body-padding: 20px;
 $side-margins: 0 20px;
 
 /* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
-(with rem or something similar)   */
-$side-margins-large: 0 3em; 
+(with rem or something similar.) Don't use "em", since it gives me a bug with the side margins for the 
+"Back to top" text.   */
+$side-margins-large: 0 3rem; 
 
 /* Shade of gray for the paragraph text for body sections with a white background.
 
@@ -1014,11 +1015,12 @@ These will be the styles for all h1 black titles.  */
 /* This will style the "Back To Top" link */
 .back-to-top {
   font-family: $arial-font;
-  margin: $side-margins;
+  // margin: $side-margins;
 
   /* This will give the font a size of 20px in tablet and computer screens */
   @media only screen and (min-width: $tablet-min-width) {
     font-size: $gray-text-size;
+    margin: $side-margins-large; // This adds side margins of over 20px 
   }
   // cursor: pointer; // This should be in the "a" tag, NOT on the div containing it
 
@@ -1031,16 +1033,19 @@ These will be the styles for all h1 black titles.  */
   // On phones on vertical mode 
   @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
     padding-top: 15%;
+    margin: $side-margins // This adds 20px of side margins
   }
 
   // On Tablets in vertical mode
   @media only screen and (max-width: $computer-min-width) and (min-width: $tablet-min-width) {
     padding-top: 5%;
+    margin: $side-margins-large;
   }
 
   // In phone screens in horizontal mode
   @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
     padding-top: 5%;
+    margin: $side-margins-large;
   }
 
   a {

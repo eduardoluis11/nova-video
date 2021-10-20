@@ -9,7 +9,8 @@ So, I will add 2 Sass variables that will add up to 20px in padding horizontally
 /* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
 /* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
 /* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
-(with rem or something similar)   */
+(with rem or something similar.) Don't use "em", since it gives me a bug with the side margins for the 
+"Back to top" text.   */
 /* Shade of gray for the paragraph text for body sections with a white background.
 
 I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
@@ -57,17 +58,17 @@ in order to create the  1x2 grid */
 }
 @media only screen and (max-height: 450px) {
   .black-title-container, .home-white-background {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .black-title-container, .home-white-background {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media only screen and (min-width: 1279px) {
   .black-title-container, .home-white-background {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 
@@ -877,7 +878,6 @@ These will be the styles for all h1 black titles.  */
 /* This will style the "Back To Top" link */
 .back-to-top {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 20px;
   /* This will give the font a size of 20px in tablet and computer screens */
   /* Styles for computer screens  */
   /* The following two snippets of code will modify the padding of the link on smaller screens */
@@ -885,6 +885,7 @@ These will be the styles for all h1 black titles.  */
 @media only screen and (min-width: 767px) {
   .back-to-top {
     font-size: 20px;
+    margin: 0 3rem;
   }
 }
 @media only screen and (min-width: 1279px) {
@@ -895,16 +896,19 @@ These will be the styles for all h1 black titles.  */
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .back-to-top {
     padding-top: 15%;
+    margin: 0 20px;
   }
 }
 @media only screen and (max-width: 1279px) and (min-width: 767px) {
   .back-to-top {
     padding-top: 5%;
+    margin: 0 3rem;
   }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
   .back-to-top {
     padding-top: 5%;
+    margin: 0 3rem;
   }
 }
 .back-to-top a {
@@ -1281,17 +1285,17 @@ padding bottom or top */
 }
 @media only screen and (max-height: 450px) {
   .body-side-margins {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .body-side-margins {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 @media only screen and (min-width: 1279px) {
   .body-side-margins {
-    margin: 0 3em;
+    margin: 0 3rem;
   }
 }
 
