@@ -1528,22 +1528,34 @@ padding bottom or top */
 .office-interior {
 
   /* For phones in vertical mode */
-  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+  @media only screen and (max-width: $tablet-min-width) 
+  and (min-height: $horizontal-phone-height) {
     width: 100%;
     
-    /* This will horizontally center the image to the center of the div */
+    /* This will horizontally center the image to the center of the div.
+    
+    I technically don't need this if the image occupies 100% of the width
+    of the div. However, in Safari in iPhone 5S, the image doesn't occupy
+    the whole width of the div, but the image still gets centered 
+    (thanks to this snippet of code.) */
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    /* This will add more padding between the image and the last 
+    paragraph */
+    padding-top: 2rem;
   }
 
   /* For phones in horizontal mode */
   @media only screen and (max-height: $horizontal-phone-height) {
-    width: 75vh;
+    width: 30rem;
 
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    padding-top: 2rem;
   }
 
   /* For tablets. */
@@ -1554,6 +1566,8 @@ padding bottom or top */
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    padding-top: 2rem;
   }
 
   // For computer screens
