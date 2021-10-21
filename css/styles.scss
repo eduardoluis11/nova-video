@@ -1059,9 +1059,33 @@ These will be the styles for all h1 black titles.  */
   color: white;
   font-family: $arial-font;
 
-  /* This adds the 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
-  sides of the footer instead of black space. */
-  padding: $side-margins;
+  /* This adds a minimum of 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
+  sides of the footer instead of black space.
+  
+  I will make it responsive so that only small screens have 20px of side margins, whereas the rest of the screens will have 
+  larger margins (or paddings.) */
+  /* For phones in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    padding: $side-margins;
+  }
+
+  /* For phones in horizontal mode */
+  @media only screen and (max-height: $horizontal-phone-height) {
+    padding: $side-margins-large;
+  }
+
+  /* For tablets. */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+  and (min-height: $horizontal-phone-height) {
+    padding: $side-margins-large;
+  }
+
+  // For computer screens
+  @media only screen and (min-width: $computer-min-width) {
+    padding: $side-margins-large;
+  } // End of side margin
+  
+  // padding: $side-margins;
 
   /* This will create a 1x5 grid, which will contain most of the footer text on computer and tablet screens. This will contain
   the social media icons and its respective title, and the links of the sitemap.

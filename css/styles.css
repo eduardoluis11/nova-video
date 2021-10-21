@@ -920,9 +920,14 @@ These will be the styles for all h1 black titles.  */
   background-color: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  /* This adds the 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
-  sides of the footer instead of black space. */
-  padding: 0 20px;
+  /* This adds a minimum of 20 px of side margins to the text. If I use margins instead of padding, I will get white space to the 
+  sides of the footer instead of black space.
+
+  I will make it responsive so that only small screens have 20px of side margins, whereas the rest of the screens will have 
+  larger margins (or paddings.) */
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablets. */
   /* This will create a 1x5 grid, which will contain most of the footer text on computer and tablet screens. This will contain
   the social media icons and its respective title, and the links of the sitemap.
 
@@ -933,6 +938,26 @@ These will be the styles for all h1 black titles.  */
   /* This will be the footer text that will be centered */
   /* Styles for the footer's copyright info */
   /* Styles for the site map */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .footer-text {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .footer-text {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .footer-text {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .footer-text {
+    padding: 0 3rem;
+  }
 }
 @media only screen and (min-width: 1279px) {
   .footer-text {
