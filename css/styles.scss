@@ -1561,13 +1561,16 @@ padding bottom or top */
   /* For tablets. */
   @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
   and (min-height: $horizontal-phone-height) {
-    width: 75vw; 
+    width: 30rem;
 
     display: block;
     margin-left: auto;
     margin-right: auto;
 
-    padding-top: 2rem;
+    /* I don't need this on tablets, since there's a div called "text-image-padding-mobile",
+    which is already adding a ton of padding between the image and the text
+    on tablets. */
+    // padding-top: 1rem;
   }
 
   // For computer screens

@@ -1395,11 +1395,13 @@ padding bottom or top */
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .office-interior {
-    width: 75vw;
+    width: 30rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2rem;
+    /* I don't need this on tablets, since there's a div called "text-image-padding-mobile",
+    which is already adding a ton of padding between the image and the text
+    on tablets. */
   }
 }
 @media only screen and (min-width: 1279px) {
