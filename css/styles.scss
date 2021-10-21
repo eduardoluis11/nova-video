@@ -832,9 +832,9 @@ These will be the styles for all h1 black titles.  */
   }
 
   /* This will fix a bug in which the default font size on iPhone 5S is of 20 px instead of 16px */
-  @media only screen and (max-height: $horizontal-phone-height) {
-    font-size: 16px;
-  }
+  // @media only screen and (max-height: $horizontal-phone-height) {
+  //   font-size: 16px;
+  // }
 
   /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
   are one above the other.) This will add more spacing between each paragraph. (source:
@@ -1526,36 +1526,79 @@ padding bottom or top */
 
 /* Styles for the About page image */
 .office-interior {
-  /* This will give add a padding to the top of the image in computer screens which is equivalent to the 
-  biggest font size for the gray paragraph text. This will be done to make the image to be at the same height as the
-  gray text that will be located to the left of the image. This should only happen when the white body is split into
-  the 1x2 grid, which is on screens with at least 1080px of width.  */
-  @media only screen and (min-width: $computer-min-width) {
-    padding-top: 20px;
-    padding-left: 10vw; 
-    // padding-right: 4vw;
 
-    width: 35vw;  /* This will make the size of the image to be responsive */
-  }
-
-  /* This will horizontally center the image to the center of the div (source: 
-  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center) */
-  @media only screen and (max-width: $computer-min-width) {
+  /* For phones in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    width: 100%;
+    
+    /* This will horizontally center the image to the center of the div */
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* The following two snippets of code will modify the size of the image on smaller screens */
-  /* On tablets and phones on vertical mode */
-  @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
-    width: 75vw; 
+  /* For phones in horizontal mode */
+  @media only screen and (max-height: $horizontal-phone-height) {
+    width: 75vh;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  // In phone screens in horizontal mode
-  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
-    width: 75vh;
+  /* For tablets. */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+  and (min-height: $horizontal-phone-height) {
+    width: 75vw; 
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  // For computer screens
+  @media only screen and (min-width: $computer-min-width) {
+
+    /* This will give add a padding to the top of the image in computer screens which is equivalent to the 
+    biggest font size for the gray paragraph text. This will be done to make the image to be at the same 
+    height as the gray text that will be located to the left of the image. This should only happen when the 
+    white body is split into the 1x2 grid, which is on screens with at least 1080px of width.  */
+    padding-top: 20px;
+
+    padding-left: 10vw; 
+    width: 35vw;  /* This will make the size of the image to be responsive */
+  }
+
+  /* This will give add a padding to the top of the image in computer screens which is equivalent to the 
+  biggest font size for the gray paragraph text. This will be done to make the image to be at the same height as the
+  gray text that will be located to the left of the image. This should only happen when the white body is split into
+  the 1x2 grid, which is on screens with at least 1080px of width.  */
+  // @media only screen and (min-width: $computer-min-width) {
+  //   padding-top: 20px;
+  //   padding-left: 10vw; 
+  //   // padding-right: 4vw;
+
+    
+  //   width: 35vw;  /* This will make the size of the image to be responsive */
+  // }
+
+  /* This will horizontally center the image to the center of the div */
+  // @media only screen and (max-width: $computer-min-width) {
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
+  /* The following two snippets of code will modify the size of the image on smaller screens */
+  /* On tablets and phones on vertical mode */
+  // @media only screen and (max-width: $computer-min-width) and (min-height: $horizontal-phone-height) {
+  //   width: 75vw; 
+  // }
+
+  // In phone screens in horizontal mode
+  // @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+  //   width: 75vh;
+  // }
 }
 
 
