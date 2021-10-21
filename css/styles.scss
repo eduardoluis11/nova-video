@@ -825,8 +825,9 @@ These will be the styles for all h1 black titles.  */
   font-family: $arial-font;
   line-height: 1.5; // This will add more space between each line of text
 
-  /* This will give the font a size of 20px in tablet and computer screens */
-  @media only screen and (min-width: $tablet-min-width) {
+  /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
+  in horizontal phone screens. */
+  @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
     font-size: $gray-text-size;
   }
 
@@ -842,7 +843,7 @@ These will be the styles for all h1 black titles.  */
 
     /* For phones in horizontal mode */
     @media only screen and (max-height: $horizontal-phone-height) {
-      margin-top: 1.5rem;
+      margin-top: 2.5rem;
     }
   
     /* For tablets. */
@@ -1044,8 +1045,9 @@ These will be the styles for all h1 black titles.  */
   font-family: $arial-font;
   // margin: $side-margins;
 
-  /* This will give the font a size of 20px in tablet and computer screens */
-  @media only screen and (min-width: $tablet-min-width) {
+  /* This will give the font a size of 20px in tablet and computer screens. I don't want this 
+  to be executed in phones in horizontal mode. */
+  @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
     font-size: $gray-text-size;
     margin: $side-margins-large; // This adds side margins of over 20px 
   }
@@ -1208,7 +1210,7 @@ These will be the styles for all h1 black titles.  */
   /* Styles for the site map */
   .sitemap {
 
-    /* Fot all of the links (all of the site map's text) */
+    /* For all of the links (all of the site map's text) */
     a {
       text-decoration: none;  // This removes the underlines
       color: white;

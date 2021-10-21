@@ -703,12 +703,13 @@ These will be the styles for all h1 black titles.  */
   color: #131516;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  /* This will give the font a size of 20px in tablet and computer screens */
+  /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
+  in horizontal phone screens. */
   /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
   are one above the other.) This will add more spacing between each paragraph. (source:
   https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 767px) and (min-height: 450px) {
   .gray-text {
     font-size: 20px;
   }
@@ -724,7 +725,7 @@ These will be the styles for all h1 black titles.  */
 }
 @media only screen and (max-height: 450px) {
   .gray-text p + p {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
@@ -905,11 +906,12 @@ These will be the styles for all h1 black titles.  */
 /* This will style the "Back To Top" link */
 .back-to-top {
   font-family: Arial, Helvetica, sans-serif;
-  /* This will give the font a size of 20px in tablet and computer screens */
+  /* This will give the font a size of 20px in tablet and computer screens. I don't want this 
+  to be executed in phones in horizontal mode. */
   /* Styles for computer screens  */
   /* The following two snippets of code will modify the padding of the link on smaller screens */
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 767px) and (min-height: 450px) {
   .back-to-top {
     font-size: 20px;
     margin: 0 3rem;
@@ -1054,7 +1056,7 @@ These will be the styles for all h1 black titles.  */
   color: white;
 }
 .footer-text .sitemap {
-  /* Fot all of the links (all of the site map's text) */
+  /* For all of the links (all of the site map's text) */
   /* This will add padding between the site map links and the copyright info text in phone screens in vertical mode  */
   /* This will add padding between the site map links and the copyright info text in tablet screens  */
   /* I need this to create the 1x3 grid and the 1x2 that will contain the site map elements on phone screens (source: 
