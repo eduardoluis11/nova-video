@@ -831,6 +831,11 @@ These will be the styles for all h1 black titles.  */
     font-size: $gray-text-size;
   }
 
+  /* This will fix a bug in which the default font size on iPhone 5S is of 20 px instead of 16px */
+  @media only screen and (max-height: $horizontal-phone-height) {
+    font-size: 16px;
+  }
+
   /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
   are one above the other.) This will add more spacing between each paragraph. (source:
   https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
