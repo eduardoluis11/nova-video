@@ -834,7 +834,27 @@ These will be the styles for all h1 black titles.  */
   are one above the other.) This will add more spacing between each paragraph. (source:
   https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
   p + p {
-    margin-top: 20px;
+        
+    // For phone screens in vertical mode
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      margin-top: 32px;
+    }
+
+    /* For phones in horizontal mode */
+    @media only screen and (max-height: $horizontal-phone-height) {
+      margin-top: 1.5rem;
+    }
+  
+    /* For tablets. */
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+    and (min-height: $horizontal-phone-height) {
+      margin-top: 20px;
+    }
+  
+    // For computer screens
+    @media only screen and (min-width: $computer-min-width) {
+      margin-top: 20px;
+    } 
   }
 }
 

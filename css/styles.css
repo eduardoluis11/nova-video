@@ -714,7 +714,28 @@ These will be the styles for all h1 black titles.  */
   }
 }
 .gray-text p + p {
-  margin-top: 20px;
+  /* For phones in horizontal mode */
+  /* For tablets. */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .gray-text p + p {
+    margin-top: 32px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .gray-text p + p {
+    margin-top: 1.5rem;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .gray-text p + p {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .gray-text p + p {
+    margin-top: 20px;
+  }
 }
 
 /* This will add the styles for the titles of the iframes on the Portfolio page (h2 titles) */
