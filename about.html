@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Nova Video Productions, Wistarr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nova Video Productions</title>
+    <title>About Us - Nova Video Productions</title>
 
     <!-- Link to local CSS file -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -47,8 +47,8 @@
                     <ul>
                         <!-- <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a> -->
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#"><u>Portfolio</u></a></li>
+                        <li><a href="#"><u>About</u></a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="index.html">Home</a></li>
                     </ul>
                 </div>
@@ -58,8 +58,8 @@
                     <!-- <ul> -->
                         <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>            
                         <a href="index.html">Home</a>
-                        <a href="#"><u>Portfolio</u></a>
-                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="#"><u>About</u></a>
                         <a href="contact.html">Contact</a>
                     <!-- </ul> -->
                 </div>
@@ -97,78 +97,34 @@
     <div class="black-title-container">
         <div class="body-left-half">    <!-- Left half -->
             <!-- Black title on white background -->
-            <h1 class="home-black-title">PORTFOLIO</h1>
+            <h1 class="home-black-title">ABOUT US</h1>
         </div>
         <div class="body-right-half"> <!-- Right half -->
         </div>
     </div>
 
-    <!-- This will add 20px of margin to most of the content of the page -->
-    <div class="body-side-margins">
-        <!-- This is the small gray text that appears right below the h1 title -->
-        <p class="gray-text">
-            Here are some of the recordings of the events that we have recorded for 
-            other clients:
-        </p>
-
-        <!-- This will contain the 5 iframes with Nova's Youtube videos -->
-        <div class="gray-iframe-titles">
-            
-            <!-- 1st video -->
-            <h2>    <!-- Title of the video -->
-                1) Cedar Grove Cheese Factory, Plain Wisconsin:
-            </h2>
-            <!-- The iframe code was taken from YouTube by clicking on "Embed". It also seems that, according to Youtube,
-            the Youtube player on my website needs to be of at least 200x200 px in size. So, to avoid any issues, I will
-            use the code provided by Youtube for the time being.
-        
-            Upon further consideration, the 560x315 px size provided by Youtube is too big for phone screens. So, I 
-            specify the width and height in the CSS file, and make it responsive.
-        
-            I won't add lazy loading to the very first iframe. I will add it to the 2nd iframe and onwards.
-            I will do this to make the 1st video to be loaded as soon as the user enters the page. -->
-            <iframe src="https://www.youtube.com/embed/1hwbiccpinA" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-
-            <h2>    <!-- Second video -->
-                2) Ocooch Books & Libations NEW LOCATION! 11-23-20:
-            </h2>
-
-            <!-- I will add lazy loading from this iframe and onwards. Lazy loading will load the video 
-            only after the user scrolls down until the video shows up. This will prevent the page from 
-            becoming slow. -->
-            <iframe src="https://www.youtube.com/embed/qoOtO9jXemc" loading="lazy" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-
-            <h2>    <!-- Third video -->
-                3) RCHS Homecoming Parade! 10-23-2020:
-            </h2>
-            <iframe src="https://www.youtube.com/embed/b4npXbDJnFQ" loading="lazy" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-
-            <h2>    <!-- Fourth video -->
-                4) Lincoln Elementary School 4-K Graduation SMILE PARADE!:
-            </h2>
-            <iframe src="https://www.youtube.com/embed/6vXtH5-RNmo" loading="lazy" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-
-            <h2>    <!-- Fifth video -->
-                5) FRANKENSTEIN UW-Richland:
-            </h2>
-            <iframe src="https://www.youtube.com/embed/_yjNP2g76LU" loading="lazy" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-        </div>  <!-- End of the Youtube videos -->
-        <p class="gray-text">
-            You can see our entire catalogue of videos in our 
-            <a href="https://www.youtube.com/channel/UCzDtqJPBgR_N2rmRBiUP6ig">YouTube channel!</a> 
-        </p>
-    </div> <!-- End of the container with 20 px of side margins -->
+    <!-- This is the part of the page that has a white background and a picture from Nova's office. -->
+    <div class="home-white-background">
+        <!-- In large screens, this part of the body of the home page will be split into 2 halves, or a 1x2 grid 
+        (1 row, 2 columns). So, I'll create a div for each column. Each column will occupy 50% of the viewport width. -->
     
+        <div class="body-left-half">    <!-- Left half of the grid  -->
+            <p class="gray-text">We are a video production business located in Richland Center, WI.</p>
+            <br>
+            <p class="gray-text"><a href="contact.html">Contact us</a> to request a quote.</p>
+
+            <!-- This will add vertical padding between the paragraph text and the image on phone and tablet screens -->
+            <div class="text-image-padding-mobile"></div>
+        </div>  <!-- End of left-half -->
+        <div class="body-right-half">   <!-- Right half of the grid -->
+            <img class="office-door" src="./img/office-door.jpg" alt="Nova Video's office front door">
+        </div>  <!-- End of right half of the grid -->
+    </div> <!-- End of the body section that has a white background -->
+    <br>
+ 
+    
+
+
     <!-- "Back to top" button. If the user clicks this link, they will go back to the beginning of the page. -->
     <div class="back-to-top">
         <a onclick="backToTop()"><u>Back to top</u></a>
@@ -228,13 +184,13 @@
                         pages. -->
                         <div class="grid-1x3 grid-1x3-sitemap sitemap-grid-1x5-tablets-part-2">
                             <div><a href="#"><b>Portfolio</b></a></div>
-                            <div class="about-centered"><a href="about.html"><b>About</b></a></div>
-                            <div><a class="contact-right-aligned" href="contact.html"><b>Contact</b></a></div>
+                            <div class="about-centered"><a href="#"><b>About</b></a></div>
+                            <div><a class="contact-right-aligned" href="#"><b>Contact</b></a></div>
                         </div>
                         <div class="grid-1x2 sitemap-grid-1x5-tablets-part-3">
-                            <div><a href="privacy.html"><b>Privacy Policy</b></a></div>
+                            <div><a href="#"><b>Privacy Policy</b></a></div>
                             <!-- <div></div> Empty space on the second 1x3 grid -->
-                            <div><a href="terms.html"><b>Terms and Conditions</b></a></div>
+                            <div><a href="#"><b>Terms and Conditions</b></a></div>
                         </div>
                     </div>  <!-- End of site map -->
                 </div>
