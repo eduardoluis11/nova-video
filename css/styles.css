@@ -704,11 +704,17 @@ These will be the styles for all h1 black titles.  */
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   /* This will give the font a size of 20px in tablet and computer screens */
+  /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
+  are one above the other.) This will add more spacing between each paragraph. (source:
+  https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
 }
 @media only screen and (min-width: 767px) {
   .gray-text {
     font-size: 20px;
   }
+}
+.gray-text p + p {
+  margin-top: 20px;
 }
 
 /* This will add the styles for the titles of the iframes on the Portfolio page (h2 titles) */
