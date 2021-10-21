@@ -1351,6 +1351,43 @@ padding bottom or top */
   }
 }
 
+/* Styles for the About page image */
+.office-interior {
+  /* This will give add a padding to the top of the image in computer screens which is equivalent to the 
+  biggest font size for the gray paragraph text. This will be done to make the image to be at the same height as the
+  gray text that will be located to the left of the image. This should only happen when the white body is split into
+  the 1x2 grid, which is on screens with at least 1080px of width.  */
+  /* This will horizontally center the image to the center of the div (source: 
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center) */
+  /* The following two snippets of code will modify the size of the image on smaller screens */
+  /* On tablets and phones on vertical mode */
+}
+@media only screen and (min-width: 1279px) {
+  .office-interior {
+    padding-top: 20px;
+    padding-left: 10vw;
+    width: 35vw;
+    /* This will make the size of the image to be responsive */
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .office-interior {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 1279px) and (min-height: 450px) {
+  .office-interior {
+    width: 75vw;
+  }
+}
+@media only screen and (max-width: 1279px) and (max-height: 450px) {
+  .office-interior {
+    width: 75vh;
+  }
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
