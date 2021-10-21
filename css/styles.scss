@@ -848,12 +848,12 @@ These will be the styles for all h1 black titles.  */
     /* For tablets. */
     @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
     and (min-height: $horizontal-phone-height) {
-      margin-top: 20px;
+      margin-top: 2.5rem;
     }
   
     // For computer screens
     @media only screen and (min-width: $computer-min-width) {
-      margin-top: 20px;
+      margin-top: 2.5rem;
     } 
   }
 }

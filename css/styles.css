@@ -729,12 +729,12 @@ These will be the styles for all h1 black titles.  */
 }
 @media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
   .gray-text p + p {
-    margin-top: 20px;
+    margin-top: 2.5rem;
   }
 }
 @media only screen and (min-width: 1279px) {
   .gray-text p + p {
-    margin-top: 20px;
+    margin-top: 2.5rem;
   }
 }
 
