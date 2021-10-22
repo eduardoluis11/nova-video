@@ -1286,7 +1286,7 @@ padding bottom or top */
 }
 @media screen and (min-width: 767px) {
   .cookie-container {
-    padding: 0 32px;
+    padding: 0 3rem;
   }
 }
 

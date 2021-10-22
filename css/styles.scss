@@ -1456,7 +1456,7 @@ padding bottom or top */
 
   // For screens larger than phones
   @media screen and (min-width: $tablet-min-width) {
-    padding: 0 32px;
+    padding: $side-margins-large;
   }
 
   box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
