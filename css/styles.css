@@ -1412,7 +1412,7 @@ padding bottom or top */
     white body is split into the 1x2 grid, which is on screens with at least 1080px of width.  */
     padding-top: 20px;
     padding-left: 10vw;
-    width: 35vw;
+    width: 35rem;
     /* This will make the size of the image to be responsive */
   }
 }
