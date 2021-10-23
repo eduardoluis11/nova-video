@@ -1618,6 +1618,19 @@ padding bottom or top */
   // }
 }
 
+/* These are the styles for the business hours */
+/* This will remove the top margin between the lines of text containing the business hours */
+#business-hours-top {
+  p {
+    margin-top: 0px;
+  }
+}
+
+/* This will remove the bottom margin between the paragraphs containing the busines hours. */
+.business-hours-bottom {
+  margin-bottom: 0px;
+}
+/* End of the styles for the business hours */
 
 // footer {
 //   margin-bottom: auto;

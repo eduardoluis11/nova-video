@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Nova Video Productions, Wistarr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Nova Video Productions</title>
+    <title>Contact Us - Nova Video Productions</title>
 
     <!-- Link to local CSS file -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -24,8 +24,7 @@
     the navbar. -->
     <div class="non-home-landing-page">
     </div>
-
-            <!-- This contains the navbar. The "non-home-navbar" class only adds a black
+        <!-- This contains the navbar. The "non-home-navbar" class only adds a black
         background and 3.5 px of padding bottom the the navbar. -->
         <div class="navbar non-home-navbar">
             <!-- Navbar -->
@@ -46,8 +45,8 @@
                 <div class="navbar-small-link">
                     <ul>
                         <!-- <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a> -->
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#"><u>About</u></a></li>
+                        <li><a href="#"><u>Contact</u></a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="index.html">Home</a></li>
                     </ul>
@@ -59,8 +58,8 @@
                         <a href="javascript:void(0)" class="closebutton" onclick="closeNavbar()">&times;</a>            
                         <a href="index.html">Home</a>
                         <a href="portfolio.html">Portfolio</a>
-                        <a href="#"><u>About</u></a>
-                        <a href="contact.html">Contact</a>
+                        <a href="about.html">About</a>
+                        <a href="#"><u>Contact</u></a>
                     <!-- </ul> -->
                 </div>
             </div>  <!-- End of the Side Navbar-->
@@ -96,7 +95,7 @@
     <div class="black-title-container">
         <div class="body-left-half">    <!-- Left half -->
             <!-- Black title on white background -->
-            <h1 class="home-black-title">ABOUT US</h1>
+            <h1 class="home-black-title">CONTACT US</h1>
         </div>
         <div class="body-right-half"> <!-- Right half -->
         </div>
@@ -110,26 +109,53 @@
         <div class="body-left-half">    <!-- Left half of the grid  -->
             <div class="gray-text"> <!-- This will contain all of the paragraph text. -->
                 <p>
-                    Our company, Nova Video Productions, offers video recording and 
-                    editing services.
+                    If you have any questions, or if you would like to request a quote, you can contact us via email, by 
+                    phone, or by sending us a message via Messenger on our Facebook page.
                 </p>
-                <!-- <br> -->
                 <p>
-                    Our office is located in Richland Center, Wisconsin.
+                    You can also visit us at our office.
                 </p>
-                <!-- <br> -->
-                <p>
-                    We are also known as PerceptaVision Productions.
-                </p>
+                <!-- The "business hours" line and the actual business hours need to have little space between
+                each line of text. I may need to remove the bottom margin of these three lines of text. -->
+                <!-- <div id="business-hours"> -->
+                    <p class="business-hours-bottom">
+                        Our <b>business hours</b> are:
+                    </p>
+                    <div id="business-hours-top">
+                        <p class="business-hours-bottom">
+                            Monday - Friday: 9:00 AM - 3:00 PM
+                        </p>
+                        <p>
+                            Sunday: 10:00 AM - 2:00 PM
+                        </p>
+                    </div>
+                <!-- </div> -->
+
             </div>
 
-            <!-- This will add vertical padding between the paragraph text and the image on phone and tablet screens -->
+            <!-- This will add vertical padding between the paragraph text and the image on phone and tablet screens.
+            
+            I MAY NEED TO REMOVE THE "text-image-padding-mobile" CLASS. -->
             <div class="text-image-padding-mobile"></div>
+
         </div>  <!-- End of left-half -->
+
         <div class="body-right-half">   <!-- Right half of the grid -->
-            <img class="office-interior" src="./img/office-interior.jpg" 
-            alt="An indoors view of Nova Video's office">
+            <!-- Note: I MAY NEED TO CREATE A NEW CLASS FOR THE STYLES OF THIS h2 TITLE, since I'm using the class
+            for the iframe titles from the portfolio page -->
+            <div class="gray-iframe-titles">
+                <h2>Contact Information</h2>
+            </div>
+            <p>+1 608-647-0099</p>
+            <p>nova@mwt.net</p>
+            <p>175 E Mill St Suite 2, Richland Center, WI 53581, United States</p>
+            <p>
+                <a href="https://www.facebook.com/profile.php?id=100063839431297">
+                    Facebook Page
+                </a>
+            </p>
         </div>  <!-- End of right half of the grid -->
+
     </div> <!-- End of the body section that has a white background -->
     <br>
 
@@ -192,8 +218,8 @@
                         pages. -->
                         <div class="grid-1x3 grid-1x3-sitemap sitemap-grid-1x5-tablets-part-2">
                             <div><a href="portfolio.html"><b>Portfolio</b></a></div>
-                            <div class="about-centered"><a href="#"><b>About</b></a></div>
-                            <div><a class="contact-right-aligned" href="contact.html"><b>Contact</b></a></div>
+                            <div class="about-centered"><a href="about.html"><b>About</b></a></div>
+                            <div><a class="contact-right-aligned" href="#"><b>Contact</b></a></div>
                         </div>
                         <div class="grid-1x2 sitemap-grid-1x5-tablets-part-3">
                             <div><a href="privacy.html"><b>Privacy Policy</b></a></div>
