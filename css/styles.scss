@@ -1735,6 +1735,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
       /* This will be for the contact info lines that only occupy one line of text */
       line-height: $contact-icon-size-small-screens;
     }
+
+    .multi-line-description {
+      /* This will make the 2-line block of text from Nova's address to look vertically centered with 
+      respect to the location icon */
+      padding-top: 3px;
+    }
   }
 
   /* For phones in horizontal mode */
@@ -1766,6 +1772,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   
       padding-top: $font-size-small-screens;
       padding-bottom: $font-size-small-screens;
+
+      /* This will add horizontal padding between the icon and its respective line of text */
+      padding-right: 1rem;
     }
 
     /* For phones in horizontal mode */

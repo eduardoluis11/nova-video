@@ -1527,6 +1527,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     /* This will be for the contact info lines that only occupy one line of text */
     line-height: 40px;
   }
+  .flex-div .multi-line-description {
+    /* This will make the 2-line block of text from Nova's address to look vertically centered with 
+    respect to the location icon */
+    padding-top: 3px;
+  }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
   .flex-div .one-line-description {
@@ -1556,6 +1561,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     width: 40px;
     padding-top: 16px;
     padding-bottom: 16px;
+    /* This will add horizontal padding between the icon and its respective line of text */
+    padding-right: 1rem;
   }
 }
 @media only screen and (max-width: 1279px) and (max-height: 450px) {
