@@ -742,6 +742,43 @@ These will be the styles for all h1 black titles.  */
   }
 }
 
+/* This styles the gray paragraph text on the contact page. I removed the "line height" property since it will be
+overwritten by the "line height" of the "flexbox div" class, which would make the page slower. */
+.gray-text-icons {
+  color: #131516;
+  font-family: Arial, Helvetica, sans-serif;
+  /* This will give the font a size of 20px in tablet and computer screens. */
+}
+@media only screen and (min-width: 767px) and (min-height: 450px) {
+  .gray-text-icons {
+    font-size: 20px;
+  }
+}
+.gray-text-icons p + p {
+  /* For phones in horizontal mode */
+  /* For tablets. */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .gray-text-icons p + p {
+    margin-top: 32px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .gray-text-icons p + p {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .gray-text-icons p + p {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .gray-text-icons p + p {
+    margin-top: 2.5rem;
+  }
+}
+
 /* This will add the styles for the titles of the iframes on the Portfolio page (h2 titles) */
 .gray-iframe-titles {
   color: #242121;
