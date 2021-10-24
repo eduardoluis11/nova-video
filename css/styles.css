@@ -1472,6 +1472,25 @@ padding bottom or top */
   }
 }
 
+/* Styles for the lines of text which will contain the contact info and their respective icons (source: 
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8)   */
+.flex-div div {
+  display: flex;
+}
+
+/* Styles for the icons on the Contact page */
+.contact-icons img {
+  /* For phones in vertical mode */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .contact-icons img {
+    height: 32px;
+    width: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
