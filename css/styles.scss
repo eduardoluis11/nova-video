@@ -84,6 +84,8 @@ $h2-size-phones-horizontal: 1rem;  // For phones in horizontal mode
 $h2-size-tablets: 1.5rem;  // For tablets
 $h2-size-computer: 1.5vw;  // For computers
 
+$font-size-small-screens: 16px;
+$font-size-large-screens: 20px;
 
 /* This snippet of code will be reused at least 2 times, and it will create a 1x2 grid (1 row, 2 columns) in which a 
 div will be split into a right and a left half. This needs to be combined with other classes that contain a "flex: 50%" 
@@ -1629,8 +1631,54 @@ padding bottom or top */
 /* This will remove the bottom margin between the paragraphs containing the busines hours. */
 .business-hours-bottom {
   margin-bottom: 0px;
+} /* End of the styles for the business hours */
+
+/* These are the styles for the contact information h2 title */
+.contact-information-title {
+  color: $gray-text-h2-titles;
+  font-family: $title-font;
+
+  /* To make the space between this h2 title and the line of text with the phone number to be the same as the 
+  space between each line of text with the rest of the contact information, I need to first remove the
+  margin at the bottom of this title (for all screens) */
+  h2 {
+    margin-bottom: 0;
+  }
+
+  /* For phones in vertical mode */
+  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    
+    // This needs to be under 4 vh or under 2 rem so that h2 titles are smaller than the h1 title
+    font-size: $h2-size-phones-vertical; 
+    padding-top: 5vh;
+
+    /* This is for adding padding between the title and the line of text with the phone number */
+    padding-bottom: $font-size-small-screens;
+  }
+
+  /* For phones in horizontal mode */
+  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+    font-size: $h2-size-phones-horizontal;
+    padding-top: 5vw;
+    padding-bottom: $font-size-small-screens; 
+  }
+
+  /* For tablet screens */
+  @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) 
+  and (min-height: $horizontal-phone-height) {
+    font-size: $h2-size-tablets; 
+    padding-top: 4vh;
+    padding-bottom: $font-size-large-screens; 
+  }
+
+  // For computer screens
+  @media only screen and (min-width: $computer-min-width) {
+    font-size: $h2-size-computer;
+    padding-bottom: $font-size-large-screens;
+      
+    // padding-top: 2vw; 
+  }
 }
-/* End of the styles for the business hours */
 
 // footer {
 //   margin-bottom: auto;

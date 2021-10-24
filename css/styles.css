@@ -1429,6 +1429,49 @@ padding bottom or top */
 }
 
 /* End of the styles for the business hours */
+/* These are the styles for the contact information h2 title */
+.contact-information-title {
+  color: #242121;
+  font-family: "Kameron", serif;
+  /* To make the space between this h2 title and the line of text with the phone number to be the same as the 
+  space between each line of text with the rest of the contact information, I need to first remove the
+  margin at the bottom of this title (for all screens) */
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablet screens */
+}
+.contact-information-title h2 {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .contact-information-title {
+    font-size: 1rem;
+    padding-top: 5vh;
+    /* This is for adding padding between the title and the line of text with the phone number */
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 1279px) and (max-height: 450px) {
+  .contact-information-title {
+    font-size: 1rem;
+    padding-top: 5vw;
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .contact-information-title {
+    font-size: 1.5rem;
+    padding-top: 4vh;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .contact-information-title {
+    font-size: 1.5vw;
+    padding-bottom: 20px;
+  }
+}
+
 /* This will make all of the navbar elements to go to the far right of the screen, with the exception of the
 "Nova Video Productions" title */
 /* .navbar li {
