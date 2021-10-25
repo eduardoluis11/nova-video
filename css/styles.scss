@@ -1773,7 +1773,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
       add padding top to try to center the text with respect to the 
       location icon. */
       padding-top: 2px;
-      
+
+      /* This will force the font size ofthe address to be of the same
+      size of the rest of the text of the page */
+      font-size: 16px;
       // line-height: $contact-icon-size-small-screens;
     }
   }

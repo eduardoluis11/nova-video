@@ -1555,6 +1555,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     add padding top to try to center the text with respect to the 
     location icon. */
     padding-top: 2px;
+    /* This will force the font size ofthe address to be of the same
+    size of the rest of the text of the page */
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 569px) and (max-width: 1279px) and (max-height: 450px) {
