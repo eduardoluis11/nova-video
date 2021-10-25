@@ -1729,8 +1729,23 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   }
   
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
-  /* For phones in vertical mode */
-  @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+  /* For iPhone 5S in vertical mode */
+  @media only screen and (max-width: $wider-than-iphone5-min-width) and (min-height: $horizontal-phone-height) {
+    .one-line-description {
+      /* This will be for the contact info lines that only occupy one line of text */
+      line-height: $contact-icon-size-small-screens;
+    }
+
+    .location-icon {
+      /* This will make the location icon to look vertically centered with respect to the multi-line
+      block of text that accompanies it */
+      padding-top: 23px;
+    }
+  }
+  
+  /* For phones wider than an iPhone 5S in vertical mode */
+  @media only screen and (min-width: $wider-than-iphone5-min-width) and (max-width: $tablet-min-width) 
+  and (min-height: $horizontal-phone-height) {
     .one-line-description {
       /* This will be for the contact info lines that only occupy one line of text */
       line-height: $contact-icon-size-small-screens;

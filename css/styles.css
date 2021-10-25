@@ -1515,14 +1515,26 @@ padding bottom or top */
 https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8)   */
 .flex-div {
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
-  /* For phones in vertical mode */
+  /* For iPhone 5S in vertical mode */
+  /* For phones wider than an iPhone 5S in vertical mode */
   /* For phones in horizontal mode */
   /* For tablet screens */
 }
 .flex-div div {
   display: flex;
 }
-@media only screen and (max-width: 767px) and (min-height: 450px) {
+@media only screen and (max-width: 321px) and (min-height: 450px) {
+  .flex-div .one-line-description {
+    /* This will be for the contact info lines that only occupy one line of text */
+    line-height: 40px;
+  }
+  .flex-div .location-icon {
+    /* This will make the location icon to look vertically centered with respect to the multi-line
+    block of text that accompanies it */
+    padding-top: 23px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 767px) and (min-height: 450px) {
   .flex-div .one-line-description {
     /* This will be for the contact info lines that only occupy one line of text */
     line-height: 40px;
