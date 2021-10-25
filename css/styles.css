@@ -1596,7 +1596,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   }
 }
 @media only screen and (min-width: 1279px) {
-  .flex-div {
+  .flex-div .one-line-description {
     line-height: 78px;
   }
 }

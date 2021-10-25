@@ -1823,7 +1823,16 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
 
   // For computer screens
   @media only screen and (min-width: $computer-min-width) {
-    line-height: $contact-icon-size-large-screens;
+    .one-line-description {
+      line-height: $contact-icon-size-large-screens;
+    }
+
+    // .multi-line-description {
+    //   /* On these screens, the block of text with the address will 
+    //   always have only 1 line of text. So, I will center it just
+    //   like the lines of text with the "one line description" class. */
+    //   line-height: $contact-icon-size-small-screens;
+    // }
   }
 }
 
