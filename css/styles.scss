@@ -1763,6 +1763,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     .one-line-description {
       line-height: $contact-icon-size-small-screens;
     }
+
+    .multi-line-description {
+      /* On these screens, the block of text with the address will 
+      always have only 1 line of text. So, I will center it just
+      like the lines of text with the "one line description" class. */
+      line-height: $contact-icon-size-small-screens;
+    }
   }
 
   /* For tablet screens */
@@ -1799,6 +1806,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   
       padding-top: $font-size-small-screens;
       padding-bottom: $font-size-small-screens;
+      padding-right: 1rem;
     }
 
     /* For tablet screens */
