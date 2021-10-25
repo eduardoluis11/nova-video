@@ -649,7 +649,7 @@ These will be the styles for all h1 black titles.  */
     line-height: 1.5;
   }
 }
-@media only screen and (max-height: 450px) {
+@media only screen and (max-width: 1279px) and (max-height: 450px) {
   .home-black-title {
     font-size: 2rem;
     /* This will make the font look big on small screens */
@@ -669,7 +669,7 @@ These will be the styles for all h1 black titles.  */
   .home-black-title {
     font-size: 4vw;
     /* This will make the font look big on small screens */
-    padding-bottom: 5vw;
+    padding-bottom: 3rem;
     /* This will add padding below the title */
   }
 }

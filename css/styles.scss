@@ -764,7 +764,7 @@ These will be the styles for all h1 black titles.  */
   }
 
   /* This will execute in phones in horizontal mode */
-  @media only screen and (max-height: $horizontal-phone-height) {
+  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
     font-size: $h1-size-phones-horizontal; /* This will make the font look big on small screens */
     padding-bottom: 5vw;  /* This will add padding below the title */
   }
@@ -783,7 +783,7 @@ These will be the styles for all h1 black titles.  */
   // For computer screens
   @media only screen and (min-width: $computer-min-width) {
     font-size: $h1-size-computer; /* This will make the font look big on small screens */
-    padding-bottom: 5vw;  /* This will add padding below the title */
+    padding-bottom: 3rem;  /* This will add padding below the title */
   }
 
   // // For screens wider than 1536 px
