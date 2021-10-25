@@ -1517,7 +1517,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
   /* For iPhone 5S in vertical mode */
   /* For phones wider than an iPhone 5S in vertical mode */
-  /* For phones in horizontal mode */
+  /* For phones wider than iPhone 5 in horizontal mode */
   /* For tablet screens */
 }
 .flex-div div {
@@ -1545,7 +1545,19 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     padding-top: 3px;
   }
 }
-@media only screen and (max-width: 1279px) and (max-height: 450px) {
+@media only screen and (max-width: 569px) and (max-height: 450px) {
+  .flex-div .one-line-description {
+    line-height: 40px;
+  }
+  .flex-div .multi-line-description {
+    /* On these screens, the block of text with the address will 
+    have 2 lines. I SOULDN'T use line-height. Instead, I will 
+    add padding top to try to center the text with respect to the 
+    location icon. */
+    padding-top: 2px;
+  }
+}
+@media only screen and (min-width: 569px) and (max-width: 1279px) and (max-height: 450px) {
   .flex-div .one-line-description {
     line-height: 40px;
   }

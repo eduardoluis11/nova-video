@@ -61,6 +61,9 @@ $iphone5-max-height-horizontal: 320px;
 /* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
 $iphone5-max-height-vertical: 568px;
 
+// Minimum height to have an iPhone higher than an iPhone 5 on vertical mode
+$higher-than-iphone5-min-height: 569px;
+
 /* This is the minimum height that is higher than an iPhone SE in horizontal mode */
 $iphone-se-max-height-horizontal: 376px;
 
@@ -1758,8 +1761,27 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     }
   }
 
-  /* For phones in horizontal mode */
-  @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+  // For iPhone 5S in horizontal mode
+  @media only screen and (max-width: $higher-than-iphone5-min-height) and (max-height: $horizontal-phone-height) {
+    .one-line-description {
+      line-height: $contact-icon-size-small-screens;
+    }
+
+    .multi-line-description {
+      /* On these screens, the block of text with the address will 
+      have 2 lines. I SOULDN'T use line-height. Instead, I will 
+      add padding top to try to center the text with respect to the 
+      location icon. */
+      padding-top: 2px;
+      
+      // line-height: $contact-icon-size-small-screens;
+    }
+  }
+
+
+  /* For phones wider than iPhone 5 in horizontal mode */
+  @media only screen and (min-width: $higher-than-iphone5-min-height) and (max-width: $computer-min-width) 
+  and (max-height: $horizontal-phone-height) {
     .one-line-description {
       line-height: $contact-icon-size-small-screens;
     }
