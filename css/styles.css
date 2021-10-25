@@ -688,6 +688,18 @@ These will be the styles for all h1 black titles.  */
   flex: 50%;
 }
 
+/* Styles for the right half of the grid in the contact page's body */
+.body-right-half-contact {
+  /* This will add a gutter between the 2 halves of the body in the contact page in
+  computer screens ... */
+  flex: 50%;
+}
+@media only screen and (min-width: 1279px) {
+  .body-right-half-contact {
+    padding-left: 3rem;
+  }
+}
+
 /* This will make both halves of the grid from the home page to be stacked one on top of the other in small screens 
 (source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
 @media (max-width: 1279px) {
@@ -1481,6 +1493,13 @@ padding bottom or top */
 }
 .contact-information-title h2 {
   margin-bottom: 0;
+  /* This will modify the margin top for the title for computer screens so that the title is at the 
+  same height as the paragraph that is to the left of the title */
+}
+@media only screen and (min-width: 1279px) {
+  .contact-information-title h2 {
+    margin-top: 20px;
+  }
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .contact-information-title {
@@ -1613,6 +1632,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     width: 78px;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 1rem;
   }
 }
 @media only screen and (min-width: 1279px) {
@@ -1621,6 +1641,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     width: 78px;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 1.5rem;
   }
 }
 
