@@ -700,6 +700,12 @@ These will be the styles for all h1 black titles.  */
   }
 }
 
+/* This will add an internal padding between the text of the left half and the right 
+half of the body of the contact page */
+.body-left-half-padding-contact {
+  padding-right: 3rem;
+}
+
 /* This will make both halves of the grid from the home page to be stacked one on top of the other in small screens 
 (source: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_responsive) */
 @media (max-width: 1279px) {
