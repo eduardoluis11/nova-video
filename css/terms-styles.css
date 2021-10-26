@@ -1,0 +1,110 @@
+/* This variable will store the height of the div that contains the navbar. I may change this to "vh" or "vw" units
+to make it responsive. */
+/* This will store the height of the navbar plus the 3.5 px of padding top and 3.5 px
+of padding bottom that I added to the navbar on every page except the home (
+to center the logo in the navbar in the black background of the navbar).
+) */
+/* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
+So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
+/* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
+/* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
+/* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
+(with rem or something similar.) Don't use "em", since it gives me a bug with the side margins for the 
+"Back to top" text.   */
+/* Shade of gray for the paragraph text for body sections with a white background.
+
+I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
+the same color of the h1 and h2 titles, whereas, in reality, it needs to be clearly lighter than the titles
+since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter.
+
+Upon further consideration I decided to use the shade "Jet" (#131516), since it has better contrast with 
+a white background, so it's easier to read (source: https://www.viget.com/articles/color-contrast/ .)*/
+/* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
+/* This stores the Arial font */
+/* This stores the Kameron font, which will be used for titles */
+/* This will be the minimum width that I will use to consider a screen to be a computer screen */
+/* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
+/* If a screen has this width or higher, I  will consider it a tablet screen */
+/* This is the minimum width to be wider than an iPhone 5 or 5S in vertical mode (320px) */
+/* This is the maximum height size for an iPhone 5 on horizontal mode (320px) */
+/* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
+/* This is the minimum height that is higher than an iPhone SE in horizontal mode */
+/* Font size of the gray text */
+/* These 2 lines will store the size of the social media icons */
+/* These variables will store the font size of the black h1 titles in different screen sizes */
+/* These variables will store the font size of the h2 titles in different screen sizes. 
+These should be SMALLER than the h1 sizes that I specified above. */
+/* These variables will store the font size of the paragraphs for small and large screens   */
+/*These variables will store the size for the contact page icons */
+/* This adds the side margins to all of the pages. */
+.gutter-terms {
+  /* This will add a minimum of 20px of side margins to the whole div. I want to make this responsive. */
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablets. */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .gutter-terms {
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .gutter-terms {
+    margin: 0 3rem;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .gutter-terms {
+    margin: 0 3rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .gutter-terms {
+    margin: 0 3rem;
+  }
+}
+
+/* This will add the side margins of minimum 20 px to the entire terms and conditions page. */
+.paragraph-text-terms {
+  /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
+  are one above the other.) This will add more spacing between each paragraph. (source:
+  https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
+}
+.paragraph-text-terms p {
+  color: #131516;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
+  in horizontal phone screens. */
+}
+@media only screen and (min-width: 767px) and (min-height: 450px) {
+  .paragraph-text-terms p {
+    font-size: 20px;
+  }
+}
+.paragraph-text-terms p + p {
+  /* For phones in horizontal mode */
+  /* For tablets. */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .paragraph-text-terms p + p {
+    margin-top: 32px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .paragraph-text-terms p + p {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .paragraph-text-terms p + p {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .paragraph-text-terms p + p {
+    margin-top: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=terms-styles.css.map */
