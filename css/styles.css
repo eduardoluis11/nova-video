@@ -1488,8 +1488,6 @@ padding bottom or top */
 /* End of the styles for the business hours */
 /* These are the styles for the contact information h2 title */
 .contact-information-title {
-  color: #242121;
-  font-family: "Kameron", serif;
   /* To make the space between this h2 title and the line of text with the phone number to be the same as the 
   space between each line of text with the rest of the contact information, I need to first remove the
   margin at the bottom of this title (for all screens) */
@@ -1498,6 +1496,8 @@ padding bottom or top */
   /* For tablet screens */
 }
 .contact-information-title h2 {
+  color: #242121;
+  font-family: "Kameron", serif;
   /* This will remove all margin bottom from the h2 title in phone screens in vertical mode so
   that he space between the h2 title and the 1st icon is the same as the space between the 2nd
   icon and the 3rd icon, and so on and so forth for the rest of the icons */
