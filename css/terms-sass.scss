@@ -1,0 +1,174 @@
+// Sass file for the CSS for the Terms and Conditions page
+
+/* This variable will store the height of the div that contains the navbar. I may change this to "vh" or "vw" units
+to make it responsive. */
+$navbar-height: 88px;
+
+/* This will store the height of the navbar plus the 3.5 px of padding top and 3.5 px
+of padding bottom that I added to the navbar on every page except the home (
+to center the logo in the navbar in the black background of the navbar).
+) */
+$navbar-height-extended: 95px;
+
+/* The padding between the borders of the browser and any text or element inside the website must be a minimum of 20px.
+So, I will add 2 Sass variables that will add up to 20px in padding horizontally. */
+$edge-navbar-padding: 9px;
+$internal-navbar-padding: 0 11px;
+
+/* This will be used as the left and right margins for the grids in the bodies with a white background for all of the pages. */
+$edge-body-padding: 20px;
+
+/* This will add 20px of horizontal padding with no vertical padding (since side margins should be at least 20px) */
+$side-margins: 0 20px;
+
+/* These will be the side margins for larger screens. I could make it either a fixed size (with px), or responsive
+(with rem or something similar.) Don't use "em", since it gives me a bug with the side margins for the 
+"Back to top" text.   */
+$side-margins-large: 0 3rem; 
+
+/* Shade of gray for the paragraph text for body sections with a white background.
+
+I originally used #312B2B, but it was too dark, to the point it looked like black. That is, it looked like 
+the same color of the h1 and h2 titles, whereas, in reality, it needs to be clearly lighter than the titles
+since paragraph text has less priority than the titles. I will use #7a6f6f, since it's lighter.
+
+Upon further consideration I decided to use the shade "Jet" (#131516), since it has better contrast with 
+a white background, so it's easier to read (source: https://www.viget.com/articles/color-contrast/ .)*/
+$gray-text: #131516;
+
+/* Shade of gray for the h2 titles (like the titles for the videos in the Portfolio page) */
+$gray-text-h2-titles: #242121;
+
+/* This stores the Arial font */
+$arial-font: Arial, Helvetica, sans-serif;
+
+/* This stores the Kameron font, which will be used for titles */
+$title-font: "Kameron", serif;
+
+/* This will be the minimum width that I will use to consider a screen to be a computer screen */
+$computer-min-width: 1279px;
+
+/* This is the maximum height that I will use to consider a screen to be a phone screen in horizontal mode */
+$horizontal-phone-height: 450px;
+
+/* If a screen has this width or higher, I  will consider it a tablet screen */
+$tablet-min-width: 767px;
+
+/* This is the minimum width to be wider than an iPhone 5 or 5S in vertical mode (320px) */
+$wider-than-iphone5-min-width: 321px;
+
+/* This is the maximum height size for an iPhone 5 on horizontal mode (320px) */
+$iphone5-max-height-horizontal: 320px;
+
+/* This is the maximum height size for an iPhone 5 on vertical mode (568px) */
+$iphone5-max-height-vertical: 568px;
+
+// Minimum height to have an iPhone higher than an iPhone 5 on vertical mode
+$higher-than-iphone5-min-height: 569px;
+
+/* This is the minimum height that is higher than an iPhone SE in horizontal mode */
+$iphone-se-max-height-horizontal: 376px;
+
+/* Font size of the gray text */
+$gray-text-size: 20px;
+
+/* These 2 lines will store the size of the social media icons */
+$social-media-icon-large: 64px;
+$social-media-icon-small: 50px;
+
+/* These variables will store the font size of the black h1 titles in different screen sizes */
+$h1-size-phones-vertical: 2rem; // For phones in vertical mode
+$h1-size-phones-horizontal: 2rem;  // For phones in horizontal mode
+$h1-size-tablets: 3rem;  // For tablets
+$h1-size-computer: 4vw;  // For computers
+
+/* These variables will store the font size of the h2 titles in different screen sizes. 
+These should be SMALLER than the h1 sizes that I specified above. */
+$h2-size-phones-vertical: 1rem; // For phones in vertical mode
+$h2-size-phones-horizontal: 1rem;  // For phones in horizontal mode
+$h2-size-tablets: 1.5rem;  // For tablets
+$h2-size-computer: 1.5vw;  // For computers
+
+/* These variables will store the font size of the paragraphs for small and large screens   */
+$font-size-small-screens: 16px;
+$font-size-large-screens: 20px;
+
+/*These variables will store the size for the contact page icons */
+$contact-icon-size-small-screens: 40px;
+$contact-icon-size-large-screens: 78px;
+
+/* This adds the side margins to all of the pages. */
+
+%gutter {
+
+    /* This will add a minimum of 20px of side margins to the whole div. I want to make this responsive. */
+    /* For phones in vertical mode */
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+    margin: $side-margins;
+    }
+
+    /* For phones in horizontal mode */
+    @media only screen and (max-height: $horizontal-phone-height) {
+    margin: $side-margins-large;
+    }
+
+    /* For tablets. */
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+    and (min-height: $horizontal-phone-height) {
+    margin: $side-margins-large;
+    }
+
+    // For computer screens
+    @media only screen and (min-width: $computer-min-width) {
+    margin: $side-margins-large;
+    }
+}
+
+/* This will add the side margins of minimum 20 px to the entire terms and conditions page. */
+.gutter-terms {
+    @extend %gutter
+}
+
+.paragraph-text-terms {
+    p {
+        color: $gray-text;
+        font-family: $arial-font;
+        line-height: 1.5; // This will add more space between each line of text
+        
+        /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
+        in horizontal phone screens. */
+        @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+            font-size: $gray-text-size;
+        }
+    }
+    
+    /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
+    are one above the other.) This will add more spacing between each paragraph. (source:
+    https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset) */
+    p + p {
+            
+        // For phone screens in vertical mode
+        @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+        margin-top: 32px;
+        }
+    
+        /* For phones in horizontal mode */
+        @media only screen and (max-height: $horizontal-phone-height) {
+        margin-top: 2.5rem;
+        }
+    
+        /* For tablets. */
+        @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width)
+        and (min-height: $horizontal-phone-height) {
+        margin-top: 2.5rem;
+        }
+    
+        // For computer screens
+        @media only screen and (min-width: $computer-min-width) {
+        margin-top: 2.5rem;
+        } 
+    }
+}
+
+
+
