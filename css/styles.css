@@ -1533,9 +1533,10 @@ padding bottom or top */
 /* Styles for the lines of text which will contain the contact info and their respective icons (source: 
 https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8)   */
 .flex-div {
+  /* For iPhone 5S in vertical mode */
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
   /* For iPhone 5S in vertical mode */
-  /* For any other phones in vertical mode */
+  /* For any other phone in vertical mode */
   /* For phones wider than iPhone 5 in horizontal mode */
   /* For tablet screens */
 }
@@ -1550,7 +1551,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   .flex-div .location-icon {
     /* This will make the location icon to look vertically centered with respect to the multi-line
     block of text that accompanies it */
-    padding-top: 23px;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 767px) and (min-height: 450px) {

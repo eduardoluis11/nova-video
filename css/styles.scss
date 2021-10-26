@@ -1748,6 +1748,15 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
   div {
     display: flex;
   }
+
+  /* For iPhone 5S in vertical mode */
+  // @media only screen and (max-width: $wider-than-iphone5-min-width) and (min-height: $horizontal-phone-height) {
+  //   .location-icon {
+  //     /* This will make the location icon to look vertically centered with respect to the multi-line
+  //     block of text that accompanies it */
+  //     align-items: center;
+  //   }
+  // }
   
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
   /* For iPhone 5S in vertical mode */
@@ -1760,11 +1769,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     .location-icon {
       /* This will make the location icon to look vertically centered with respect to the multi-line
       block of text that accompanies it */
-      padding-top: 23px;
+      align-items: center;
     }
+
+    // .location-icon {
+    //   /* This will make the location icon to look vertically centered with respect to the multi-line
+    //   block of text that accompanies it */
+    //   padding-top: 23px;
+    // }
   }
   
-  /* For any other phones in vertical mode */
+  /* For any other phone in vertical mode */
   @media only screen and (min-width: $wider-than-iphone5-min-width) and (max-width: $tablet-min-width) 
   and (min-height: $horizontal-phone-height) {
     .one-line-description {
