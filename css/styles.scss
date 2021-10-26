@@ -1704,8 +1704,25 @@ padding bottom or top */
   space between each line of text with the rest of the contact information, I need to first remove the
   margin at the bottom of this title (for all screens) */
   h2 {
-    margin-bottom: 0;
 
+    /* This will remove all margin bottom from the h2 title in phone screens in vertical mode so
+    that he space between the h2 title and the 1st icon is the same as the space between the 2nd
+    icon and the 3rd icon, and so on and so forth for the rest of the icons */
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      margin-bottom: 0;
+    }
+
+    /* For phones in horizontal mode (from iphone 5 and on) */
+    @media only screen and (min-width: $iphone5-max-height-vertical) and (max-height: $horizontal-phone-height) {
+      margin-bottom: 0;
+    }
+
+    /* I want to add more space between the h2 title and the first icon, but only for screens 
+    larger than a phone */
+    @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height)  {
+      margin-bottom: 2rem;
+    }
+    
     /* This will modify the margin top for the title for computer screens so that the title is at the 
     same height as the paragraph that is to the left of the title */
     @media only screen and (min-width: $computer-min-width) {
