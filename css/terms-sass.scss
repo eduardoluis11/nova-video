@@ -126,9 +126,10 @@ $contact-icon-size-large-screens: 78px;
 
 /* This will add the side margins of minimum 20 px to the entire terms and conditions page. */
 .gutter-terms {
-    @extend %gutter
+    @extend %gutter;
 }
 
+/* This will style the paragraph text for the Terms page */
 .paragraph-text-terms {
     p {
         color: $gray-text;
@@ -169,6 +170,72 @@ $contact-icon-size-large-screens: 78px;
         } 
     }
 }
+
+/* This will style the h2 titles in the Terms page */
+.h2-titles-terms {
+
+    h2 {
+      color: $gray-text-h2-titles;
+      font-family: $title-font;
+  
+      /* This will remove all margin bottom from the h2 title in phone screens in vertical mode so
+      that he space between the h2 title and the 1st icon is the same as the space between the 2nd
+      icon and the 3rd icon, and so on and so forth for the rest of the icons */
+      @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+        margin-bottom: 1rem;
+      }
+  
+      /* For phones in horizontal mode (from iphone 5 and on) */
+      @media only screen and (min-width: $iphone5-max-height-vertical) and (max-height: $horizontal-phone-height) {
+        margin-bottom: 1rem;
+      }
+  
+      /* I want to add more space between the h2 title and the first icon, but only for screens 
+      larger than a phone */
+      @media only screen and (min-width: $tablet-min-width) and (min-height: $horizontal-phone-height)  {
+        margin-bottom: 2rem;
+      }
+      
+      /* This will modify the margin top for the title for computer screens so that the title is at the 
+      same height as the paragraph that is to the left of the title */
+      @media only screen and (min-width: $computer-min-width) {
+        margin-top: $font-size-large-screens;
+      }
+    }
+  
+    /* For phones in vertical mode */
+    @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
+      
+      // This needs to be under 4 vh or under 2 rem so that h2 titles are smaller than the h1 title
+      font-size: $h2-size-phones-vertical; 
+      padding-top: 5vh;
+  
+      /* This is for adding padding between the title and the line of text with the phone number */
+      padding-bottom: $font-size-small-screens;
+    }
+  
+    /* For phones in horizontal mode */
+    @media only screen and (max-width: $computer-min-width) and (max-height: $horizontal-phone-height) {
+      font-size: $h2-size-phones-horizontal;
+      padding-top: 5vw;
+      padding-bottom: $font-size-small-screens; 
+    }
+  
+    /* For tablet screens */
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $computer-min-width) 
+    and (min-height: $horizontal-phone-height) {
+      font-size: $h2-size-tablets; 
+      padding-top: 4vh;
+      padding-bottom: $font-size-large-screens; 
+    }
+  
+    // For computer screens
+    @media only screen and (min-width: $computer-min-width) {
+      font-size: $h2-size-computer;
+      padding-top: 4rem;
+    //   margin-bottom: 3rem;
+    }
+  }
 
 
 

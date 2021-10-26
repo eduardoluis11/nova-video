@@ -65,6 +65,7 @@ These should be SMALLER than the h1 sizes that I specified above. */
 }
 
 /* This will add the side margins of minimum 20 px to the entire terms and conditions page. */
+/* This will style the paragraph text for the Terms page */
 .paragraph-text-terms {
   /* This will only execute if two "p" tags are one right on top of the other (if 2 paragraphs 
   are one above the other.) This will add more spacing between each paragraph. (source:
@@ -104,6 +105,73 @@ These should be SMALLER than the h1 sizes that I specified above. */
 @media only screen and (min-width: 1279px) {
   .paragraph-text-terms p + p {
     margin-top: 2.5rem;
+  }
+}
+
+/* This will style the h2 titles in the Terms page */
+.h2-titles-terms {
+  /* For phones in vertical mode */
+  /* For phones in horizontal mode */
+  /* For tablet screens */
+}
+.h2-titles-terms h2 {
+  color: #242121;
+  font-family: "Kameron", serif;
+  /* This will remove all margin bottom from the h2 title in phone screens in vertical mode so
+  that he space between the h2 title and the 1st icon is the same as the space between the 2nd
+  icon and the 3rd icon, and so on and so forth for the rest of the icons */
+  /* For phones in horizontal mode (from iphone 5 and on) */
+  /* I want to add more space between the h2 title and the first icon, but only for screens 
+  larger than a phone */
+  /* This will modify the margin top for the title for computer screens so that the title is at the 
+  same height as the paragraph that is to the left of the title */
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .h2-titles-terms h2 {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 568px) and (max-height: 450px) {
+  .h2-titles-terms h2 {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 767px) and (min-height: 450px) {
+  .h2-titles-terms h2 {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .h2-titles-terms h2 {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-height: 450px) {
+  .h2-titles-terms {
+    font-size: 1rem;
+    padding-top: 5vh;
+    /* This is for adding padding between the title and the line of text with the phone number */
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 1279px) and (max-height: 450px) {
+  .h2-titles-terms {
+    font-size: 1rem;
+    padding-top: 5vw;
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1279px) and (min-height: 450px) {
+  .h2-titles-terms {
+    font-size: 1.5rem;
+    padding-top: 4vh;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  .h2-titles-terms {
+    font-size: 1.5vw;
+    padding-top: 4rem;
   }
 }
 
