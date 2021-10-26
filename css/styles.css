@@ -1509,12 +1509,12 @@ padding bottom or top */
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .contact-information-title h2 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (min-width: 568px) and (max-height: 450px) {
   .contact-information-title h2 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (min-width: 767px) and (min-height: 450px) {

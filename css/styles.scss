@@ -1709,12 +1709,12 @@ padding bottom or top */
     that he space between the h2 title and the 1st icon is the same as the space between the 2nd
     icon and the 3rd icon, and so on and so forth for the rest of the icons */
     @media only screen and (max-width: $tablet-min-width) and (min-height: $horizontal-phone-height) {
-      margin-bottom: 0;
+      margin-bottom: 1rem;
     }
 
     /* For phones in horizontal mode (from iphone 5 and on) */
     @media only screen and (min-width: $iphone5-max-height-vertical) and (max-height: $horizontal-phone-height) {
-      margin-bottom: 0;
+      margin-bottom: 1rem;
     }
 
     /* I want to add more space between the h2 title and the first icon, but only for screens 
