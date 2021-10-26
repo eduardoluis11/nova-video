@@ -1764,7 +1764,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     }
   }
   
-  /* For phones wider than an iPhone 5S in vertical mode */
+  /* For any other phones in vertical mode */
   @media only screen and (min-width: $wider-than-iphone5-min-width) and (max-width: $tablet-min-width) 
   and (min-height: $horizontal-phone-height) {
     .one-line-description {
@@ -1827,12 +1827,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
       line-height: $contact-icon-size-large-screens;
     }
 
-    // .multi-line-description {
-    //   /* On these screens, the block of text with the address will 
-    //   always have only 1 line of text. So, I will center it just
-    //   like the lines of text with the "one line description" class. */
-    //   line-height: $contact-icon-size-small-screens;
-    // }
+    .multi-line-description {
+      /* This will vertically center the address text in all computer screens,
+      regardless of whether the block of text is of 1 or 2 lines of text.  */
+      display: flex; 
+      align-items: center;
+    }
   }
 }
 

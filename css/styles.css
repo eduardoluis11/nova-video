@@ -1535,7 +1535,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
 .flex-div {
   /* These snippets of code will vertically center the lines of text with respect to their respective icon */
   /* For iPhone 5S in vertical mode */
-  /* For phones wider than an iPhone 5S in vertical mode */
+  /* For any other phones in vertical mode */
   /* For phones wider than iPhone 5 in horizontal mode */
   /* For tablet screens */
 }
@@ -1598,6 +1598,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
 @media only screen and (min-width: 1279px) {
   .flex-div .one-line-description {
     line-height: 78px;
+  }
+  .flex-div .multi-line-description {
+    /* This will vertically center the address text in all computer screens,
+    regardless of whether the block of text is of 1 or 2 lines of text.  */
+    display: flex;
+    align-items: center;
   }
 }
 
