@@ -1779,7 +1779,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     // }
   }
   
-  /* For any other phone in vertical mode */
+  /* For any other phones in vertical mode */
   @media only screen and (min-width: $wider-than-iphone5-min-width) and (max-width: $tablet-min-width) 
   and (min-height: $horizontal-phone-height) {
     .one-line-description {
@@ -1790,7 +1790,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
     .multi-line-description {
       /* This will make the 2-line block of text from Nova's address to look vertically centered with 
       respect to the location icon */
-      padding-top: 3px;
+      display: flex;
+      align-items: center;
+      
+      // padding-top: 3px;
     }
   }
 
@@ -1805,17 +1808,21 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowra
       have 2 lines. I SOULDN'T use line-height. Instead, I will 
       add padding top to try to center the text with respect to the 
       location icon. */
-      padding-top: 2px;
+      // padding-top: 2px;
 
       /* This will force the font size ofthe address to be of the same
       size of the rest of the text of the page */
       font-size: 16px;
       // line-height: $contact-icon-size-small-screens;
     }
+
+    .location-icon {
+      align-items: center;
+    }
   }
 
 
-  /* For phones wider than iPhone 5 in horizontal mode */
+  /* For other phones in horizontal mode */
   @media only screen and (min-width: $higher-than-iphone5-min-height) and (max-width: $computer-min-width) 
   and (max-height: $horizontal-phone-height) {
     .one-line-description {
