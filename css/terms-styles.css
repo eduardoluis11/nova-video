@@ -81,7 +81,7 @@ These should be SMALLER than the h1 sizes that I specified above. */
   /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
   in horizontal phone screens. */
 }
-@media only screen and (min-width: 568px) and (max-height: 450px) {
+@media only screen and (max-width: 569px) and (max-height: 450px) {
   .paragraph-text-terms p {
     font-size: 16px;
   }
