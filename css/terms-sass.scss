@@ -135,6 +135,11 @@ $contact-icon-size-large-screens: 78px;
         color: $gray-text;
         font-family: $arial-font;
         line-height: 1.5; // This will add more space between each line of text
+
+        /* For iPhone 5S in horizontal mode. This will force a font size of 16 px in these screens  */
+        @media only screen and (min-width: $iphone5-max-height-vertical) and (max-height: $horizontal-phone-height) {
+          font-size: $font-size-small-screens;
+        }
         
         /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
         in horizontal phone screens. */
@@ -149,6 +154,11 @@ $contact-icon-size-large-screens: 78px;
       color: $gray-text;
       font-family: $arial-font;
       line-height: 1.5; // This will add more space between each line of text
+
+      /* For iPhone 5S in horizontal mode. This will force a font size of 16 px in these screens  */
+      @media only screen and (min-width: $iphone5-max-height-vertical) and (max-height: $horizontal-phone-height) {
+        font-size: $font-size-small-screens;
+      }
       
       /* This will give the font a size of 20px in tablet and computer screens. I don't want this to be executed
       in horizontal phone screens. */
