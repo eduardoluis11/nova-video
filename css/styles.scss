@@ -933,6 +933,14 @@ overwritten by the "line height" of the "flexbox div" class, which would make th
   color: $gray-text-h2-titles;
   font-family: $title-font;
 
+  /* I can't use the "frameBorder = 0" attribute from HTML to remove the borders around the
+  iFrames since it's deprecated. Instead, I need to use "border: 0" from CSS (source: Roberto Chiaretti
+  from https://stackoverflow.com/questions/65034/remove-border-from-iframe ) */
+  iframe {
+    border: 0;
+  }
+  // border: 0;
+
   /* H1 titles are of 4vh of size in phone screens, and of 4vw of size in computer 
   screens. So, I will make h2 titles smaller than those values.
   

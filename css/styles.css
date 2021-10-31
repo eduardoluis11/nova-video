@@ -801,6 +801,9 @@ overwritten by the "line height" of the "flexbox div" class, which would make th
 .gray-iframe-titles {
   color: #242121;
   font-family: "Kameron", serif;
+  /* I can't use the "frameBorder = 0" attribute from HTML to remove the borders around the
+  iFrames since it's deprecated. Instead, I need to use "border: 0" from CSS (source: Roberto Chiaretti
+  from https://stackoverflow.com/questions/65034/remove-border-from-iframe ) */
   /* H1 titles are of 4vh of size in phone screens, and of 4vw of size in computer 
   screens. So, I will make h2 titles smaller than those values.
 
@@ -814,6 +817,9 @@ overwritten by the "line height" of the "flexbox div" class, which would make th
   /* For tablet screens (they are thin screens, so it's better to use "vh" as
     unit size.) This SHOULDN'T execute in phones in horizontal mode, or the titles
     would be too small */
+}
+.gray-iframe-titles iframe {
+  border: 0;
 }
 @media only screen and (max-width: 767px) and (min-height: 450px) {
   .gray-iframe-titles {
